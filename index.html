@@ -18,7 +18,7 @@
 
 
 <body>
-
+<!--Header-->
 <header>
     <h2>Tharushika Sewmini</h2>
     <nav>
@@ -35,6 +35,7 @@
 </header>
 
 <main>
+    <!--Home Page-->
     <section>
         <section>
             <h1>Hello, I'm</h1><br>
@@ -48,8 +49,16 @@
             <img src="" alt=""><br>
             <img src="" alt="">
         </aside>
+        <section>
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </section>
     </section>
 
+    <!--About Me-->
     <section>
         <section>
             <h2>About Me</h2>
@@ -70,6 +79,7 @@
         </aside>
     </section>
 
+    <!--Skills-->
     <section>
         <section>
             <h2>Skills</h2>
@@ -77,6 +87,7 @@
         <section></section>
     </section>
 
+    <!--Education-->
     <section>
         <section>
             <h2>Education</h2>
@@ -84,6 +95,7 @@
         <section></section>
     </section>
 
+    <!--Services-->
     <section>
         <section>
             <h2>Services</h2>
@@ -107,6 +119,7 @@
         </section>
     </section>
 
+    <!--Projects-->
     <section>
         <section>
             <h2>Projects</h2>
@@ -118,15 +131,41 @@
         </section>
     </section>
 
+    <!--Contacts-->
     <section>
         <section>
             <h2>Contact</h2>
         </section>
         <aside>
-            <h4>Your Name :</h4>
-            <h4>Email :</h4>
-            <h4>Subject :</h4>
-            <h4>Type Your Message :</h4>
+            <form action="gedara" method="post" id="contactForm">
+                <fieldset>
+
+                    <label for="txtCusName">Your Name:</label>
+                    <input type="text" id="txtCusName" name="customername" placeholder="" required>
+                    <br>
+                    <br>
+
+                    <label for="txtCusEmail">Email:</label>
+                    <input type="email" id="txtCusEmail" name="cusemail" required>
+                    <br>
+                    <br>
+
+                    <label for="txtCusSubject">Subject:</label>
+                    <input type="text" id="txtCusSubject" name="customersubject" placeholder="" required>
+                    <br>
+                    <br>
+
+                    <label for="txtCusMessage">Type Your Message:</label>
+                    <textarea name="cusMessage" id="txtCusMessage" cols="100" rows="10">
+
+                    </textarea>
+                    <br>
+                    <br>
+                </fieldset>
+            </form>
+            <br>
+            <br>
+            <button form="contactForm" formaction="send" formmethod="post" formtarget="_self">Send</button>
         </aside>
 
         <section>
@@ -150,6 +189,7 @@
     </section>
 </main>
 
+<!--Footer-->
 <footer>
     <section>
         <small>Developed By Tharushika | 2022 All Rights Reserved</small>
