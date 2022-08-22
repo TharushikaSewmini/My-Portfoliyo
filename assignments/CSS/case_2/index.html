@@ -41,17 +41,16 @@
         }
 
         main {
-            height: 45vw;
             position: relative;
+            margin-top: 0;
         }
 
         main>aside {
             width: 15%;
-            height: 100%;
             background: #4C0182;
             position: absolute;
             top: 0;
-            left: 0;
+            bottom: 0;
         }
 
         main>aside>ul {
@@ -68,50 +67,43 @@
         }
 
         main>section {
-            width: 85%;
+            margin-left: 227px;
+            padding: 10px;
+        }
+
+        main>section>section:nth-child(1) {
+            height: 300px;
+            position: relative;
+        }
+
+        main>section>section:nth-child(1)>div{
+            width: calc(100% / 3);
             height: 100%;
+            border: 1px solid green;
             position: absolute;
-            right: 0;
-            top: 0;
         }
 
-        main>section>section {
-            width: 99%;
-            height: 250px;
-            position: absolute;
-            border: 2px solid red;
-            top: 6px;
+        main>section>section:nth-child(1)>div:nth-child(1) {
             left: 0;
-            right: 0;
-            margin: auto;
         }
 
-        main>section>section>div{
-            display: inline-block;
-            width: 33.2%;
-            height: 100%;
-            border: 2px solid green;
+        main>section>section:nth-child(1)>div:nth-child(2) {
+            left: calc(100% / 3);
+        }
+
+        main>section>section:nth-child(1)>div:nth-child(3) {
+            right: 0;
+        }
+
+        main>section>section:nth-child(1)>div>img {
             position: absolute;
-            top: -2px;
-        }
-
-        main>section>section>div:nth-child(1) {
-            left: -1.5px;
-        }
-
-        main>section>section>div:nth-child(2) {
-            left: 0;
-            right: 0;
-            margin: auto;
-        }
-
-        main>section>section>div:nth-child(3) {
-            right: -1.5px;
-        }
-
-        main>section>section>div>img {
             width: 100%;
             height: 100%;
+        }
+
+        main>section>section:nth-child(2)>p {
+            font-size: 15px;
+            font-weight: normal;
         }
 
     </style>
@@ -139,6 +131,7 @@
         </ul>
     </aside>
     <section>
+
         <section>
         <div>
             <img alt="" src="assets/gif.gif">
@@ -150,9 +143,33 @@
             <img alt="" src="assets/gif.gif">
         </div>
         </section>
-    </section>
 
+        <section>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti ea eaque fugiat, harum iure laborum magnam
+                obcaecati placeat recusandae reprehenderit rerum sit vitae! Dignissimos eveniet impedit necessitatibus qui repellendus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti ea eaque fugiat, harum iure laborum magnam
+                obcaecati placeat recusandae reprehenderit rerum sit vitae! Dignissimos eveniet impedit necessitatibus qui repellendus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti ea eaque fugiat, harum iure laborum magnam
+                obcaecati placeat recusandae reprehenderit rerum sit vitae! Dignissimos eveniet impedit necessitatibus qui repellendus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti ea eaque fugiat, harum iure laborum magnam
+                obcaecati placeat recusandae reprehenderit rerum sit vitae! Dignissimos eveniet impedit necessitatibus qui repellendus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti ea eaque fugiat, harum iure laborum magnam
+                obcaecati placeat recusandae reprehenderit rerum sit vitae! Dignissimos eveniet impedit necessitatibus qui repellendus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti ea eaque fugiat, harum iure laborum magnam
+                obcaecati placeat recusandae reprehenderit rerum sit vitae! Dignissimos eveniet impedit necessitatibus qui repellendus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti ea eaque fugiat, harum iure laborum magnam
+                obcaecati placeat recusandae reprehenderit rerum sit vitae! Dignissimos eveniet impedit necessitatibus qui repellendus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti ea eaque fugiat, harum iure laborum magnam
+                obcaecati placeat recusandae reprehenderit rerum sit vitae! Dignissimos eveniet impedit necessitatibus qui repellendus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti ea eaque fugiat, harum iure laborum magnam
+                obcaecati placeat recusandae reprehenderit rerum sit vitae! Dignissimos eveniet impedit necessitatibus qui repellendus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti ea eaque fugiat, harum iure laborum magnam
+                obcaecati placeat recusandae reprehenderit rerum sit vitae! Dignissimos eveniet impedit necessitatibus qui repellendus.</p>
+        </section>
+
+    </section>
 </main>
+
 </body>
 
 </html>
