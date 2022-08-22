@@ -38,6 +38,25 @@
             padding: 12px;
             color: #525252;
             font-family: 'Lato', sans-serif;
+            cursor: pointer;
+        }
+
+        header>nav>ul>li:hover a {
+            color: blue;
+        }
+
+        main>aside>ul>li:hover a {
+            color: red;
+        }
+
+        header>nav>ul>li>a {
+            color: #525252;
+            text-decoration: none;
+        }
+
+        main>aside>ul>li>a {
+            color: white;
+            text-decoration: none;
         }
 
         main {
@@ -46,7 +65,7 @@
         }
 
         main>aside {
-            width: 260px;
+            width: 270px;
             background: #4C0182;
             position: absolute;
             top: 0;
@@ -58,10 +77,15 @@
             color: white;
             list-style: none;
             font-family: 'Lato', sans-serif;
+            cursor: pointer;
+        }
+
+        main>aside>ul>li:first-child {
+            padding-top: 22px;
         }
 
         main>section {
-            margin-left: 260px;
+            margin-left: 270px;
             padding: 10px;
         }
 
@@ -73,20 +97,20 @@
         main>section>section:nth-child(1)>div{
             width: calc(100% / 3);
             height: 100%;
-            border: 1px solid green;
+            border: 2px solid green;
             position: absolute;
         }
 
         main>section>section:nth-child(1)>div:nth-child(1) {
-            left: 0;
+            left: -6.5px;
         }
 
         main>section>section:nth-child(1)>div:nth-child(2) {
-            left: calc(100% / 3);
+            left: calc(99% / 3);
         }
 
         main>section>section:nth-child(1)>div:nth-child(3) {
-            right: 0;
+            right: -2.3px;
         }
 
         main>section>section:nth-child(1)>div>img {
@@ -121,10 +145,10 @@
     <img alt="Logo" src="assets/ijse.png">
     <nav>
         <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Contacts</li>
-            <li>About Us</li>
+            <li><a href="https://abc.lk" target="_blank"> Home</a></li>
+            <li><a href="#" target="_blank">Services</a></li>
+            <li><a href="#" target="_blank">Contacts</a></li>
+            <li><a href="#" target="_blank">About Us</a></li>
         </ul>
     </nav>
 </header>
@@ -132,10 +156,10 @@
 <main>
     <aside>
         <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Contacts</li>
-            <li>About Us</li>
+            <li><a href="https://abc.lk" target="_blank"> Home</a></li>
+            <li><a href="#" target="_blank">Services</a></li>
+            <li><a href="#" target="_blank">Contacts</a></li>
+            <li><a href="#" target="_blank">About Us</a></li>
         </ul>
     </aside>
     <section>
