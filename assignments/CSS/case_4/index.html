@@ -15,30 +15,73 @@
       position: relative;
     }
 
-    main>section {
-      background: white;
+    main section {
+      height: 100vh;
+      position: sticky;
     }
 
-    main>section>div {
+    main>section:first-child {
+      background: white;
+
+    }
+
+    main>section:first-child>div {
       width: 100%;
       height: 60px;
-      position: absolute;
       background: red;
+      top: 0;
     }
 
-    main>section>div>h1 {
+    main>section:first-child>div>h1 {
       color: white;
       position: absolute;
-      margin-top: 10px;
+      margin: 0;
       left: 20px;
+      padding-top: 10px;
     }
 
-    main>section>h1 {
+    main>section:first-child>section {
+      position: sticky;
+      margin-top: 301px;
+      margin-bottom: 301px;
+    }
+
+    main>section:first-child>section>h1 {
       color: black;
       text-align: center;
       font-size: 80px;
+
+    }
+
+    main>section:nth-child(2) {
+      background: lightskyblue;
+    }
+
+    main>section:nth-child(2)>div {
+      width: 100%;
+      height: 60px;
+      background: darkslateblue;
+      top: 0;
+    }
+
+    main>section:nth-child(2)>div>h1 {
+      color: black;
+      position: absolute;
       margin: 0;
-      padding-top: 350px;
+      left: 20px;
+      padding-top: 10px;
+    }
+
+    main>section:nth-child(2)>section {
+      position: sticky;
+      margin-top: 301px;
+      margin-bottom: 301px;
+    }
+
+    main>section:nth-child(2)>section>h1 {
+      color: black;
+      text-align: center;
+      font-size: 80px;
     }
   </style>
 </head>
@@ -48,7 +91,18 @@
     <div>
       <h1>Card 1</h1>
     </div>
-    <h1>Hello</h1>
+    <section>
+      <h1>Hello</h1>
+    </section>
+  </section>
+
+  <section>
+    <div>
+      <h1>Card 2</h1>
+    </div>
+    <section>
+      <h1>How</h1>
+    </section>
   </section>
 </main>
 </body>
