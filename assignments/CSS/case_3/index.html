@@ -6,11 +6,19 @@
 
   <link href="../normalize.css" rel="stylesheet">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+
+
   <style>
+    * {
+      font-family: 'Open Sans', sans-serif;
+    }
+
     main {
       position: relative;
-      width: 100vw;
-      height: 100vh;
+      height: 2515px;
     }
 
     main div {
@@ -22,53 +30,98 @@
       border-radius: 200px;
     }
 
-    main>div {
+    main>div:first-child {
       border: 15px solid grey;
       width: 300px;
       height: 300px;
       position: fixed;
+      z-index: 2;
     }
 
-    main>div>div:first-child {
+    main>div:nth-child(2) {
       border: 15px solid red;
       width: 275px;
       height: 275px;
       position: fixed;
+      z-index: 2;
     }
 
-    main>div>div:first-child>div:first-child {
+    main>div:nth-child(3) {
       background: purple;
       width: 280px;
       height: 280px;
-      position: fixed;
-      animation: mymove 2s infinite;
-      animation-delay: 1s;
+      position: absolute;
+      margin-top: 235px;
     }
 
-    @keyframes mymove {
-      from {bottom: 0;}
-      to {top: -1500px;}
-    }
-
-    main>div>div:first-child>div>h1 {
+    main>div:nth-child(3)>h1 {
       color: white;
       text-align: center;
+      font-size: 25px;
       position: absolute;
-      padding: 100px;
+      top: 110px;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
 
+    main>div:nth-child(4) {
+      background: lightskyblue;
+      width: 280px;
+      height: 280px;
+      position: absolute;
+      margin-top: 1000px;
+    }
 
+    main>div:nth-child(4)>h1 {
+      color: white;
+      text-align: center;
+      font-size: 20px;
+      position: absolute;
+      top: 110px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    main>div:nth-child(5) {
+      background: #ff6a50;
+      width: 280px;
+      height: 280px;
+      position: absolute;
+      margin-top: 2000px;
+      margin-bottom: 1500px;
+    }
+
+    main>div:nth-child(5)>h1 {
+      color: white;
+      text-align: center;
+      font-size: 20px;
+      position: relative;
+      top: 110px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
 
   </style>
 </head>
 
 <body>
 <main>
-  <div><div>
-    <div>
-      <h1>Hello</h1>
-    </div>
-  </div></div>
+  <div></div>
+  <div></div>
+  <div>
+    <h1>Hello</h1>
+  </div>
+
+  <div>
+    <h1>Welcome To</h1>
+  </div>
+
+  <div>
+    <h1>Institute of Software Engineering</h1>
+  </div>
 
 </main>
 </body>
