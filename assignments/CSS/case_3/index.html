@@ -9,7 +9,6 @@
   <style>
     main {
       position: relative;
-      border: 2px solid red;
       width: 100vw;
       height: 100vh;
     }
@@ -36,6 +35,21 @@
       height: 275px;
       position: fixed;
     }
+
+    main>div:nth-child(3) {
+      background: purple;
+      width: 280px;
+      height: 280px;
+      position: absolute;
+    }
+
+
+    main>div:nth-child(3)>h1 {
+      color: white;
+      text-align: center;
+      position: absolute;
+      padding: 100px;
+    }
   </style>
 </head>
 
@@ -43,6 +57,9 @@
 <main>
   <div></div>
   <div></div>
+  <div>
+    <h1>Hello</h1>
+  </div>
 </main>
 </body>
 </html>
