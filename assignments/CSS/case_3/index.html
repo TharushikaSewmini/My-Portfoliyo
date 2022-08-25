@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Case Three</title>
+
+  <link href="../normalize.css" rel="stylesheet">
+
+  <style>
+    main {
+      position: relative;
+      border: 2px solid red;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    main>div {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      border-radius: 200px;
+    }
+
+    main>div:first-child {
+      border: 15px solid grey;
+      width: 300px;
+      height: 300px;
+      position: fixed;
+    }
+
+    main>div:nth-child(2) {
+      border: 15px solid red;
+      width: 275px;
+      height: 275px;
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body>
+<main>
+  <div></div>
+  <div></div>
+</main>
+</body>
+</html>
