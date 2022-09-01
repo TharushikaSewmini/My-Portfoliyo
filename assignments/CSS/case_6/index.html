@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <title>Case Six</title>
 
-    <link href="../assets/normalize.css" rel="stylesheet">
+    <link href="../../../assets/normalize.css" rel="stylesheet">
 
     <style>
         section {
-            width: 1100px;
-            height: 500px;
+            width: 1200px;
+            height: 650px;
             position: absolute;
             left: 0;
             right: 0;
@@ -17,8 +17,9 @@
             bottom: 0;
             margin: auto;
             display: grid;
-            grid-template-rows: 1fr 1fr 1fr;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: repeat(3,1fr);
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
         }
 
         section>div {
@@ -44,7 +45,7 @@
             grid-column: 4/5;
             background: url("assets/tree.jpg");
             background-size: cover;
-            background-position: center;
+            background-position: right;
         }
 
         section>div:nth-child(4) {
@@ -54,7 +55,7 @@
         }
 
         section>div:nth-child(5) {
-            background: url("assets/waterfall.jpg");
+            background: url("assets/autumn.jpg");
             background-size: cover;
             background-position: center;
         }
@@ -62,13 +63,11 @@
         section>div:nth-child(6) {
             background: url("assets/butterfly.jpg");
             background-size: cover;
-            background-position: center;
         }
 
         section>div:nth-child(7) {
-            background: url("assets/snow.jpg");
+            background: url("assets/winter.jpg");
             background-size: cover;
-            background-position: center;
         }
 
         section>div:nth-child(8) {
@@ -76,7 +75,6 @@
             grid-column: 2/4;
             background: url("assets/landscape.jpg");
             background-size: cover;
-            background-position: center;
         }
     </style>
 </head>
