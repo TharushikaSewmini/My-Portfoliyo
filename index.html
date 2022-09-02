@@ -17,11 +17,7 @@
     <link href="assets/normalize.css" rel="stylesheet">
 
     <style>
-        body {
-            background: white;
-        }
-
-        body>header {
+        header {
             height: 70px;
             width: 100%;
             background: grey;
@@ -30,24 +26,44 @@
             box-shadow: 0 -1px 2px 4px #242424;
         }
 
-        body>header>h2 {
+        header>h2 {
             color: black;
             position: relative;
             left: 10px;
         }
 
-        body>header>nav {
+        header>nav {
             position: absolute;
             top: 0;
             right: 10px;
         }
 
-        body>header>nav>ul>li {
+        header>nav>ul>li {
             display: inline-block;
             padding: 10px 14px 0 14px;
             color: black;
             font-size: 20px;
             font-weight: bold;
+        }
+
+        main {
+            border: 2px solid red;
+            position: relative;
+            top: 70px;
+        }
+
+        main>section:first-child {
+            border: 1px solid blue;
+            position: relative;
+        }
+
+        main>section:first-child>section:first-child {
+            border: 1px solid green;
+        }
+
+        main>section:first-child>section:first-child>h1 {
+            border: 1px solid yellow;
+            font-size: 50px;
         }
 
     </style>
