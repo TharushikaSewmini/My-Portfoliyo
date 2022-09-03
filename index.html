@@ -55,15 +55,80 @@
         main>section:first-child {
             border: 1px solid blue;
             position: relative;
+            height: 650px;
         }
 
         main>section:first-child>section:first-child {
-            border: 1px solid green;
+            background: blue;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            height: 70%;
+            width: 90%;
+            border-radius: 20px;
         }
 
-        main>section:first-child>section:first-child>h1 {
+        main>section:first-child>section:first-child>section {
+            border: 2px solid red;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin-left: 100px;
+            width: 55%;
+        }
+
+        main>section:first-child>section:first-child>section>h1 {
             border: 1px solid yellow;
+            position: absolute;
+        }
+
+        main>section:first-child>section:first-child>section>h1:first-child {
             font-size: 50px;
+            color: white;
+            top: 20px;
+        }
+
+        main>section:first-child>section:first-child>section>h1:nth-child(2) {
+            font-size: 50px;
+            color: white;
+            top: 100px;
+        }
+
+        main>section:first-child>section:first-child>section>h1:nth-child(3) {
+            font-size: 50px;
+            top: 100px;
+            left: 100px;
+        }
+
+        main>section:first-child>section:first-child>section>h1:nth-child(4) {
+            font-size: 30px;
+            color: white;
+            top: 220px;
+        }
+
+        main>section:first-child>section:first-child>div {
+            border: 2px solid green;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        main>section:first-child>section:first-child>div>img:first-child {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            right: -10px;
+        }
+
+        main>section:first-child>section:first-child>div>img:nth-child(2) {
+            position: relative;
+            right: 0;
+            top: 50px;
+            z-index: 1;
         }
 
     </style>
@@ -91,9 +156,16 @@
     <!--Home Page-->
     <section>
         <section>
-            <h1>Hello, I'm</h1><br>
-            <h1>Tharushika Sewmini</h1><br>
-            <h1>I'm a Software Engineer</h1>
+            <section>
+                <h1>Hello,</h1>
+                <h1>I'm</h1>
+                <h1>Tharushika Sewmini</h1>
+                <h1>I'm a Software Engineer</h1>
+            </section>
+            <div>
+                <img src="assets/images/shape.png" alt="">
+                <img src="assets/images/softwaredeveloper.png" alt="">
+            </div>
         </section>
         <aside>
             <img src="" alt=""><br>
