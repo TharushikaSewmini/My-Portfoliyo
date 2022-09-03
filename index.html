@@ -71,42 +71,43 @@
             border-radius: 20px;
         }
 
-        main>section:first-child>section:first-child>section {
+        main>section:first-child>section:first-child>section:first-child {
             border: 2px solid red;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            margin-left: 100px;
-            width: 55%;
+            position: relative;
+            top: 30px;
+            left: 100px;
+            width: 700px;
+            height: 350px;
         }
 
-        main>section:first-child>section:first-child>section>h1 {
+        main>section:first-child>section:first-child>section:first-child>h1 {
             border: 1px solid yellow;
             position: absolute;
         }
 
-        main>section:first-child>section:first-child>section>h1:first-child {
+        main>section:first-child>section:first-child>section:first-child>h1:first-child {
             font-size: 50px;
             color: white;
             top: 20px;
         }
 
-        main>section:first-child>section:first-child>section>h1:nth-child(2) {
+        main>section:first-child>section:first-child>section:first-child>h1:nth-child(2) {
             font-size: 50px;
             color: white;
             top: 100px;
         }
 
-        main>section:first-child>section:first-child>section>h1:nth-child(3) {
+        main>section:first-child>section:first-child>section:first-child>h1:nth-child(3) {
             font-size: 50px;
+            color: #10EFC3;
             top: 100px;
             left: 100px;
         }
 
-        main>section:first-child>section:first-child>section>h1:nth-child(4) {
+        main>section:first-child>section:first-child>section:first-child>h1:nth-child(4) {
             font-size: 30px;
             color: white;
-            top: 220px;
+            top: 200px;
         }
 
         main>section:first-child>section:first-child>div {
@@ -129,6 +130,23 @@
             right: 0;
             top: 50px;
             z-index: 1;
+        }
+
+        main>section:first-child>section:first-child>section:nth-child(3) {
+            position: absolute;
+            top: 380px;
+            left: 95px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        main>section:first-child>section:first-child>section:nth-child(3)>div {
+            margin: 0 5px 0 5px;
+        }
+
+        main>section:first-child>section:first-child>section:nth-child(3)>div>img {
+            width: 30px;
+            height: 30px;
         }
 
     </style>
@@ -162,25 +180,31 @@
                 <h1>Tharushika Sewmini</h1>
                 <h1>I'm a Software Engineer</h1>
             </section>
+
             <div>
                 <img src="assets/images/shape.png" alt="">
                 <img src="assets/images/softwaredeveloper.png" alt="">
             </div>
+
+            <section>
+                <div>
+                    <img src="assets/images/linkedin.png" alt="">
+                </div>
+                <div>
+                    <img src="assets/images/facebook.png" alt="">
+                </div>
+                <div>
+                    <img src="assets/images/github.png" alt="">
+                </div>
+                <div>
+                    <img src="assets/images/whatsapp.png" alt="">
+                </div>
+                <div>
+                    <img src="assets/images/slack.png" alt="">
+                </div>
+            </section>
         </section>
-        <aside>
-            <img src="" alt=""><br>
-            <img src="" alt=""><br>
-            <img src="" alt=""><br>
-            <img src="" alt=""><br>
-            <img src="" alt="">
-        </aside>
-        <section>
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-        </section>
+
     </section>
 
     <!--About Me-->
