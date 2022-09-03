@@ -13,14 +13,14 @@
 
   <style>
     section {
-      border: 2px solid red;
-      width: 300px;
+      width: 250px;
       height: 500px;
       position: relative;
-      top: 50px;
+      top: 110px;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
+      left: -185px;
     }
 
     section>div {
@@ -28,11 +28,23 @@
       height: 50px;
       color: white;
       position: relative;
+      cursor: pointer;
+      box-shadow: 2px 2px 4px 1px grey;
+      width: 100%;
+      left: 0;
+      transition-property: all;
+      transition-duration: 1s;
     }
 
     section>div>h1 {
+      height: max-content;
       font-size: 18px;
       font-family: 'Open Sans', sans-serif;
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
     }
 
     section>div>i {
@@ -42,10 +54,17 @@
       bottom: 0;
       right: 20px;
       margin: auto;
-      font-size: 30px;
+      font-size: 28px;
+    }
+
+    section>div:hover {
+      left: 185px;
+      transition-property: all;
+      transition-duration: 1s;
     }
   </style>
 </head>
+
 <body>
 <section>
   <div>
