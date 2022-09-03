@@ -20,8 +20,9 @@
       top: 0;
       bottom: 0;
       margin: auto;
-      border-radius: 200px;
+      border-radius: 100%;
       border-top: 18px solid red;
+      cursor: pointer;
     }
 
     div>h1 {
@@ -36,6 +37,18 @@
       margin: auto;
       width: max-content;
       height: max-content;
+    }
+
+    div:hover {
+      transform: rotate(360deg);
+      transition-property: all;
+      transition-duration: 2s;
+    }
+
+    div:hover>h1 {
+      transform: rotate(-360deg);
+      transition-property: all;
+      transition-duration: 2s;
     }
   </style>
 </head>
