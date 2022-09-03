@@ -5,6 +5,12 @@
   <title>Transition Case One</title>
   <meta content="width=device-width initial-scale=1" name="viewport">
 
+  <link href="../../../assets/css/normalize.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/css/all.min.css">
+
   <style>
     section {
       border: 2px solid red;
@@ -18,9 +24,25 @@
     }
 
     section>div {
-      border: 2px solid blue;
+      background: blueviolet;
       height: 50px;
+      color: white;
+      position: relative;
+    }
 
+    section>div>h1 {
+      font-size: 18px;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    section>div>i {
+      height: max-content;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 20px;
+      margin: auto;
+      font-size: 30px;
     }
   </style>
 </head>
@@ -28,18 +50,23 @@
 <section>
   <div>
     <h1>Menu One</h1>
+    <i class="fa-solid fa-address-book"></i>
   </div>
   <div>
     <h1>Menu Two</h1>
+    <i class="fa-solid fa-truck-medical"></i>
   </div>
   <div>
     <h1>Menu Three</h1>
+    <i class="fa-solid fa-book-atlas"></i>
   </div>
   <div>
     <h1>Menu Four</h1>
+    <i class="fa-solid fa-layer-group"></i>
   </div>
   <div>
     <h1>Menu Five</h1>
+    <i class="fa-solid fa-cart-arrow-down"></i>
   </div>
 </section>
 </body>
