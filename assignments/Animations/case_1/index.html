@@ -8,40 +8,46 @@
 
   <style>
     div {
-      border: 2px solid red;
       background: blue;
       height: 100px;
       width: 200px;
       border-radius: 20px;
 
       animation-name: my-animation;
-      animation-duration: 2s;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
     }
 
     @keyframes my-animation {
       0% {
         background: blue;
         margin: 0 0 0 0;
+        transform: rotate(0deg);
       }
 
       25% {
         background: yellow;
         margin: 0 0 0 500px;
+        transform: rotate(180deg);
       }
 
       50% {
-        background: deeppink;
+        background: red;
         margin: 500px 0 0 500px;
+        transform: rotate(360deg);
       }
 
       75% {
-        background: black;
+        background: deeppink;
         margin: 500px 0 0 0;
+        transform: rotate(180deg);
       }
 
       100% {
-        background: red;
+        background: orange;
         margin: 0 0 0 0;
+        transform: rotate(360deg);
       }
 
     }
