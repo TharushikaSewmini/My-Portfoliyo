@@ -15,6 +15,7 @@
     <meta name="theme-color" content="">-->
 
     <link href="assets/css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/css/all.min.css">
 
     <style>
 
@@ -631,7 +632,7 @@
             background-color: #1D314F;
             border: 1px solid blue;
             position: relative;
-            height: 750px;
+            height: 720px;
         }
 
         main>section:nth-child(7)>section:first-child {
@@ -658,17 +659,63 @@
 
         main>section:nth-child(7)>section:nth-child(2) {
             border: 1px solid green;
-
+            position: relative;
+            height: 80%;
+            margin-top: 20px;
         }
 
         main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2) {
-            border: 1px solid yellow;
             width: 400px;
-            height: 100%;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+        }
+
+        main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section {
+            height: 100px;
+            position: relative;
+        }
+
+        main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section>i {
+            color: white;
+            position: relative;
+            top: 28px;
+            left: 20px;
+            font-size: 30px;
+        }
+
+        main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section>h3 {
+            font-size: 18px;
+            font-family: 'Open Sans', sans-serif;
+            color: #1ABC9C;
+            position: relative;
+            margin: 0 0 0 65px;
+            width: max-content;
+        }
+
+        main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section>h4 {
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            color: white;
+            position: relative;
+            margin: 0 0 0 65px;
+            width: max-content;
+        }
+
+        main>section:nth-child(7)>section:nth-child(2)>aside {
+            border: 1px solid red;
+            color: white;
             position: absolute;
             top: 0;
-            right: 0;
-            margin-right: 30px;
+            bottom: 0;
+            margin-left: 40px;
+        }
+
+        main>section:nth-child(7)>section:nth-child(2)>aside>button {
+            align-items: center;
         }
 
     </style>
@@ -908,17 +955,17 @@
 
             <section>
                 <section>
-                    <img src="" alt="">
+                    <i class="fa-solid fa-location-dot"></i>
                     <h3>Address</h3><br>
-                    <h4>‘Priyangani’, Udawela Road, Yatiyana, Agalawatta.</h4>
+                    <h4>‘Priyangani’, Udawela Road, Yatiyana, Agalawatta</h4>
                 </section>
                 <section>
-                    <img src="" alt="">
+                    <i class="fa-solid fa-envelope"></i>
                     <h3>Email</h3><br>
                     <h4>tharushikasewmini@gmail.com</h4>
                 </section>
                 <section>
-                    <img src="" alt="">
+                    <i class="fa-solid fa-phone"></i>
                     <h3>Contact</h3><br>
                     <h4>+94 763064824</h4>
                 </section>
