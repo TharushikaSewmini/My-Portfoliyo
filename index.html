@@ -55,7 +55,7 @@
         main>section:first-child {
             border: 1px solid blue;
             position: relative;
-            height: 650px;
+            height: 660px;
         }
 
         main>section:first-child>section:first-child {
@@ -149,6 +149,97 @@
             height: 30px;
         }
 
+        main>section:nth-child(2) {
+            border: 1px solid blue;
+            position: relative;
+            height: 700px;
+        }
+
+        main>section:nth-child(2)>section:first-child {
+            position: relative;
+        }
+
+        main>section:nth-child(2)>section:first-child>h2 {
+            text-align: center;
+            color: darkblue;
+            font-size: 30px;
+            margin-bottom: 0;
+        }
+
+        main>section:nth-child(2)>section:first-child>div {
+            background: blue;
+            width: 150px;
+            height: 4px;
+            position: absolute;
+            top: 30px;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+
+
+        main>section:nth-child(2)>section:nth-child(2) {
+            width: 96%;
+            height: 80%;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            border: 1px solid green;
+        }
+
+        main>section:nth-child(2)>section:nth-child(2)>article {
+            margin: 50px 400px 0 40px;
+        }
+
+        main>section:nth-child(2)>section:nth-child(2)>article>p {
+            font-size: 20px;
+        }
+
+
+
+
+        main>section:nth-child(2)>section:nth-child(2)>section {
+            border: 2px solid #8E44AD;
+            margin: 50px 800px 0 200px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main>section:nth-child(2)>section:nth-child(2)>section>h3 {
+            margin-left: 50px;
+            font-size: 18px;
+        }
+
+
+
+
+        main>section:nth-child(2)>section:nth-child(2)>aside {
+            width: 400px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: 30px;
+        }
+
+        main>section:nth-child(2)>section:nth-child(2)>aside>img {
+            width: 400px;
+            height: 400px;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            filter: brightness(84%);
+
+        }
+
     </style>
 </head>
 
@@ -211,21 +302,27 @@
     <section>
         <section>
             <h2>About Me</h2>
+            <div></div>
         </section>
-        <article>
-            <p>I’m  Tharushika and a software engineering student of IJSE(Institute of Java & Software Engineering). I’m a self motivated and hardworking student who is passionate about
-                UI/ UX designing, software developing and web designing. Seeking a career opportunity to expand my knowledge of related fields to provide an effective services.</p>
-        </article>
+
         <section>
-            <h3>Name : Tharushika Sewmini</h3><br>
-            <h3>Age : 23 Years</h3><br>
-            <h3>City : Kalutara, Sri Lanka</h3><br>
-            <h3>Email : tharushikasewmini@gmail.com</h3><br>
-            <h3>Contact : +94 763064814</h3>
+            <article>
+                <p>I’m  Tharushika and a software engineering student of IJSE(Institute of Java & Software Engineering). I’m a self motivated and hardworking student who is passionate about
+                    UI/ UX designing, software developing and web designing. Seeking a career opportunity to expand my knowledge of related fields to provide an effective services.</p>
+            </article>
+
+            <section>
+                <h3>Name : Tharushika Sewmini</h3>
+                <h3>Age : 23 Years</h3>
+                <h3>City : Kalutara, Sri Lanka</h3>
+                <h3>Email : tharushikasewmini@gmail.com</h3>
+                <h3>Contact : +94 763064814</h3>
+            </section>
+
+            <aside>
+                <img src="assets/images/myphoto.png" alt="">
+            </aside>
         </section>
-        <aside>
-            <img src="" alt="">
-        </aside>
     </section>
 
     <!--Skills-->
