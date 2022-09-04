@@ -625,6 +625,52 @@
             height: 220px;
         }
 
+
+        /* Contact */
+        main>section:nth-child(7) {
+            background-color: #1D314F;
+            border: 1px solid blue;
+            position: relative;
+            height: 750px;
+        }
+
+        main>section:nth-child(7)>section:first-child {
+            position: relative;
+        }
+
+        main>section:nth-child(7)>section:first-child>h2 {
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            margin-bottom: 0;
+        }
+
+        main>section:nth-child(7)>section:first-child>div {
+            background: white;
+            width: 150px;
+            height: 4px;
+            position: absolute;
+            top: 30px;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        main>section:nth-child(7)>section:nth-child(2) {
+            border: 1px solid green;
+
+        }
+
+        main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2) {
+            border: 1px solid yellow;
+            width: 400px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: 30px;
+        }
+
     </style>
 </head>
 
@@ -824,56 +870,60 @@
     <section>
         <section>
             <h2>Contact</h2>
+            <div></div>
         </section>
-        <aside>
-            <form action="gedara" method="post" id="contactForm">
-                <fieldset>
-
-                    <label for="txtCusName">Your Name:</label>
-                    <input type="text" id="txtCusName" name="customername" placeholder="" required>
-                    <br>
-                    <br>
-
-                    <label for="txtCusEmail">Email:</label>
-                    <input type="email" id="txtCusEmail" name="cusemail" required>
-                    <br>
-                    <br>
-
-                    <label for="txtCusSubject">Subject:</label>
-                    <input type="text" id="txtCusSubject" name="customersubject" placeholder="" required>
-                    <br>
-                    <br>
-
-                    <label for="txtCusMessage">Type Your Message:</label>
-                    <textarea name="cusMessage" id="txtCusMessage" cols="100" rows="10">
-
-                    </textarea>
-                    <br>
-                    <br>
-                </fieldset>
-            </form>
-            <br>
-            <br>
-            <button form="contactForm" formaction="send" formmethod="post" formtarget="_self">Send</button>
-        </aside>
 
         <section>
+            <aside>
+                <form action="gedara" method="post" id="contactForm">
+                    <fieldset>
+
+                        <label for="txtCusName">Your Name:</label>
+                        <input type="text" id="txtCusName" name="customername" placeholder="" required>
+                        <br>
+                        <br>
+
+                        <label for="txtCusEmail">Email:</label>
+                        <input type="email" id="txtCusEmail" name="cusemail" required>
+                        <br>
+                        <br>
+
+                        <label for="txtCusSubject">Subject:</label>
+                        <input type="text" id="txtCusSubject" name="customersubject" placeholder="" required>
+                        <br>
+                        <br>
+
+                        <label for="txtCusMessage">Type Your Message:</label>
+                        <textarea name="cusMessage" id="txtCusMessage" cols="100" rows="10">
+
+                        </textarea>
+                        <br>
+                        <br>
+                    </fieldset>
+                </form>
+                <br>
+                <br>
+                <button form="contactForm" formaction="send" formmethod="post" formtarget="_self">Send</button>
+            </aside>
+
             <section>
-                <img src="" alt="">
-                <h3>Address</h3><br>
-                <h4>‘Priyangani’, Udawela Road, Yatiyana, Agalawatta.</h4>
+                <section>
+                    <img src="" alt="">
+                    <h3>Address</h3><br>
+                    <h4>‘Priyangani’, Udawela Road, Yatiyana, Agalawatta.</h4>
+                </section>
+                <section>
+                    <img src="" alt="">
+                    <h3>Email</h3><br>
+                    <h4>tharushikasewmini@gmail.com</h4>
+                </section>
+                <section>
+                    <img src="" alt="">
+                    <h3>Contact</h3><br>
+                    <h4>+94 763064824</h4>
+                </section>
+                <section></section>
             </section>
-            <section>
-                <img src="" alt="">
-                <h3>Email</h3><br>
-                <h4>tharushikasewmini@gmail.com</h4>
-            </section>
-            <section>
-                <img src="" alt="">
-                <h3>Contact</h3><br>
-                <h4>+94 763064824</h4>
-            </section>
-            <section></section>
         </section>
     </section>
 </main>
