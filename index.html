@@ -48,6 +48,12 @@
             color: white;
             font-size: 20px;
             font-weight: bold;
+            cursor: pointer;
+        }
+
+        header ul > li > a {
+            color: #ccffcd;
+            text-decoration: none;
         }
 
         /* Main */
@@ -63,7 +69,7 @@
             height: 660px;
         }
 
-        main>section:first-child>section:first-child {
+        main>section:first-child>dfn>section:first-child {
             background: blue;
             position: absolute;
             top: 0;
@@ -76,7 +82,7 @@
             border-radius: 20px;
         }
 
-        main>section:first-child>section:first-child>section:first-child {
+        main>section:first-child>dfn>section:first-child>section:first-child {
             position: relative;
             top: 30px;
             left: 100px;
@@ -84,58 +90,58 @@
             height: 350px;
         }
 
-        main>section:first-child>section:first-child>section:first-child>h1 {
+        main>section:first-child>dfn>section:first-child>section:first-child>h1 {
             position: absolute;
         }
 
-        main>section:first-child>section:first-child>section:first-child>h1:first-child {
+        main>section:first-child>dfn>section:first-child>section:first-child>h1:first-child {
             font-size: 50px;
             color: white;
             top: 20px;
         }
 
-        main>section:first-child>section:first-child>section:first-child>h1:nth-child(2) {
+        main>section:first-child>dfn>section:first-child>section:first-child>h1:nth-child(2) {
             font-size: 50px;
             color: white;
             top: 100px;
         }
 
-        main>section:first-child>section:first-child>section:first-child>h1:nth-child(3) {
+        main>section:first-child>dfn>section:first-child>section:first-child>h1:nth-child(3) {
             font-size: 50px;
             color: #10EFC3;
             top: 100px;
             left: 100px;
         }
 
-        main>section:first-child>section:first-child>section:first-child>h1:nth-child(4) {
+        main>section:first-child>dfn>section:first-child>section:first-child>h1:nth-child(4) {
             font-size: 30px;
             color: white;
             top: 200px;
         }
 
         /* Home Page Images */
-        main>section:first-child>section:first-child>div {
+        main>section:first-child>dfn>section:first-child>div {
             position: absolute;
             top: 0;
             bottom: 0;
             right: 0;
         }
 
-        main>section:first-child>section:first-child>div>img:first-child {
+        main>section:first-child>dfn>section:first-child>div>img:first-child {
             position: absolute;
             width: 500px;
             height: 500px;
             right: -10px;
         }
 
-        main>section:first-child>section:first-child>div>img:nth-child(2) {
+        main>section:first-child>dfn>section:first-child>div>img:nth-child(2) {
             position: relative;
             right: 0;
             top: 50px;
             z-index: 1;
         }
 
-        main>section:first-child>section:first-child>section:nth-child(3) {
+        main>section:first-child>dfn>section:first-child>section:nth-child(3) {
             position: absolute;
             top: 380px;
             left: 95px;
@@ -143,11 +149,11 @@
             flex-direction: row;
         }
 
-        main>section:first-child>section:first-child>section:nth-child(3)>div {
+        main>section:first-child>dfn>section:first-child>section:nth-child(3)>div {
             margin: 0 8px 0 8px;
         }
 
-        main>section:first-child>section:first-child>section:nth-child(3)>div>img {
+        main>section:first-child>dfn>section:first-child>section:nth-child(3)>div>img {
             width: 30px;
             height: 30px;
         }
@@ -763,7 +769,7 @@
     <h2>Tharushika Sewmini</h2>
     <nav>
         <ul>
-            <li>Home</li>
+            <li><a href="#homePage">Home</a></li>
             <li>About Us</li>
             <li>Skills</li>
             <li>Education</li>
@@ -776,7 +782,7 @@
 
 <main>
     <!--Home Page-->
-    <section>
+    <section><dfn id="homePage">
         <section>
             <section>
                 <h1>Hello,</h1>
@@ -808,7 +814,7 @@
                 </div>
             </section>
         </section>
-
+    </dfn>
     </section>
 
     <!--About Me-->
