@@ -10,8 +10,8 @@
 
   <style>
     main {
-      width: 900px;
-      height: 500px;
+      width: 1000px;
+      height: 600px;
       position: absolute;
       top: 0;
       right: 0;
@@ -31,6 +31,7 @@
       animation-duration: 10s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
+      animation-timing-function: linear;
     }
 
     main>section>div {
@@ -39,43 +40,43 @@
     }
 
     main>section>div:nth-child(1) {
-      background: url("assets/autumn.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-
-    main>section>div:nth-child(2) {
       background: url("assets/landscape.jpg");
       background-size: cover;
       background-position: center;
     }
 
-    main>section>div:nth-child(3) {
-      background: url("assets/butterfly.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-
-    main>section>div:nth-child(4) {
+    main>section>div:nth-child(2) {
       background: url("assets/winter.jpg");
       background-size: cover;
       background-position: center;
     }
 
+    main>section>div:nth-child(3) {
+      background: url("assets/autumn.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    main>section>div:nth-child(4) {
+      background: url("assets/butterfly.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
     @keyframes my-animation {
-      0%{
+      0%,20%{
         transform: translateX(0);
       }
 
-      25%{
+      30%,50%{
         transform: translateX(-25%);
       }
 
-      50%{
+      60%,80%{
         transform: translateX(-50%);
       }
 
-      100%{
+      90%,100%{
         transform: translateX(-75%);
       }
     }
