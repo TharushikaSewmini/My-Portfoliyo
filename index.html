@@ -1,20 +1,23 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>My-Portfolio</title>
 
     <title>HyperText Markup Language</title>
-    <link rel="icon" href="">
+    <link rel="icon" href="assets/images/resume.png">
     <!--<base href="localhost">-->
-    <meta name="keywords" content="Tharushika Sewmini">
+    <meta name="keywords" content="Tharushika Sewmini, Tharushika, Sewmini, Portfolio">
     <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="owner" content="">
+    <meta name="author" content="Tharushika Sewmini">
+    <meta name="owner" content="Tharushika Sewmini">
     <meta name="viewport" content="width=device-width initial-scale=1 maximum-scale=1 minimum-scale=1 user-scalable=no">
-    <meta name="theme-color" content="">
+    <meta name="theme-color" content="gray">
 
     <link href="assets/css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/css/all.min.css">
+
+    <!--Fonts for Header Navigation-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -22,15 +25,17 @@
     <style>
 
         /* Header */
-        header {
-            height: 70px;
+        body>header {
+            height: 60px;
             width: 100%;
             background: #2C2C2C;
-            position: absolute;
+            position: fixed;
             top: 0;
             box-shadow: 0 -1px 2px 4px #242424;
+            z-index: 1;
         }
 
+        /* Header name */
         header>h2 {
             color: white;
             position: relative;
@@ -38,6 +43,7 @@
             width: max-content;
         }
 
+        /* Navigation */
         header>nav {
             position: absolute;
             top: 0;
@@ -46,22 +52,27 @@
 
         header>nav>ul>li {
             display: inline-block;
-            padding: 10px 15px 0 15px;
+            padding: 6px 15px 0 15px;
             color: white;
             font-size: 18px;
             font-family: 'Roboto', sans-serif;
             cursor: pointer;
         }
 
-        header ul > li > a {
+        /* when nav hover */
+        header>nav>ul>li>a:hover {
             color: #ccffcd;
+        }
+
+        header ul > li > a {
+            color: white;
             text-decoration: none;
         }
 
         /* Main */
         main {
             position: relative;
-            margin-top: 70px;
+            margin-top: 60px;
         }
 
 
@@ -775,6 +786,7 @@
 <!--Header-->
 <header>
     <h2>Tharushika Sewmini</h2>
+    <!--Navigations-->
     <nav>
         <ul>
             <li><a href="#homePage">Home</a></li>
@@ -793,6 +805,7 @@
     <!--Home Page-->
     <section><dfn id="homePage">
         <section>
+            <!--Content-->
             <section>
                 <h1>Hello,</h1>
                 <h1>I'm</h1>
@@ -800,11 +813,13 @@
                 <h1>I'm a Software Engineer</h1>
             </section>
 
+            <!--Images-->
             <div>
                 <img src="assets/images/shape.png" alt="">
                 <img src="assets/images/softwaredeveloper.png" alt="">
             </div>
 
+            <!--Social Media Links-->
             <section>
                 <div>
                     <img src="assets/images/linkedin.png" alt="">
@@ -828,11 +843,14 @@
 
     <!--About Me-->
     <section>
+        <!--Title for About Me-->
         <section>
             <h2>About Me</h2>
+            <!--Underline-->
             <div></div>
         </section>
 
+        <!--Description-->
         <section>
             <article>
                 <p>I’m  Tharushika and a software engineering student of IJSE(Institute of Java & Software Engineering). I’m a self motivated and hardworking student who is passionate about
@@ -855,10 +873,13 @@
 
     <!--Skills-->
     <section>
+        <!--Title for Skills-->
         <section>
             <h2>Skills</h2>
             <div></div>
         </section>
+
+        <!--Languages and Tools Images-->
         <section>
             <div><img src="assets/images/java.png" alt=""></div>
             <div><img src="assets/images/mysql.png" alt=""></div>
@@ -874,18 +895,23 @@
 
     <!--Education-->
     <section>
+        <!--Title for Education-->
         <section>
             <h2>Education</h2>
             <div></div>
         </section>
 
         <section>
+            <!--Middle Line-->
             <div></div>
+
+            <!--Circles-->
             <div></div>
             <div></div>
             <div></div>
             <div></div>
 
+            <!--Details-->
             <section>
                 <img src="assets/images/ijse.png" alt="">
                 <h4>IJSE- Institute of Software Engineering, Panadura</h4>
@@ -918,10 +944,13 @@
 
     <!--Services-->
     <section>
+        <!--Title for Services-->
         <section>
             <h2>Services</h2>
             <div></div>
         </section>
+
+        <!--Boxes with Content-->
         <section>
             <section>
                 <img src="assets/images/software-development.png" alt="">
@@ -943,11 +972,14 @@
 
     <!--Projects-->
     <section>
+        <!--Title for Projects-->
         <section>
             <h2>Projects</h2>
             <div></div>
         </section>
         <section>
+
+            <!--Projects with Images-->
             <section>
                 <h1>Hostel Management System</h1>
                 <img src="assets/images/project1.png" alt="">
@@ -965,11 +997,13 @@
 
     <!--Contacts-->
     <section>
+        <!--Title for Contacts-->
         <section>
             <h2>Contact</h2>
             <div></div>
         </section>
 
+        <!--Contact Form-->
         <section>
             <aside>
                 <form action="gedara" method="post" id="contactForm">
@@ -1003,6 +1037,7 @@
                 <button form="contactForm" formaction="send" formmethod="post" formtarget="_self">Send</button>
             </aside>
 
+            <!--Details for Contact-->
             <section>
                 <section>
                     <i class="fa-solid fa-location-dot"></i>
@@ -1021,6 +1056,7 @@
                 </section>
             </section>
 
+            <!--Social Media Links-->
             <section>
                 <div>
                     <img src="assets/images/linkedin.png" alt="">
@@ -1045,6 +1081,7 @@
 
 <!--Footer-->
 <footer>
+    <!--Footer Content-->
     <small>Developed By Tharushika | 2022 All Rights Reserved</small>
 </footer>
 </body>
