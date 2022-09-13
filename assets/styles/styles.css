@@ -211,6 +211,8 @@ main>section:nth-child(2)>section:nth-child(2)>section {
 main>section:nth-child(2)>section:nth-child(2)>section>h3 {
     margin-left: 50px;
     font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    color: #282823;
 }
 
 /* About Me Image */
