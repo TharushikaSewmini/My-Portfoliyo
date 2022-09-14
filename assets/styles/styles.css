@@ -198,7 +198,8 @@ main>section:nth-child(2)>section:nth-child(2)>article {
 }
 
 main>section:nth-child(2)>section:nth-child(2)>article>p {
-    font-size: 20px;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 main>section:nth-child(2)>section:nth-child(2)>section {
@@ -208,8 +209,8 @@ main>section:nth-child(2)>section:nth-child(2)>section {
     flex-direction: column;
 }
 
-main>section:nth-child(2)>section:nth-child(2)>section>h3 {
-    margin-left: 50px;
+main>section:nth-child(2)>section:nth-child(2)>section>pre {
+    margin: 10px 0 10px 50px;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     color: #282823;
@@ -283,15 +284,15 @@ main>section:nth-child(3)>section:nth-child(2) {
 }
 
 main>section:nth-child(3)>section:nth-child(2)>div {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     margin: 40px;
     position: relative;
 }
 
 main>section:nth-child(3)>section:nth-child(2)>div>img {
-    width: 100px;
-    height: 95px;
+    width: 120px;
+    height: 120px;
     position: absolute;
     top: 0;
     right: 0;
@@ -344,7 +345,7 @@ main>section:nth-child(4)>section:nth-child(2) {
 }
 
 main>section:nth-child(4)>section:nth-child(2)>div {
-    background-color: #106EEA;
+    background-color: #242424;
     position: absolute;
     left: 0;
     right: 0;
@@ -353,77 +354,87 @@ main>section:nth-child(4)>section:nth-child(2)>div {
 
 /* ----line----- */
 main>section:nth-child(4)>section:nth-child(2)>div:first-child {
-    width: 5px;
-    height: 480px;
-    top: 45px;
+    width: 4px;
+    height: 460px;
+    top: 85px;
 }
 
 /* ----circle----- */
 main>section:nth-child(4)>section:nth-child(2)>div:nth-child(2) {
-    width: 20px;
-    height: 20px;
-    top: 35px;
+    width: 10px;
+    height: 10px;
+    top: 85px;
     border-radius: 100%;
 }
 
 /* ----circle----- */
 main>section:nth-child(4)>section:nth-child(2)>div:nth-child(3) {
-    width: 20px;
-    height: 20px;
-    top: 190px;
+    width: 10px;
+    height: 10px;
+    top: 240px;
     border-radius: 100%;
 }
 
 /* ----circle----- */
 main>section:nth-child(4)>section:nth-child(2)>div:nth-child(4) {
-    width: 20px;
-    height: 20px;
-    top: 350px;
+    width: 10px;
+    height: 10px;
+    top: 390px;
     border-radius: 100%;
 }
 
 /* ----circle----- */
 main>section:nth-child(4)>section:nth-child(2)>div:nth-child(5) {
-    width: 20px;
-    height: 20px;
-    top: 510px;
+    width: 10px;
+    height: 10px;
+    top: 545px;
     border-radius: 100%;
 }
 
 main>section:nth-child(4)>section:nth-child(2)>section {
-    background-color: #244165;
+    border: 2px solid red;
+    width: 100%;
+    height: 100%;
     position: relative;
-    width: 355px;
-    height: 120px;
-    margin-top: 40px;
-    margin-bottom: 0;
 }
 
-main>section:nth-child(4)>section:nth-child(2)>section:nth-child(6) {
-    margin-left: 280px;
-}
-
-main>section:nth-child(4)>section:nth-child(2)>section:nth-child(7) {
-    margin-left: 730px;
-}
-
-main>section:nth-child(4)>section:nth-child(2)>section:nth-child(8) {
-    margin-left: 280px;
-}
-
-main>section:nth-child(4)>section:nth-child(2)>section:nth-child(9) {
-    margin-left: 730px;
-}
-
-main>section:nth-child(4)>section:nth-child(2)>section>img {
-    width: 60px;
-    height: 60px;
+main>section:nth-child(4)>section:nth-child(2)>section>section {
+    background-color: #244165;
     position: absolute;
+    width: 26%;
+    height: 18%;
+    margin-top: 40px;
+}
+
+main>section:nth-child(4)>section:nth-child(2)>section>section:nth-child(1) {
+    left: 280px;
+}
+
+main>section:nth-child(4)>section:nth-child(2)>section>section:nth-child(2) {
+    left: 730px;
+    top: 23%;
+}
+
+main>section:nth-child(4)>section:nth-child(2)>section>section:nth-child(3) {
+    left: 280px;
+    top: 45%;
+}
+
+main>section:nth-child(4)>section:nth-child(2)>section>section:nth-child(4) {
+    left: 730px;
+    top: 70%;
+}
+
+main>section:nth-child(4)>section:nth-child(2)>section>section>img {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 100%;
     top: 13px;
     left: 13px;
 }
 
-main>section:nth-child(4)>section:nth-child(2)>section>h4 {
+main>section:nth-child(4)>section:nth-child(2)>section>section>h4 {
     width: 268px;
     position: absolute;
     top: 15px;
@@ -434,7 +445,7 @@ main>section:nth-child(4)>section:nth-child(2)>section>h4 {
     margin: 0;
 }
 
-main>section:nth-child(4)>section:nth-child(2)>section>h5 {
+main>section:nth-child(4)>section:nth-child(2)>section>section>h5 {
     width: 268px;
     position: absolute;
     top: 50px;
@@ -446,7 +457,7 @@ main>section:nth-child(4)>section:nth-child(2)>section>h5 {
     margin: 0;
 }
 
-main>section:nth-child(4)>section:nth-child(2)>section>h6 {
+main>section:nth-child(4)>section:nth-child(2)>section>section>h6 {
     width: 268px;
     position: absolute;
     top: 80px;
@@ -661,42 +672,63 @@ main>section:nth-child(7)>section:first-child>div {
     margin: auto;
 }
 
+/*Contact Area content*/
 main>section:nth-child(7)>section:nth-child(2) {
-    border: 1px solid green;
-    position: relative;
+    position: absolute;
     height: 80%;
-    margin-top: 20px;
+    width: 100%;
 }
-
 
 /*Contact Form Area*/
 main>section:nth-child(7)>section:nth-child(2)>aside {
     border: 1px solid red;
+    width: 50%;
+    height: max-content;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 40px;
     margin-left: 40px;
+}
+
+main>section:nth-child(7)>section:nth-child(2)>aside>form {
+    position: relative;
+}
+
+main>section:nth-child(7)>section:nth-child(2)>aside>form>fieldset {
+    border: none;
+    position: relative;
 }
 
 /*Contact Form labels*/
 main>section:nth-child(7)>section:nth-child(2)>aside>form>fieldset>label {
     position: absolute;
     color: #282823;
-    left: 20px;
+    padding: 10px;
     z-index: 1;
 }
 
 /*Contact Form input fields*/
-main>section:nth-child(7)>section:nth-child(2)>aside>form>fieldset>input {
-    position: absolute;
+main>section:nth-child(7)>section:nth-child(2)>aside>form>fieldset>input,textarea {
     color: #282823;
-    width: 400px;
-    height: 30px;
+    width: 80%;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    outline: 0;
+    border-radius: 10px;
 }
 
 /*Contact form send button*/
-main>section:nth-child(7)>section:nth-child(2)>aside>button {
-    align-items: center;
+main>section:nth-child(7)>section:nth-child(2)>aside>form>button {
+    width: 150px;
+    height: 35px;
+    border-radius: 20px;
+    border: 2px solid grey;
+    position: relative;
+    left: 465px;
+    bottom: 20px;
+    background: orange;
+    color: white;
+    cursor: pointer;
 }
 
 
@@ -750,9 +782,9 @@ main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section>h4 {
 main>section:nth-child(7)>section:nth-child(2)>section:nth-child(3) {
     border: 1px solid red;
     width: max-content;
-    position: relative;
+    position: absolute;
     top: 400px;
-    left: 1120px;
+    right: 180px;
     display: flex;
     flex-direction: row;
 }
