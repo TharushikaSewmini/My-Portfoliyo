@@ -636,6 +636,7 @@ main>section:nth-child(7) {
     height: 720px;
 }
 
+/*Title*/
 main>section:nth-child(7)>section:first-child {
     position: relative;
 }
@@ -648,6 +649,7 @@ main>section:nth-child(7)>section:first-child>h2 {
     margin: 0;
 }
 
+/*Underline*/
 main>section:nth-child(7)>section:first-child>div {
     background: white;
     width: 150px;
@@ -666,6 +668,39 @@ main>section:nth-child(7)>section:nth-child(2) {
     margin-top: 20px;
 }
 
+
+/*Contact Form Area*/
+main>section:nth-child(7)>section:nth-child(2)>aside {
+    border: 1px solid red;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: 40px;
+}
+
+/*Contact Form labels*/
+main>section:nth-child(7)>section:nth-child(2)>aside>form>fieldset>label {
+    position: absolute;
+    color: #282823;
+    left: 20px;
+    z-index: 1;
+}
+
+/*Contact Form input fields*/
+main>section:nth-child(7)>section:nth-child(2)>aside>form>fieldset>input {
+    position: absolute;
+    color: #282823;
+    width: 400px;
+    height: 30px;
+}
+
+/*Contact form send button*/
+main>section:nth-child(7)>section:nth-child(2)>aside>button {
+    align-items: center;
+}
+
+
+/*Contact Details Area*/
 main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2) {
     width: 400px;
     position: absolute;
@@ -681,6 +716,7 @@ main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section {
     position: relative;
 }
 
+/*Contact Details Images*/
 main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section>i {
     color: white;
     position: relative;
@@ -689,6 +725,7 @@ main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section>i {
     font-size: 30px;
 }
 
+/*Contact Details Content Topic*/
 main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section>h3 {
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
@@ -698,6 +735,7 @@ main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section>h3 {
     width: max-content;
 }
 
+/*Contact Details Content*/
 main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section>h4 {
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
@@ -707,19 +745,8 @@ main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section>h4 {
     width: max-content;
 }
 
-main>section:nth-child(7)>section:nth-child(2)>aside {
-    border: 1px solid red;
-    color: white;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin-left: 40px;
-}
 
-main>section:nth-child(7)>section:nth-child(2)>aside>button {
-    align-items: center;
-}
-
+/*Social Media Links*/
 main>section:nth-child(7)>section:nth-child(2)>section:nth-child(3) {
     border: 1px solid red;
     width: max-content;
@@ -730,6 +757,7 @@ main>section:nth-child(7)>section:nth-child(2)>section:nth-child(3) {
     flex-direction: row;
 }
 
+/*Social Media Images*/
 main>section:nth-child(7)>section:nth-child(2)>section:nth-child(3)>div {
     margin: 0 8px 0 8px;
 }
