@@ -1,3 +1,5 @@
+/*===============================================*/
+
 /* Header */
 body>header {
     height: 60px;
@@ -36,14 +38,17 @@ header>nav>ul>li {
 }
 
 /* when nav hover */
-header>nav>ul>li>a:hover {
+header ul>li>a:hover {
     color: #ccffcd;
 }
 
-header ul > li > a {
+/* styles for links */
+header ul>li>a {
     color: white;
     text-decoration: none;
 }
+
+/*===============================================*/
 
 /* Main */
 main {
@@ -52,13 +57,16 @@ main {
 }
 
 
+/*--------------------------------------------------*/
+
 /* Home Page */
-main>section {
+main>section:first-child {
     position: relative;
     /*height: 660px;*/
     height: 90vh;
 }
 
+/* background */
 main>section:first-child>dfn>section:first-child {
     background: #003f7d;
     position: absolute;
@@ -72,6 +80,7 @@ main>section:first-child>dfn>section:first-child {
     border-radius: 20px;
 }
 
+/* Text content Area */
 main>section:first-child>dfn>section:first-child>section:first-child {
     position: relative;
     top: 30px;
@@ -80,32 +89,32 @@ main>section:first-child>dfn>section:first-child>section:first-child {
     height: 350px;
 }
 
+/* Text */
 main>section:first-child>dfn>section:first-child>section:first-child>h1 {
     position: absolute;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-main>section:first-child>dfn>section:first-child>section:first-child>h1:first-child {
+main>section:first-child h1:first-child {
     font-size: 50px;
-    color: white;
     top: 20px;
 }
 
-main>section:first-child>dfn>section:first-child>section:first-child>h1:nth-child(2) {
+main>section:first-child h1:nth-child(2) {
     font-size: 50px;
-    color: white;
     top: 100px;
 }
 
-main>section:first-child>dfn>section:first-child>section:first-child>h1:nth-child(3) {
+main>section:first-child h1:nth-child(3) {
     font-size: 50px;
-    color: #10EFC3;
+    color: #10EFC3 !important;
     top: 100px;
     left: 100px;
 }
 
-main>section:first-child>dfn>section:first-child>section:first-child>h1:nth-child(4) {
+main>section:first-child h1:nth-child(4) {
     font-size: 30px;
-    color: white;
     top: 200px;
 }
 
@@ -151,12 +160,15 @@ main>section:first-child>dfn>section:first-child>section:nth-child(3)>div>img {
 }
 
 
+/*--------------------------------------------------*/
+
 /* About Me */
 main>section:nth-child(2) {
     position: relative;
     height: 700px;
 }
 
+/*Title*/
 main>section:nth-child(2)>section:first-child {
     position: relative;
 }
@@ -193,15 +205,18 @@ main>section:nth-child(2)>section:nth-child(2) {
     border: 1px solid green;
 }
 
+/* Paragraph Area */
 main>section:nth-child(2)>section:nth-child(2)>article {
     margin: 50px 400px 0 40px;
 }
 
+/* paragraph */
 main>section:nth-child(2)>section:nth-child(2)>article>p {
     font-size: 18px;
     font-family: 'Ubuntu', sans-serif;
 }
 
+/* Details box */
 main>section:nth-child(2)>section:nth-child(2)>section {
     border: 2px solid #8E44AD;
     margin: 50px 800px 0 200px;
@@ -209,11 +224,26 @@ main>section:nth-child(2)>section:nth-child(2)>section {
     flex-direction: column;
 }
 
+/* Details */
 main>section:nth-child(2)>section:nth-child(2)>section>pre {
     margin: 10px 0 10px 50px;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     color: #282823;
+}
+
+/* "Download CV" Button */
+main>section:nth-child(2)>section:nth-child(2)>button {
+    width: 150px;
+    height: 35px;
+    border-radius: 20px;
+    border: 2px solid grey;
+    position: absolute;
+    margin-left: 35%;
+    bottom: 100px;
+    background: orangered;
+    color: white;
+    cursor: pointer
 }
 
 /* About Me Image */
@@ -240,6 +270,9 @@ main>section:nth-child(2)>section:nth-child(2)>aside>img {
 
 }
 
+
+/*--------------------------------------------------*/
+
 /* Skills */
 main>section:nth-child(3) {
     position: relative;
@@ -247,6 +280,7 @@ main>section:nth-child(3) {
     background-color: #1D314F;
 }
 
+/*Title*/
 main>section:nth-child(3)>section:first-child {
     position: relative;
 }
@@ -270,6 +304,7 @@ main>section:nth-child(3)>section:first-child>div {
     margin: auto;
 }
 
+/* Languages and Tools Images Area*/
 main>section:nth-child(3)>section:nth-child(2) {
     height: 600px;
     position: relative;
@@ -290,6 +325,7 @@ main>section:nth-child(3)>section:nth-child(2)>div {
     position: relative;
 }
 
+/* Languages and Tools Images */
 main>section:nth-child(3)>section:nth-child(2)>div>img {
     width: 120px;
     height: 120px;
@@ -301,7 +337,8 @@ main>section:nth-child(3)>section:nth-child(2)>div>img {
     margin: auto;
 }
 
-/*testing*/
+
+/*--------------------------------------------------*/
 
 /* Education */
 main>section:nth-child(4) {
@@ -344,6 +381,7 @@ main>section:nth-child(4)>section:nth-child(2) {
     width: 90%;
 }
 
+/* Line and Circles Area */
 main>section:nth-child(4)>section:nth-child(2)>div {
     background-color: #242424;
     position: absolute;
@@ -391,13 +429,14 @@ main>section:nth-child(4)>section:nth-child(2)>div:nth-child(5) {
     border-radius: 100%;
 }
 
+/* Detail Boxes Area */
 main>section:nth-child(4)>section:nth-child(2)>section {
-    border: 2px solid red;
     width: 100%;
     height: 100%;
     position: relative;
 }
 
+/* Detail Box */
 main>section:nth-child(4)>section:nth-child(2)>section>section {
     background-color: #244165;
     position: absolute;
@@ -407,24 +446,25 @@ main>section:nth-child(4)>section:nth-child(2)>section>section {
 }
 
 main>section:nth-child(4)>section:nth-child(2)>section>section:nth-child(1) {
-    left: 280px;
+    left: 20%;
 }
 
 main>section:nth-child(4)>section:nth-child(2)>section>section:nth-child(2) {
-    left: 730px;
+    left: 53%;
     top: 23%;
 }
 
 main>section:nth-child(4)>section:nth-child(2)>section>section:nth-child(3) {
-    left: 280px;
+    left: 20%;
     top: 45%;
 }
 
 main>section:nth-child(4)>section:nth-child(2)>section>section:nth-child(4) {
-    left: 730px;
+    left: 53%;
     top: 70%;
 }
 
+/* Detail Boxes Images */
 main>section:nth-child(4)>section:nth-child(2)>section>section>img {
     width: 65px;
     height: 65px;
@@ -434,41 +474,35 @@ main>section:nth-child(4)>section:nth-child(2)>section>section>img {
     left: 13px;
 }
 
-main>section:nth-child(4)>section:nth-child(2)>section>section>h4 {
-    width: 268px;
+/* Detail Boxes Text */
+main>section:nth-child(4)>section:nth-child(2)>section>section>h4,h5,h6 {
+    width: 75%;
     position: absolute;
-    top: 15px;
     right: 0;
     color: white;
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
     margin: 0;
+}
+
+main>section:nth-child(4)>section:nth-child(2)>section>section>h4 {
+    top: 15px;
+    font-size: 14px;
 }
 
 main>section:nth-child(4)>section:nth-child(2)>section>section>h5 {
-    width: 268px;
-    position: absolute;
     top: 50px;
-    right: 0;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
     font-size: 13px;
     font-style: italic;
-    margin: 0;
 }
 
 main>section:nth-child(4)>section:nth-child(2)>section>section>h6 {
-    width: 268px;
-    position: absolute;
     top: 80px;
-    right: 0;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     font-style: italic;
-    margin: 0;
 }
 
+
+/*--------------------------------------------------*/
 
 /* Services */
 main>section:nth-child(5) {
@@ -477,6 +511,7 @@ main>section:nth-child(5) {
     height: 700px;
 }
 
+/*Title*/
 main>section:nth-child(5)>section:first-child {
     position: relative;
 }
@@ -500,6 +535,7 @@ main>section:nth-child(5)>section:first-child>div {
     margin: auto;
 }
 
+/* Background Area */
 main>section:nth-child(5)>section:nth-child(2) {
     background-color: #1D314F;
     position: absolute;
@@ -515,6 +551,7 @@ main>section:nth-child(5)>section:nth-child(2) {
     justify-content: space-around;
 }
 
+/* Boxes Area */
 main>section:nth-child(5)>section:nth-child(2)>section {
     background-color: #37648b;
     position: relative;
@@ -522,19 +559,23 @@ main>section:nth-child(5)>section:nth-child(2)>section {
     width: 90%;
 }
 
+/* First Box */
 main>section:nth-child(5)>section:nth-child(2)>section:first-child {
     margin-right: 50px;
 }
 
+/* Second Box */
 main>section:nth-child(5)>section:nth-child(2)>section:nth-child(2) {
     margin-left: 50px;
     margin-right: 50px;
 }
 
+/* Third Box */
 main>section:nth-child(5)>section:nth-child(2)>section:nth-child(3) {
     margin-left: 50px;
 }
 
+/* Images */
 main>section:nth-child(5)>section:nth-child(2)>section>img {
     position: absolute;
     top: 50px;
@@ -545,7 +586,8 @@ main>section:nth-child(5)>section:nth-child(2)>section>img {
     height: 80px;
 }
 
-main>section:nth-child(5)>section:nth-child(2)>section>h4 {
+/* Text */
+main>section:nth-child(5)>section:nth-child(2)>section>h1 {
     color: white;
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
@@ -556,7 +598,7 @@ main>section:nth-child(5)>section:nth-child(2)>section>h4 {
     right: 0;
 }
 
-main>section:nth-child(5)>section:nth-child(2)>section>h5 {
+main>section:nth-child(5)>section:nth-child(2)>section>h2 {
     color: white;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
@@ -568,12 +610,15 @@ main>section:nth-child(5)>section:nth-child(2)>section>h5 {
 }
 
 
+/*--------------------------------------------------*/
+
 /* Projects */
 main>section:nth-child(6) {
     position: relative;
     height: 700px;
 }
 
+/*Title*/
 main>section:nth-child(6)>section:first-child {
     position: relative;
 }
@@ -597,6 +642,7 @@ main>section:nth-child(6)>section:first-child>div {
     margin: auto;
 }
 
+/*Projects Area*/
 main>section:nth-child(6)>section:nth-child(2) {
     background-color: #EDF0FF;
     position: absolute;
@@ -612,6 +658,7 @@ main>section:nth-child(6)>section:nth-child(2) {
     justify-content: space-around;
 }
 
+/*Boxes*/
 main>section:nth-child(6)>section:nth-child(2)>section {
     background-color: #37648b;
     position: relative;
@@ -620,6 +667,7 @@ main>section:nth-child(6)>section:nth-child(2)>section {
     border-radius: 20px;
 }
 
+/* Text */
 main>section:nth-child(6)>section:nth-child(2)>section>h1 {
     color: white;
     font-size: 20px;
@@ -629,6 +677,7 @@ main>section:nth-child(6)>section:nth-child(2)>section>h1 {
     top: 20px;
 }
 
+/* Images */
 main>section:nth-child(6)>section:nth-child(2)>section>img {
     position: absolute;
     top: 90px;
@@ -639,6 +688,24 @@ main>section:nth-child(6)>section:nth-child(2)>section>img {
     height: 220px;
 }
 
+/* "View More" Button */
+main>section:nth-child(6)>button {
+    width: 150px;
+    height: 35px;
+    border-radius: 20px;
+    border: 2px solid grey;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 80px;
+    margin: auto;
+    background: purple;
+    color: white;
+    cursor: pointer
+}
+
+
+/*--------------------------------------------------*/
 
 /* Contact */
 main>section:nth-child(7) {
@@ -712,19 +779,18 @@ main>section:nth-child(7)>section:nth-child(2)>aside>form>fieldset>input,textare
     width: 80%;
     border: none;
     padding: 10px;
-    margin-bottom: 10px;
     outline: 0;
     border-radius: 10px;
 }
 
-/*Contact form send button*/
+/*Contact form "Send" button*/
 main>section:nth-child(7)>section:nth-child(2)>aside>form>button {
     width: 150px;
     height: 35px;
     border-radius: 20px;
     border: 2px solid grey;
     position: relative;
-    left: 465px;
+    left: 61%;
     bottom: 20px;
     background: orange;
     color: white;
@@ -740,7 +806,7 @@ main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2) {
     right: 0;
     display: flex;
     flex-direction: column;
-    margin-right: 20px;
+    margin-right: 50px;
 }
 
 main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section {
@@ -799,6 +865,11 @@ main>section:nth-child(7)>section:nth-child(2)>section:nth-child(3)>div>img {
     height: 30px;
 }
 
+* dfn {
+    font-style: normal;
+}
+
+/*===============================================*/
 
 /* Footer */
 footer {
