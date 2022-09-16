@@ -82,11 +82,16 @@ main>section:first-child>dfn>section:first-child {
 
 /* Text content Area */
 main>section:first-child>dfn>section:first-child>section:first-child {
-    position: relative;
-    top: 30px;
-    left: 100px;
+    position: absolute;
+    top: 6.5%;
+    /*left: 100px;
     width: 700px;
-    height: 350px;
+    height: 350px;*/
+
+    width: 52%;
+    height: 74%;
+    margin-left: 7.5%;
+    font-size: 50px;
 }
 
 /* Text */
@@ -94,28 +99,27 @@ main>section:first-child>dfn>section:first-child>section:first-child>h1 {
     position: absolute;
     color: white;
     font-family: 'Ubuntu', sans-serif;
+    /*font-size: 50px;*/
+
+    width: max-content;
+    height: max-content;
+    font-size: 100%;
+    margin: 0;
 }
 
 main>section:first-child h1:first-child {
-    font-size: 50px;
-    top: 20px;
+    top: 16%;
 }
 
 main>section:first-child h1:nth-child(2) {
-    font-size: 50px;
-    top: 100px;
+    color: #10EFC3 !important;
+    top: 36%;
 }
 
 main>section:first-child h1:nth-child(3) {
-    font-size: 50px;
-    color: #10EFC3 !important;
-    top: 100px;
-    left: 100px;
-}
-
-main>section:first-child h1:nth-child(4) {
-    font-size: 30px;
-    top: 200px;
+    /*font-size: 30px;*/
+    font-size: 60%!important;
+    top: 64%;
 }
 
 /* Home Page Images */
@@ -124,19 +128,21 @@ main>section:first-child>dfn>section:first-child>div {
     top: 0;
     bottom: 0;
     right: 0;
+    width: 40%;
+    height: 110%;
 }
 
 main>section:first-child>dfn>section:first-child>div>img:first-child {
     position: absolute;
-    width: 500px;
-    height: 500px;
-    right: -10px;
+    height: 100%;
+    right: -2%;
 }
 
 main>section:first-child>dfn>section:first-child>div>img:nth-child(2) {
-    position: relative;
+    position: absolute;
     right: 0;
-    top: 50px;
+    top: 7.5%;
+    height: 70%;
     z-index: 1;
 }
 
@@ -922,5 +928,21 @@ footer>small {
         font-size: 10px;
     }
 
-    
+    main {
+        margin-top: 85px;
+    }
+
+    main>section:first-child {
+        height: 29vh;
+        /*height: 180px;*/
+        width: 100%;
+    }
+
+    main>section:first-child>dfn>section:first-child {
+        border-radius: 10px;
+    }
+
+    main>section:first-child>dfn>section:first-child>section:first-child {
+        font-size: 10px;
+    }
 }
