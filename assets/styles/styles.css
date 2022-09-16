@@ -889,3 +889,38 @@ footer>small {
     color: white;
     font-family: 'Lato', sans-serif;
 }
+
+
+
+@media all and (max-width:320px) {
+    body>header {
+        height: 85px;
+    }
+
+    header>h2 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 15px;
+    }
+
+    header>nav {
+        top: 35px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: max-content;
+    }
+
+    header>nav>ul {
+        padding: 0;
+    }
+
+    header>nav>ul>li {
+        padding: 0 3px 0 3px;
+        font-size: 10px;
+    }
+
+    
+}
