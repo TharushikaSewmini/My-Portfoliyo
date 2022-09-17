@@ -229,7 +229,7 @@ main>section:nth-child(2)>section:nth-child(2)>section{
 }
 
 main>section:nth-child(2)>section:nth-child(2)>section>article {
-    margin: 50px 0 0 40px;
+    padding: 30px 0 30px 40px;
 }
 
 /* paragraph */
@@ -243,11 +243,13 @@ main>section:nth-child(2)>section:nth-child(2)>section>section {
     position: relative;
     /*width: 31%;*/
     width: max-content;
-    height: 45%;
+    height: max-content;
     border: 2px solid #8E44AD;
     /*margin: 50px 800px 20px 200px;*/
-    margin-left: 14%;
-    margin-top: 3%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -264,14 +266,14 @@ main>section:nth-child(2)>section:nth-child(2)>section>section>pre {
 }
 
 /* "Download CV" Button */
-main>section:nth-child(2)>section:nth-child(2)>button {
+main>section:nth-child(2)>section:nth-child(2)>section>button {
     width: 150px;
     height: 35px;
     border-radius: 20px;
     border: 2px solid grey;
     position: absolute;
-    margin-left: 35%;
-    bottom: 20%;
+    margin-left: 55%;
+    bottom: 105px;
     background: orangered;
     color: white;
     cursor: pointer
@@ -1000,7 +1002,7 @@ footer>small {
 
     /*------------About Me--------------------*/
     main>section:nth-child(2) {
-        height: 150vh;
+        height: 125vh;
         /*height: max-content;*/
         width: 100%;
     }
@@ -1010,18 +1012,20 @@ footer>small {
     }
 
     main>section:nth-child(2)>section:first-child>h2 {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     main>section:nth-child(2)>section:nth-child(2) {
         top: 0;
         position: relative;
         margin-top: 3%;
+        height: 90%;
     }
 
     main>section:nth-child(2)>section:nth-child(2)>aside {
-        width: 80%;
-        height: 245px;
+        width: 75.5%;
+        height: 34%;
+        top: 15px;
         left: 0;
         margin: auto;
     }
@@ -1034,12 +1038,12 @@ footer>small {
     main>section:nth-child(2)>section:nth-child(2)>section {
         width: 100%;
         height: max-content;
-        padding-top: 250px;
+        padding-top: 245px;
         /*position: relative;*/
     }
 
     main>section:nth-child(2)>section:nth-child(2)>section>article {
-        margin: 0;
+        padding: 0;
         width: 100%;
     }
 
@@ -1047,16 +1051,29 @@ footer>small {
         font-size: 13px;
         text-align: center;
         padding: 10px;
-        line-height: 1.5;
+        line-height: 1.8;
     }
 
     main>section:nth-child(2)>section:nth-child(2)>section>section {
-
+        margin: auto;
+        left: 0;
+        right: 0;
+        padding: 10px 0;
     }
 
     main>section:nth-child(2)>section:nth-child(2)>section>section>pre {
         font-size: 13px;
-        padding: 5px 10px;
+        padding: 6px 10px;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>button {
+        top: 665px;
+        margin: auto;
+        left: 0;
+        right: 0;
+        width: 125px;
+        height: 28px;
+        font-size: 80%;
     }
 
 }
