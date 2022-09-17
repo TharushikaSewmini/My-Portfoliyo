@@ -184,8 +184,42 @@ main>section:nth-child(2) {
     height: 95vh;
 }
 
+
+/*All Pages Title*/
+main>section>section:first-child {
+    position: relative;
+}
+
+main>section>section:first-child>h2 {
+    text-align: center;
+    color: darkblue;
+    font-size: 30px;
+    padding-top: 2%;
+    margin: 0;
+}
+
+main>section>section:first-child>div {
+    background: blue;
+    width: 10%;
+    height: 6%;
+    position: absolute;
+    top: 93%;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.t2 {
+    color: white !important;
+}
+
+.u2 {
+    background: white !important;
+}
+
+/*------------------------------------------------------------------------*/
 /*Title*/
-main>section:nth-child(2)>section:first-child {
+/*main>section:nth-child(2)>section:first-child {
     position: relative;
 }
 
@@ -206,7 +240,7 @@ main>section:nth-child(2)>section:first-child>div {
     right: 0;
     left: 0;
     margin: auto;
-}
+}*/
 
 /* About Me Details */
 main>section:nth-child(2)>section:nth-child(2) {
@@ -314,7 +348,7 @@ main>section:nth-child(3) {
 }
 
 /*Title*/
-main>section:nth-child(3)>section:first-child {
+/*main>section:nth-child(3)>section:first-child {
     position: relative;
 }
 
@@ -335,7 +369,7 @@ main>section:nth-child(3)>section:first-child>div {
     right: 0;
     left: 0;
     margin: auto;
-}
+}*/
 
 /* Languages and Tools Images Area*/
 main>section:nth-child(3)>section:nth-child(2) {
@@ -380,7 +414,7 @@ main>section:nth-child(4) {
 }
 
 /* ----title----- */
-main>section:nth-child(4)>section:first-child {
+/*main>section:nth-child(4)>section:first-child {
     position: relative;
 }
 
@@ -412,7 +446,7 @@ main>section:nth-child(4)>section:nth-child(2) {
     margin: auto;
     height: 88%;
     width: 90%;
-}
+}*/
 
 /* Line and Circles Area */
 main>section:nth-child(4)>section:nth-child(2)>div {
@@ -545,7 +579,7 @@ main>section:nth-child(5) {
 }
 
 /*Title*/
-main>section:nth-child(5)>section:first-child {
+/*main>section:nth-child(5)>section:first-child {
     position: relative;
 }
 
@@ -566,7 +600,7 @@ main>section:nth-child(5)>section:first-child>div {
     right: 0;
     left: 0;
     margin: auto;
-}
+}*/
 
 /* Background Area */
 main>section:nth-child(5)>section:nth-child(2) {
@@ -652,7 +686,7 @@ main>section:nth-child(6) {
 }
 
 /*Title*/
-main>section:nth-child(6)>section:first-child {
+/*main>section:nth-child(6)>section:first-child {
     position: relative;
 }
 
@@ -673,7 +707,7 @@ main>section:nth-child(6)>section:first-child>div {
     right: 0;
     left: 0;
     margin: auto;
-}
+}*/
 
 /*Projects Area*/
 main>section:nth-child(6)>section:nth-child(2) {
@@ -748,7 +782,7 @@ main>section:nth-child(7) {
 }
 
 /*Title*/
-main>section:nth-child(7)>section:first-child {
+/*main>section:nth-child(7)>section:first-child {
     position: relative;
 }
 
@@ -761,7 +795,7 @@ main>section:nth-child(7)>section:first-child>h2 {
 }
 
 /*Underline*/
-main>section:nth-child(7)>section:first-child>div {
+/*main>section:nth-child(7)>section:first-child>div {
     background: white;
     width: 150px;
     height: 4px;
@@ -770,7 +804,7 @@ main>section:nth-child(7)>section:first-child>div {
     right: 0;
     left: 0;
     margin: auto;
-}
+}*/
 
 /*Contact Area content*/
 main>section:nth-child(7)>section:nth-child(2) {
@@ -1007,11 +1041,11 @@ footer>small {
         width: 100%;
     }
 
-    main>section:nth-child(2)>section:first-child {
+    main>section>section:first-child {
         padding-top: 10px;
     }
 
-    main>section:nth-child(2)>section:first-child>h2 {
+    main>section>section:first-child>h2 {
         font-size: 30px;
     }
 
@@ -1074,6 +1108,13 @@ footer>small {
         width: 125px;
         height: 28px;
         font-size: 80%;
+    }
+
+    /*------------Skills--------------------*/
+    main>section:nth-child(3) {
+        height: 125vh;
+        /*height: max-content;*/
+        width: 100%;
     }
 
 }
