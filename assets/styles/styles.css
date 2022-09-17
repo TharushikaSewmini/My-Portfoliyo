@@ -222,28 +222,43 @@ main>section:nth-child(2)>section:nth-child(2) {
 }
 
 /* Paragraph Area */
-main>section:nth-child(2)>section:nth-child(2)>article {
-    margin: 50px 400px 0 40px;
+main>section:nth-child(2)>section:nth-child(2)>section{
+    width: 72.5%;
+    height: 100%;
+    position: absolute;
+}
+
+main>section:nth-child(2)>section:nth-child(2)>section>article {
+    margin: 50px 0 0 40px;
 }
 
 /* paragraph */
-main>section:nth-child(2)>section:nth-child(2)>article>p {
+main>section:nth-child(2)>section:nth-child(2)>section>article>p {
     font-size: 18px;
     font-family: 'Ubuntu', sans-serif;
 }
 
 /* Details box */
-main>section:nth-child(2)>section:nth-child(2)>section {
+main>section:nth-child(2)>section:nth-child(2)>section>section {
+    position: relative;
+    /*width: 31%;*/
+    width: max-content;
+    height: 45%;
     border: 2px solid #8E44AD;
-    margin: 50px 800px 0 200px;
+    /*margin: 50px 800px 20px 200px;*/
+    margin-left: 14%;
+    margin-top: 3%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 /* Details */
-main>section:nth-child(2)>section:nth-child(2)>section>pre {
-    margin: 10px 0 10px 50px;
-    font-size: 18px;
+main>section:nth-child(2)>section:nth-child(2)>section>section>pre {
+    /*margin: 10px 50px 10px 50px;*/
+    padding: 10px 40px;
+    margin: 0;
+    font-size: 110%;
     font-family: 'Open Sans', sans-serif;
     color: #282823;
 }
@@ -256,7 +271,7 @@ main>section:nth-child(2)>section:nth-child(2)>button {
     border: 2px solid grey;
     position: absolute;
     margin-left: 35%;
-    bottom: 100px;
+    bottom: 20%;
     background: orangered;
     color: white;
     cursor: pointer
@@ -264,7 +279,7 @@ main>section:nth-child(2)>section:nth-child(2)>button {
 
 /* About Me Image */
 main>section:nth-child(2)>section:nth-child(2)>aside {
-    width: 400px;
+    width: 27.5%;
     height: 100%;
     position: absolute;
     top: 0;
@@ -273,13 +288,13 @@ main>section:nth-child(2)>section:nth-child(2)>aside {
 }
 
 main>section:nth-child(2)>section:nth-child(2)>aside>img {
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: 70%;
     border-radius: 100%;
     position: absolute;
     top: 0;
-    right: 0;
-    left: 0;
+    /*right: 0;
+    left: 0;*/
     bottom: 0;
     margin: auto;
     filter: brightness(84%);
@@ -909,6 +924,7 @@ footer>small {
 
 
 @media all and (max-width:320px) {
+    /*------------Header--------------------*/
     body>header {
         height: 85px;
     }
@@ -938,12 +954,14 @@ footer>small {
         font-size: 10px;
     }
 
+    /*------------Main--------------------*/
     main {
         margin-top: 85px;
     }
 
+    /*------------Home Page--------------------*/
     main>dfn>section:first-child {
-        height: 40vh;
+        height: 35vh;
         /*height: 180px;*/
         width: 100%;
     }
@@ -980,15 +998,65 @@ footer>small {
         height: 16px;
     }
 
+    /*------------About Me--------------------*/
     main>section:nth-child(2) {
-        height: 100vh;
-        /*height: 180px;*/
+        height: 150vh;
+        /*height: max-content;*/
         width: 100%;
-        background: red;
+    }
+
+    main>section:nth-child(2)>section:first-child {
+        padding-top: 10px;
     }
 
     main>section:nth-child(2)>section:first-child>h2 {
         font-size: 20px;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2) {
+        top: 0;
+        position: relative;
+        margin-top: 3%;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>aside {
+        width: 80%;
+        height: 245px;
+        left: 0;
+        margin: auto;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>aside>img {
+        margin: 0;
+        height: 100%;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section {
+        width: 100%;
+        height: max-content;
+        padding-top: 250px;
+        /*position: relative;*/
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>article {
+        margin: 0;
+        width: 100%;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>article>p {
+        font-size: 13px;
+        text-align: center;
+        padding: 10px;
+        line-height: 1.5;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>section {
+
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>section>pre {
+        font-size: 13px;
+        padding: 5px 10px;
     }
 
 }
