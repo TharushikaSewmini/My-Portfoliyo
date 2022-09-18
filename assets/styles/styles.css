@@ -184,42 +184,8 @@ main>section:nth-child(2) {
     height: 95vh;
 }
 
-
-/*All Pages Title*/
-main>section>section:first-child {
-    position: relative;
-}
-
-main>section>section:first-child>h2 {
-    text-align: center;
-    color: darkblue;
-    font-size: 30px;
-    padding-top: 2%;
-    margin: 0;
-}
-
-main>section>section:first-child>div {
-    background: blue;
-    width: 10%;
-    height: 6%;
-    position: absolute;
-    top: 93%;
-    right: 0;
-    left: 0;
-    margin: auto;
-}
-
-.t2 {
-    color: white !important;
-}
-
-.u2 {
-    background: white !important;
-}
-
-/*------------------------------------------------------------------------*/
 /*Title*/
-/*main>section:nth-child(2)>section:first-child {
+main>section:nth-child(2)>section:first-child {
     position: relative;
 }
 
@@ -240,7 +206,7 @@ main>section:nth-child(2)>section:first-child>div {
     right: 0;
     left: 0;
     margin: auto;
-}*/
+}
 
 /* About Me Details */
 main>section:nth-child(2)>section:nth-child(2) {
@@ -343,12 +309,13 @@ main>section:nth-child(2)>section:nth-child(2)>aside>img {
 /* Skills */
 main>section:nth-child(3) {
     position: relative;
-    height: 700px;
+    /*height: 700px;*/
+    height: 90vh;
     background-color: #1D314F;
 }
 
 /*Title*/
-/*main>section:nth-child(3)>section:first-child {
+main>section:nth-child(3)>section:first-child {
     position: relative;
 }
 
@@ -356,46 +323,58 @@ main>section:nth-child(3)>section:first-child>h2 {
     text-align: center;
     color: white;
     font-size: 30px;
-    padding-top: 30px;
+    padding-top: 2%;
     margin: 0;
 }
 
 main>section:nth-child(3)>section:first-child>div {
     background: white;
-    width: 150px;
-    height: 4px;
+    width: 10%;
+    height: 6%;
     position: absolute;
-    top: 60px;
+    top: 93%;
     right: 0;
     left: 0;
     margin: auto;
-}*/
+}
 
 /* Languages and Tools Images Area*/
 main>section:nth-child(3)>section:nth-child(2) {
-    height: 600px;
+    height: 80%;
     position: relative;
     top: 5px;
+    /*height: max-content;*/
+    /*position: absolute;*/
+    /*top: 0px;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*margin: auto;*/
+    /*left: 0;*/
+
     background-color: #1D314F;
     display: flex;
     flex-direction: row;
     align-items: center;
-    align-content: center;
+    /*align-content: center;*/
     justify-content: center;
     flex-wrap: wrap;
 }
 
 main>section:nth-child(3)>section:nth-child(2)>div {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     margin: 40px;
+    /*width: 7.8%;*/
+    /*height: 20%;*/
+    /*margin: 2.6%;*/
+
     position: relative;
 }
 
 /* Languages and Tools Images */
 main>section:nth-child(3)>section:nth-child(2)>div>img {
-    width: 120px;
-    height: 120px;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     right: 0;
@@ -414,7 +393,7 @@ main>section:nth-child(4) {
 }
 
 /* ----title----- */
-/*main>section:nth-child(4)>section:first-child {
+main>section:nth-child(4)>section:first-child {
     position: relative;
 }
 
@@ -446,7 +425,7 @@ main>section:nth-child(4)>section:nth-child(2) {
     margin: auto;
     height: 88%;
     width: 90%;
-}*/
+}
 
 /* Line and Circles Area */
 main>section:nth-child(4)>section:nth-child(2)>div {
@@ -579,7 +558,7 @@ main>section:nth-child(5) {
 }
 
 /*Title*/
-/*main>section:nth-child(5)>section:first-child {
+main>section:nth-child(5)>section:first-child {
     position: relative;
 }
 
@@ -600,7 +579,7 @@ main>section:nth-child(5)>section:first-child>div {
     right: 0;
     left: 0;
     margin: auto;
-}*/
+}
 
 /* Background Area */
 main>section:nth-child(5)>section:nth-child(2) {
@@ -686,7 +665,7 @@ main>section:nth-child(6) {
 }
 
 /*Title*/
-/*main>section:nth-child(6)>section:first-child {
+main>section:nth-child(6)>section:first-child {
     position: relative;
 }
 
@@ -707,7 +686,7 @@ main>section:nth-child(6)>section:first-child>div {
     right: 0;
     left: 0;
     margin: auto;
-}*/
+}
 
 /*Projects Area*/
 main>section:nth-child(6)>section:nth-child(2) {
@@ -782,7 +761,7 @@ main>section:nth-child(7) {
 }
 
 /*Title*/
-/*main>section:nth-child(7)>section:first-child {
+main>section:nth-child(7)>section:first-child {
     position: relative;
 }
 
@@ -795,7 +774,7 @@ main>section:nth-child(7)>section:first-child>h2 {
 }
 
 /*Underline*/
-/*main>section:nth-child(7)>section:first-child>div {
+main>section:nth-child(7)>section:first-child>div {
     background: white;
     width: 150px;
     height: 4px;
@@ -804,7 +783,7 @@ main>section:nth-child(7)>section:first-child>h2 {
     right: 0;
     left: 0;
     margin: auto;
-}*/
+}
 
 /*Contact Area content*/
 main>section:nth-child(7)>section:nth-child(2) {
@@ -1112,9 +1091,19 @@ footer>small {
 
     /*------------Skills--------------------*/
     main>section:nth-child(3) {
-        height: 125vh;
+        height: 100vh;
         /*height: max-content;*/
         width: 100%;
+    }
+
+    main>section:nth-child(3)>section:nth-child(2) {
+        justify-content: space-around;
+    }
+
+    main>section:nth-child(3)>section:nth-child(2)>div {
+        width: 80px;
+        height: 80px;
+        margin: 15px;
     }
 
 }
