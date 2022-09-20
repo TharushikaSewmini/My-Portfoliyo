@@ -657,16 +657,16 @@ main>section:nth-child(6)>section:first-child>h2 {
     text-align: center;
     color: darkblue;
     font-size: 30px;
-    padding-top: 30px;
+    padding-top: 2%;
     margin: 0;
 }
 
 main>section:nth-child(6)>section:first-child>div {
     background: blue;
-    width: 150px;
-    height: 4px;
-    /*position: absolute;*/
-    top: 60px;
+    width: 10%;
+    height: 6%;
+    position: absolute;
+    top: 93%;
     right: 0;
     left: 0;
     margin: auto;
