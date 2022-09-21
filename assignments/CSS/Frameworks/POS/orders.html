@@ -56,17 +56,16 @@
       margin-left: 200px;
     }
 
-    #customerSearch {
+    #itemsForm {
       position: absolute;
       right: 100px;
       left: 900px;
       top: 20px;
     }
 
-    #newCustomerbtn, #viewCustomerbtn {
-      position: absolute;
-      right: 200px;
-      left: 1050px;
+    .btn-primary {
+      position: relative;
+      right: 0px;
     }
 
     #newCustomerbtn {
@@ -158,6 +157,39 @@
     <button type="button" class="btn btn-success">Save</button>
     <button type="button" class="btn btn-primary">Update</button>
     <button type="button" class="btn btn-danger">Delete</button>
+  </section>
+
+  <!--items form-->
+  <section id="itemsForm">
+    <form class="row g-3">
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">Item Code</label>
+        <select id="inputState" class="form-select">
+          <option selected></option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="inputName" class="form-label">Item Name</label>
+        <input type="password" class="form-control" id="inputName">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPrice" class="form-label">Item Price</label>
+        <input type="text" class="form-control" id="inputPrice">
+      </div>
+      <div class="col-md-6">
+        <label for="inputQuantity" class="form-label">Item Quantity</label>
+        <input type="text" class="form-control" id="inputQuantity">
+      </div>
+      <div class="col-md-12">
+        <label for="inputCity" class="form-label">Order Quantity</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>
+    </form>
   </section>
 
 </section>
