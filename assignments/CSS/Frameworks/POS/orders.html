@@ -68,8 +68,10 @@
       right: 0px;
     }
 
-    #newCustomerbtn {
-      top: 100px;
+    #purchaseForm {
+      position: absolute;
+      right: 0px;
+      top: 20px;
     }
 
     #viewCustomerbtn {
@@ -192,7 +194,35 @@
     </form>
   </section>
 
-</section>
+
+  <!--orders form-->
+  <section id="purchaseForm">
+    <div class="mb-3">
+      <label for="formFile" class="form-label">Total : </label>
+    </div>
+    <div class="mb-3">
+      <label for="formFileMultiple" class="form-label">Sub Total : </label>
+    </div>
+    <div class="mb-3">
+      <label for="discount" class="form-label">Discount</label>
+      <input class="form-control" type="text" id="discount">
+    </div>
+    <div class="mb-3">
+      <label for="cash" class="form-label">Cash</label>
+      <input class="form-control" id="cash" type="text">
+    </div>
+    <div class="mb-3">
+      <label for="balance" class="form-label">Balance</label>
+      <input class="form-control" id="balance" type="text">
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Purchase</button>
+    </div>
+  </section>
+
+
+  </section>
 
 
 <!--table-->
