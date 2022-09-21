@@ -29,7 +29,8 @@
     #customerForm {
       font-size: 15px;
       position: relative;
-      margin: 0  800px 0 100px;
+      top: 20px;
+      margin: 0  1150px 0 50px;
     }
 
     h1 {
@@ -48,6 +49,10 @@
       height: 50px;
     }
 
+    .mb-2 {
+      height: 40px;
+    }
+
     .form-label {
       margin: 0;
     }
@@ -56,11 +61,14 @@
       margin-left: 200px;
     }
 
+    .btn-primary {
+      margin-left: 450px;
+    }
+
     #itemsForm {
       position: absolute;
-      right: 100px;
-      left: 900px;
       top: 20px;
+      margin: 0  450px 0 500px;
     }
 
     .btn-primary {
@@ -72,6 +80,7 @@
       position: absolute;
       right: 0px;
       top: 20px;
+      margin: 0  50px 0 1200px;
     }
 
     #viewCustomerbtn {
@@ -79,7 +88,7 @@
     }
 
     #customerTable {
-      margin: 50px 40px 0 40px;
+      margin: 70px 40px 0 40px;
     }
 
     th, td, tr, tbody {
@@ -139,39 +148,50 @@
 
   <!--customer form-->
   <section id="customerForm">
-    <div class="mb-3">
-      <label for="formFile" class="form-label">Customer ID</label>
-      <input class="form-control" type="text" id="formFile">
-    </div>
-    <div class="mb-3">
-      <label for="formFileMultiple" class="form-label">Customer Name</label>
-      <input class="form-control" type="text" id="formFileMultiple" multiple>
-    </div>
-    <div class="mb-3">
-      <label for="formFileDisabled" class="form-label">Customer Address</label>
-      <input class="form-control" type="text" id="formFileDisabled">
-    </div>
-    <div class="mb-3">
-      <label for="formFileSm" class="form-label">Customer Salary</label>
-      <input class="form-control" id="formFileSm" type="text">
-    </div>
+      <form class="row g-2">
+        <div class="col-md-6">
+          <label for="orderID" class="form-label">Order ID</label>
+          <input type="password" class="form-control" id="orderID">
+        </div>
+        <div class="col-md-6">
+          <label for="orderDate" class="form-label">Order Date</label>
+          <input type="password" class="form-control" id="orderDate">
+        </div>
+        <div class="col-md-12">
+          <label for="inputCustomerID" class="form-label">Customer ID</label>
+          <select id="inputCustomerID" class="form-select">
+            <option selected></option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="col-md-12">
+          <label for="inputPrice" class="form-label">Customer Name</label>
+          <input type="text" class="form-control" id="customerName">
+        </div>
+        <div class="col-md-12">
+          <label for="customerAddress" class="form-label">Customer Address</label>
+          <input type="text" class="form-control" id="customerAddress">
+        </div>
+        <div class="col-md-12">
+          <label for="customerSalary" class="form-label">Customer Salary</label>
+          <input type="text" class="form-control" id="customerSalary">
+        </div>
 
-    <button type="button" class="btn btn-success">Save</button>
-    <button type="button" class="btn btn-primary">Update</button>
-    <button type="button" class="btn btn-danger">Delete</button>
+      </form>
+
   </section>
 
   <!--items form-->
   <section id="itemsForm">
-    <form class="row g-3">
-      <div class="col-md-4">
+    <form class="row g-4">
+      <div class="col-md-5">
         <label for="inputState" class="form-label">Item Code</label>
         <select id="inputState" class="form-select">
           <option selected></option>
           <option>...</option>
         </select>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-7">
         <label for="inputName" class="form-label">Item Name</label>
         <input type="password" class="form-control" id="inputName">
       </div>
@@ -189,7 +209,7 @@
       </div>
 
       <div class="col-12">
-        <button type="submit" class="btn btn-primary">Sign in</button>
+        <button type="submit" class="btn btn-primary">Add Item</button>
       </div>
     </form>
   </section>
@@ -197,11 +217,11 @@
 
   <!--orders form-->
   <section id="purchaseForm">
-    <div class="mb-3">
-      <label for="formFile" class="form-label">Total : </label>
+    <div class="mb-2" style="color: blue; font-size: 25px;">
+      <label class="form-label">Total : </label>
     </div>
-    <div class="mb-3">
-      <label for="formFileMultiple" class="form-label">Sub Total : </label>
+    <div class="mb-2" style="color: red; font-size: 25px;">
+      <label class="form-label">Sub Total : </label>
     </div>
     <div class="mb-3">
       <label for="discount" class="form-label">Discount</label>
@@ -217,7 +237,7 @@
     </div>
 
     <div class="col-12">
-      <button type="submit" class="btn btn-primary">Purchase</button>
+      <button type="submit" class="btn btn-success">Purchase</button>
     </div>
   </section>
 
@@ -230,36 +250,34 @@
   <table class="table">
     <thead style="background-color: #8E44AD; color: white;">
     <tr>
-      <th scope="col">Customer ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Address</th>
-      <th scope="col">Salary</th>
+      <th scope="col">Item Code</th>
+      <th scope="col">Item Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Total</th>
     </tr>
     </thead>
     <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>Nimal</td>
-      <td>Kalautara</td>
-      <td>25000.00</td>
+      <th scope="row">P001</th>
+      <td>Cake</td>
+      <td>400.00</td>
+      <td>5</td>
+      <td>2000.00</td>
     </tr>
     <tr>
-      <th scope="row">2</th>
-      <td>Kamal</td>
-      <td>Colombo</td>
-      <td>30000.00</td>
+      <th scope="row">P002</th>
+      <td>Biscuit</td>
+      <td>200.00</td>
+      <td>10</td>
+      <td>2000.00</td>
     </tr>
     <tr>
-      <th scope="row">3</th>
-      <td>Jayani</td>
-      <td>Mathugama</td>
-      <td>45000.00</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>Amal</td>
-      <td>Agalawtta</td>
-      <td>35000.00</td>
+      <th scope="row">P003</th>
+      <td>Bun</td>
+      <td>100.00</td>
+      <td>6</td>
+      <td>600.00</td>
     </tr>
     </tbody>
   </table>
