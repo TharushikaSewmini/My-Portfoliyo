@@ -8,10 +8,19 @@
 
   <link href="../assests/css/bootstrap.min.css" rel="stylesheet">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../assets/css/css/all.min.css">
+
   <style>
 
     .navbar-expand-lg {
       box-shadow: 1px 2px 3px grey;
+    }
+
+    .navbar-text {
+      padding: 0;
     }
 
     .breadcrumb {
@@ -49,10 +58,6 @@
       height: 50px;
     }
 
-    .mb-2 {
-      height: 40px;
-    }
-
     .form-label {
       margin: 0;
     }
@@ -81,10 +86,6 @@
       right: 0px;
       top: 20px;
       margin: 0  50px 0 1200px;
-    }
-
-    #viewCustomerbtn {
-      top: 150px;
     }
 
     #customerTable {
@@ -126,6 +127,38 @@
         </li>
 
       </ul>
+
+      <!--navbar sign up,log out-->
+      <span class="navbar-text">
+                <div class="collapse navbar-collapse" id="navbarSideContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item" style="color: black">
+                            <i class="fa-solid fa-user"></i>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+
+      <span class="navbar-text">
+                <div class="collapse navbar-collapse" id="navbarSideContent2" style="margin-left: 20px;">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item" style="color: black">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Log Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+
     </div>
   </div>
 </nav>
@@ -155,7 +188,7 @@
         </div>
         <div class="col-md-6">
           <label for="orderDate" class="form-label">Order Date</label>
-          <input type="password" class="form-control" id="orderDate">
+          <input type="date" class="form-control" id="orderDate">
         </div>
         <div class="col-md-12">
           <label for="inputCustomerID" class="form-label">Customer ID</label>
@@ -217,10 +250,10 @@
 
   <!--orders form-->
   <section id="purchaseForm">
-    <div class="mb-2" style="color: blue; font-size: 25px;">
+    <div class="mb-2" style="color: blue; font-size: 25px; height: 40px;">
       <label class="form-label">Total : </label>
     </div>
-    <div class="mb-2" style="color: red; font-size: 25px;">
+    <div class="mb-2" style="color: red; font-size: 25px; height: 40px;">
       <label class="form-label">Sub Total : </label>
     </div>
     <div class="mb-3">
@@ -247,7 +280,7 @@
 
 <!--table-->
 <section id="customerTable" class="justify-content-center">
-  <table class="table">
+  <table class="table table-striped">
     <thead style="background-color: #8E44AD; color: white;">
     <tr>
       <th scope="col">Item Code</th>
@@ -259,21 +292,21 @@
     </thead>
     <tbody>
     <tr>
-      <th scope="row">P001</th>
+      <td scope="row">P001</td>
       <td>Cake</td>
       <td>400.00</td>
       <td>5</td>
       <td>2000.00</td>
     </tr>
     <tr>
-      <th scope="row">P002</th>
+      <td scope="row">P002</td>
       <td>Biscuit</td>
       <td>200.00</td>
       <td>10</td>
       <td>2000.00</td>
     </tr>
     <tr>
-      <th scope="row">P003</th>
+      <td scope="row">P003</td>
       <td>Bun</td>
       <td>100.00</td>
       <td>6</td>

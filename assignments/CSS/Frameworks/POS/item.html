@@ -8,10 +8,19 @@
 
     <link href="../assests/css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../assets/css/css/all.min.css">
+
     <style>
 
         .navbar-expand-lg {
             box-shadow: 1px 2px 3px grey;
+        }
+
+        .navbar-text {
+            padding: 0;
         }
 
         .breadcrumb {
@@ -116,6 +125,38 @@
                 </li>
 
             </ul>
+
+            <!--navbar sign up,log out-->
+            <span class="navbar-text">
+                <div class="collapse navbar-collapse" id="navbarSideContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item" style="color: black">
+                            <i class="fa-solid fa-user"></i>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+
+            <span class="navbar-text">
+                <div class="collapse navbar-collapse" id="navbarSideContent2" style="margin-left: 20px;">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item" style="color: black">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Log Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+
         </div>
     </div>
 </nav>
@@ -176,7 +217,7 @@
 
 <!--table-->
 <section id="itemTable" class="justify-content-center">
-    <table class="table">
+    <table class="table table-striped">
         <thead style="background-color: #8E44AD; color: white;">
         <tr>
             <th scope="col">Item Code</th>
@@ -187,25 +228,25 @@
         </thead>
         <tbody>
         <tr>
-            <th scope="row">P001</th>
+            <td scope="row">P001</td>
             <td>Cake</td>
             <td>400.00</td>
             <td>50</td>
         </tr>
         <tr>
-            <th scope="row">P002</th>
+            <td scope="row">P002</td>
             <td>Biscuit</td>
             <td>200.00</td>
             <td>100</td>
         </tr>
         <tr>
-            <th scope="row">P003</th>
+            <td scope="row">P003</td>
             <td>Bun</td>
             <td>100.00</td>
             <td>60</td>
         </tr>
         <tr>
-            <th scope="row">P004</th>
+            <td scope="row">P004</td>
             <td>Milo</td>
             <td>250.00</td>
             <td>30</td>
