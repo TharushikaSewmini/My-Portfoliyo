@@ -8,9 +8,66 @@
 
     <link href="../assests/css/bootstrap.min.css" rel="stylesheet">
 
+    <style>
+
+        .navbar-expand-lg {
+            box-shadow: 1px 2px 3px grey;
+        }
+
+        .breadcrumb {
+            position: relative;
+            color: blue;
+            top: 0;
+            border: 1px solid grey;
+            margin: 0;
+        }
+
+        .breadcrumb-item {
+            text-decoration: none;
+        }
+
+        #customerForm {
+            width: 500px;
+            height: 300px;
+            font-size: 15px;
+            position: relative;
+            margin-left: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            position: relative;
+            top: 0;
+        }
+
+        #content {
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .mb-3 {
+            height: 50px;
+        }
+
+        .form-label {
+            margin: 0;
+        }
+
+        #customerSearch {
+            position: absolute;
+            right: 100px;
+            top: 0px;
+        }
+
+
+
+
+    </style>
+
 </head>
 <body>
 
+<!--navbar-->
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">POS</a>
@@ -67,37 +124,59 @@
 <!--                    <a class="nav-link disabled">Disabled</a>-->
 <!--                </li>-->
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
         </div>
     </div>
 </nav>
 
 
-<div class="mb-3">
-    <label for="formFile" class="form-label">Customer ID</label>
-    <input class="form-control" type="text" id="formFile">
-</div>
-<div class="mb-3">
-    <label for="formFileMultiple" class="form-label">Customer Name</label>
-    <input class="form-control" type="text" id="formFileMultiple" multiple>
-</div>
-<div class="mb-3">
-    <label for="formFileDisabled" class="form-label">Customer Address</label>
-    <input class="form-control" type="text" id="formFileDisabled">
-</div>
-<div class="mb-3">
-    <label for="formFileSm" class="form-label">Customer Salary</label>
-    <input class="form-control" id="formFileSm" type="text">
-</div>
+<!--breadcrumb-->
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Customer</li>
+    </ol>
+</nav>
 
 
-<button type="button" class="btn btn-success">Save</button>
-<button type="button" class="btn btn-primary">Update</button>
-<button type="button" class="btn btn-danger">Delete</button>
+<!--title-->
+<h1>Customer</h1>
 
+
+<!--customer form-->
+<section id="content">
+    <section id="customerForm">
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Customer ID</label>
+            <input class="form-control" type="text" id="formFile">
+        </div>
+        <div class="mb-3">
+            <label for="formFileMultiple" class="form-label">Customer Name</label>
+            <input class="form-control" type="text" id="formFileMultiple" multiple>
+        </div>
+        <div class="mb-3">
+            <label for="formFileDisabled" class="form-label">Customer Address</label>
+            <input class="form-control" type="text" id="formFileDisabled">
+        </div>
+        <div class="mb-3">
+            <label for="formFileSm" class="form-label">Customer Salary</label>
+            <input class="form-control" id="formFileSm" type="text">
+        </div>
+
+        <button type="button" class="btn btn-success">Save</button>
+        <button type="button" class="btn btn-primary">Update</button>
+        <button type="button" class="btn btn-danger">Delete</button>
+    </section>
+
+
+    <!--search-->
+    <aside id="customerSearch">
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </aside>
+
+</section>
 
 <script src="../assests/js/bootstrap.min.js"></script>
 </body>
