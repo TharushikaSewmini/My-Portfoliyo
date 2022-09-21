@@ -3,8 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <title>POS Items Form</title>
+
+    <meta content="width=device-width initial-scale=1" name="viewport">
+
+    <link href="../assests/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        .navbar-expand-lg {
+            box-shadow: 1px 2px 3px grey;
+        }
+
+        .breadcrumb {
+            position: relative;
+            color: blue;
+            top: 0;
+            border: 1px solid grey;
+            margin: 0;
+        }
+
+        .breadcrumb-item {
+            text-decoration: none;
+        }
+
+        #customerForm {
+            font-size: 15px;
+            position: relative;
+            margin: 0  800px 0 100px;
+        }
+
+        h1 {
+            text-align: center;
+            position: relative;
+            top: 0;
+            color: #34495e;
+        }
+
+        #content {
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .mb-3 {
+            height: 50px;
+        }
+
+        .form-label {
+            margin: 0;
+        }
+
+        .btn-success {
+            margin-left: 200px;
+        }
+
+        #itemSearch {
+            position: absolute;
+            right: 100px;
+            left: 900px;
+            top: 20px;
+        }
+
+        #newItembtn, #viewItembtn {
+            position: absolute;
+            right: 200px;
+            left: 1050px;
+        }
+
+        #newItembtn {
+            top: 100px;
+        }
+
+        #viewItembtn {
+            top: 150px;
+        }
+
+        #itemTable {
+            margin: 50px 40px 0 40px;
+        }
+
+        th, td, tr, tbody {
+            border: 1px solid #dbe3e7 !important;
+        }
+
+
+    </style>
+
 </head>
 <body>
+<!--navbar-->
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">POS System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
 
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Customer</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Items</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Orders</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!--breadcrumb-->
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Items</li>
+    </ol>
+</nav>
+
+
+<!--title-->
+<h1>Items</h1>
+
+
+<!--customer form-->
+<section id="content">
+    <section id="customerForm">
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Item Code</label>
+            <input class="form-control" type="text" id="formFile">
+        </div>
+        <div class="mb-3">
+            <label for="formFileMultiple" class="form-label">Item Name</label>
+            <input class="form-control" type="text" id="formFileMultiple" multiple>
+        </div>
+        <div class="mb-3">
+            <label for="formFileDisabled" class="form-label">Item Price</label>
+            <input class="form-control" type="text" id="formFileDisabled">
+        </div>
+        <div class="mb-3">
+            <label for="formFileSm" class="form-label">Item Quantity</label>
+            <input class="form-control" id="formFileSm" type="text">
+        </div>
+
+        <button type="button" class="btn btn-success">Save</button>
+        <button type="button" class="btn btn-primary">Update</button>
+        <button type="button" class="btn btn-danger">Delete</button>
+    </section>
+
+
+    <!--search-->
+    <aside id="itemSearch">
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Input Item ID/Name" aria-label="Search">
+            <button class="btn btn-secondary" type="submit" style="color: white;">Search</button>
+        </form>
+    </aside>
+
+    <button type="button" class="btn btn-info" id="newItembtn">New Item</button>
+    <button type="button" class="btn btn-warning" id="viewItembtn">View All Items</button>
+
+</section>
+
+
+<!--table-->
+<section id="itemTable" class="justify-content-center">
+    <table class="table">
+        <thead style="background-color: #8E44AD; color: white;">
+        <tr>
+            <th scope="col">Item Code</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">P001</th>
+            <td>Cake</td>
+            <td>400.00</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <th scope="row">P002</th>
+            <td>Biscuit</td>
+            <td>200.00</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <th scope="row">P003</th>
+            <td>Bun</td>
+            <td>100.00</td>
+            <td>60</td>
+        </tr>
+        <tr>
+            <th scope="row">P004</th>
+            <td>Milo</td>
+            <td>250.00</td>
+            <td>30</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+<script src="../assests/js/bootstrap.min.js"></script>
 </body>
 </html>
