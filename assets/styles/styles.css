@@ -735,7 +735,7 @@ main>section:nth-child(6)>section:nth-child(2)>button {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 80px;
+    bottom: 30px;
     margin: auto;
     background: purple;
     color: white;
@@ -761,17 +761,17 @@ main>section:nth-child(7)>section:first-child>h2 {
     text-align: center;
     color: white;
     font-size: 30px;
-    padding-top: 30px;
+    padding-top: 2%;
     margin: 0;
 }
 
 /*Underline*/
 main>section:nth-child(7)>section:first-child>div {
     background: white;
-    width: 150px;
-    height: 4px;
+    width: 10%;
+    height: 6%;
     position: absolute;
-    top: 60px;
+    top: 93%;
     right: 0;
     left: 0;
     margin: auto;
@@ -779,7 +779,7 @@ main>section:nth-child(7)>section:first-child>div {
 
 /*Contact Area content*/
 main>section:nth-child(7)>section:nth-child(2) {
-    position: absolute;
+    position: relative;
     height: 80%;
     width: 100%;
 }
@@ -789,7 +789,7 @@ main>section:nth-child(7)>section:nth-child(2)>aside {
     border: 1px solid red;
     width: 50%;
     height: max-content;
-    position: absolute;
+    position: relative;
     top: 40px;
     margin-left: 40px;
 }
@@ -814,11 +814,15 @@ main>section:nth-child(7)>section:nth-child(2)>aside>form>fieldset>label {
 /*Contact Form input fields*/
 main>section:nth-child(7)>section:nth-child(2)>aside>form>fieldset>input,textarea {
     color: #282823;
-    width: 80%;
+    width: 100%;
     border: none;
-    padding: 10px;
+    /*padding: 10px;*/
     outline: 0;
     border-radius: 10px;
+}
+
+main>section:nth-child(7)>section:nth-child(2)>aside>form>fieldset>input {
+    height: 35px;
 }
 
 /*Contact form "Send" button*/
@@ -1195,5 +1199,23 @@ footer>small {
         width: 125px;
         height: 28px;
         font-size: 80%;
+    }
+
+    /*------------Contact--------------------*/
+    main>section:nth-child(7) {
+        height: 135vh;
+        /*height: max-content;*/
+        width: 100%;
+    }
+
+    main>section:nth-child(7)>section:nth-child(2) {
+        width: 100%;
+    }
+
+    main>section:nth-child(7)>section:nth-child(2)>aside {
+        width: 90%;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
 }
