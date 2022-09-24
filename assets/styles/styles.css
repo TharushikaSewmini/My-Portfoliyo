@@ -788,7 +788,7 @@ main>section:nth-child(7)>section:nth-child(2) {
 main>section:nth-child(7)>section:nth-child(2)>aside {
     border: 1px solid red;
     width: 50%;
-    height: max-content;
+    height: 72%;
     position: relative;
     top: 40px;
     margin-left: 40px;
@@ -796,11 +796,15 @@ main>section:nth-child(7)>section:nth-child(2)>aside {
 
 main>section:nth-child(7)>section:nth-child(2)>aside>form {
     position: relative;
+    height: 100%;
 }
 
 main>section:nth-child(7)>section:nth-child(2)>aside>form>fieldset {
     border: none;
     position: relative;
+    height: 85%;
+    padding-bottom: 0;
+    font-size: 100%;
 }
 
 /*Contact Form labels*/
@@ -815,6 +819,7 @@ main>section:nth-child(7)>section:nth-child(2)>aside>form>fieldset>label {
 main>section:nth-child(7)>section:nth-child(2)>aside>form>fieldset>input,textarea {
     color: #282823;
     width: 100%;
+    height: 45%;
     border: none;
     /*padding: 10px;*/
     outline: 0;
@@ -822,7 +827,7 @@ main>section:nth-child(7)>section:nth-child(2)>aside>form>fieldset>input,textare
 }
 
 main>section:nth-child(7)>section:nth-child(2)>aside>form>fieldset>input {
-    height: 35px;
+    height: 10%;
 }
 
 /*Contact form "Send" button*/
@@ -831,9 +836,10 @@ main>section:nth-child(7)>section:nth-child(2)>aside>form>button {
     height: 35px;
     border-radius: 20px;
     border: 2px solid grey;
-    position: relative;
-    left: 61%;
-    bottom: 20px;
+    position: absolute;
+    right: 5%;
+    /*left: 61%;*/
+    /*bottom: 20px;*/
     background: orange;
     color: white;
     cursor: pointer;
@@ -842,7 +848,7 @@ main>section:nth-child(7)>section:nth-child(2)>aside>form>button {
 
 /*Contact Details Area*/
 main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2) {
-    width: 400px;
+    width: 27%;
     position: absolute;
     top: 50px;
     right: 0;
@@ -852,26 +858,30 @@ main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2) {
 }
 
 main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section {
-    height: 100px;
-    position: relative;
+    height: 100%;
+    width: 100%;
+    /*position: relative;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /*Contact Details Images*/
-main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section>i {
+main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section>pre>i {
     color: white;
     position: relative;
-    top: 28px;
-    left: 20px;
+    /*top: 28px;*/
+    /*left: 20px;*/
     font-size: 30px;
 }
 
 /*Contact Details Content Topic*/
-main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section>h3 {
+main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section>pre {
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     color: #1ABC9C;
     position: relative;
-    margin: 0 0 0 65px;
+    /*margin: 0 0 0 65px;*/
     width: max-content;
 }
 
@@ -881,8 +891,9 @@ main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section>h4 {
     font-family: 'Open Sans', sans-serif;
     color: white;
     position: relative;
-    margin: 0 0 0 65px;
-    width: max-content;
+    padding-left: 25px;
+    padding-bottom: 40px;
+    margin: 0;
 }
 
 
@@ -1214,8 +1225,42 @@ footer>small {
 
     main>section:nth-child(7)>section:nth-child(2)>aside {
         width: 90%;
+        height: 50%;
         left: 0;
         right: 0;
+        margin: auto;
+    }
+
+    main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2) {
+        position: relative;
+        width: 100%;
+        align-items: center;
+        top: 40px;
+    }
+
+    main>section:nth-child(7)>section:nth-child(2)>aside>form>fieldset {
+        font-size: 3.8vw;
+    }
+
+    main>section:nth-child(7)>section:nth-child(2)>aside>form>button {
+        width: 125px;
+        height: 28px;
+        font-size: 80%;
+    }
+
+    main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section {
+        align-items: center;
+    }
+
+    main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2)>section>h4 {
+        text-align: center;
+        padding-right: 25px;
+        padding-bottom: 25px;
+    }
+
+    main>section:nth-child(7)>section:nth-child(2)>section:nth-child(3) {
+        right: 0;
+        left: 0;
         margin: auto;
     }
 }
