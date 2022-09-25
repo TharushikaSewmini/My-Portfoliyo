@@ -23,13 +23,13 @@
             margin: 0;
         }
 
-        #customerForm {
+        #customerForm, #itemForm {
             font-size: 15px;
             position: relative;
             margin: 0  800px 0 100px;
         }
 
-        #content {
+        #customerContent, #itemContent {
             position: relative;
             margin-top: 20px;
         }
@@ -46,28 +46,28 @@
             margin-left: 200px;
         }
 
-        #customerSearch {
+        #customerSearch, #itemSearch {
             position: absolute;
             right: 100px;
             left: 900px;
             top: 20px;
         }
 
-        #newCustomerbtn, #viewCustomerbtn {
+        #newCustomerbtn, #viewCustomerbtn, #newItembtn, #viewItembtn {
             position: absolute;
             right: 200px;
             left: 1050px;
         }
 
-        #newCustomerbtn {
+        #newCustomerbtn, #newItembtn {
             top: 100px;
         }
 
-        #viewCustomerbtn {
+        #viewCustomerbtn, #viewItembtn {
             top: 150px;
         }
 
-        #customerTable {
+        #customerTable, #itemTable {
             margin: 50px 40px 0 40px;
         }
 
@@ -147,98 +147,200 @@
     <div class="row">
         <img src="../../CSS/Frameworks/assests/images/supermarket.jpg" class="img-fluid" alt="...">
     </div>
-</main>
 
-<!--breadcrumb-->
-<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-    <ol class="breadcrumb" style="color: blue; border: 1px solid grey;">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Customer</li>
-    </ol>
-</nav>
+    <!--Customer Page-->
+    <section id="#customerPage">
+        <!--breadcrumb-->
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb" style="color: blue; border: 1px solid grey;">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Customer</li>
+            </ol>
+        </nav>
 
-<!--title-->
-<h1 style="text-align: center; color: #34495e;">Customer</h1>
+        <!--title-->
+        <h1 style="text-align: center; color: #34495e;">Customer</h1>
 
 
-<!--customer form-->
-<section id="content">
-    <section id="customerForm">
-        <div class="mb-3">
-            <label for="formFile" class="form-label">Customer ID</label>
-            <input class="form-control" type="text" id="formFile">
-        </div>
-        <div class="mb-3">
-            <label for="formFileMultiple" class="form-label">Customer Name</label>
-            <input class="form-control" type="text" id="formFileMultiple" multiple>
-        </div>
-        <div class="mb-3">
-            <label for="formFileDisabled" class="form-label">Customer Address</label>
-            <input class="form-control" type="text" id="formFileDisabled">
-        </div>
-        <div class="mb-3">
-            <label for="formFileSm" class="form-label">Customer Salary</label>
-            <input class="form-control" id="formFileSm" type="text">
-        </div>
+        <!--customer form-->
+        <section id="customerContent">
+            <section id="customerForm">
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Customer ID</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+                <div class="mb-3">
+                    <label for="formFileMultiple" class="form-label">Customer Name</label>
+                    <input class="form-control" type="text" id="formFileMultiple" multiple>
+                </div>
+                <div class="mb-3">
+                    <label for="formFileDisabled" class="form-label">Customer Address</label>
+                    <input class="form-control" type="text" id="formFileDisabled">
+                </div>
+                <div class="mb-3">
+                    <label for="formFileSm" class="form-label">Customer Salary</label>
+                    <input class="form-control" id="formFileSm" type="text">
+                </div>
 
-        <button type="button" class="btn btn-success">Save</button>
-        <button type="button" class="btn btn-primary">Update</button>
-        <button type="button" class="btn btn-danger">Delete</button>
+                <button type="button" class="btn btn-success">Save</button>
+                <button type="button" class="btn btn-primary">Update</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </section>
+
+            <!--search-->
+            <aside id="customerSearch">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Input Customer ID/Name" aria-label="Search">
+                    <button class="btn btn-secondary" type="submit" style="color: white;">Search</button>
+                </form>
+            </aside>
+
+            <button type="button" class="btn btn-info" id="newCustomerbtn">New Customer</button>
+            <button type="button" class="btn btn-warning" id="viewCustomerbtn">View All Customers</button>
+
+        </section>
+
+        <!--table-->
+        <section id="customerTable" class="justify-content-center">
+            <table class="table table-striped">
+                <thead style="background-color: #8E44AD; color: white;">
+                <tr>
+                    <th scope="col">Customer ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Salary</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td scope="row">C001</td>
+                    <td>Nimal</td>
+                    <td>Kalautara</td>
+                    <td>25000.00</td>
+                </tr>
+                <tr>
+                    <td scope="row">C002</td>
+                    <td>Kamal</td>
+                    <td>Colombo</td>
+                    <td>30000.00</td>
+                </tr>
+                <tr>
+                    <td scope="row">C003</td>
+                    <td>Jayani</td>
+                    <td>Mathugama</td>
+                    <td>45000.00</td>
+                </tr>
+                <tr>
+                    <td scope="row">C004</td>
+                    <td>Amal</td>
+                    <td>Agalawtta</td>
+                    <td>35000.00</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
     </section>
 
-    <!--search-->
-    <aside id="customerSearch">
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Input Customer ID/Name" aria-label="Search">
-            <button class="btn btn-secondary" type="submit" style="color: white;">Search</button>
-        </form>
-    </aside>
 
-    <button type="button" class="btn btn-info" id="newCustomerbtn">New Customer</button>
-    <button type="button" class="btn btn-warning" id="viewCustomerbtn">View All Customers</button>
 
-</section>
 
-<!--table-->
-<section id="customerTable" class="justify-content-center">
-    <table class="table table-striped">
-        <thead style="background-color: #8E44AD; color: white;">
-        <tr>
-            <th scope="col">Customer ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Address</th>
-            <th scope="col">Salary</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td scope="row">C001</td>
-            <td>Nimal</td>
-            <td>Kalautara</td>
-            <td>25000.00</td>
-        </tr>
-        <tr>
-            <td scope="row">C002</td>
-            <td>Kamal</td>
-            <td>Colombo</td>
-            <td>30000.00</td>
-        </tr>
-        <tr>
-            <td scope="row">C003</td>
-            <td>Jayani</td>
-            <td>Mathugama</td>
-            <td>45000.00</td>
-        </tr>
-        <tr>
-            <td scope="row">C004</td>
-            <td>Amal</td>
-            <td>Agalawtta</td>
-            <td>35000.00</td>
-        </tr>
-        </tbody>
-    </table>
-</section>
+    <!--Items Page-->
+    <section id="#itemPage">
+        <!--breadcrumb-->
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Items</li>
+            </ol>
+        </nav>
 
+
+        <!--title-->
+        <h1 style="text-align: center; color: #34495e;">Items</h1>
+
+
+        <!--item form-->
+        <section id="itemContent">
+            <section id="itemForm">
+                <div class="mb-3">
+                    <label for="itemCode" class="form-label">Item Code</label>
+                    <input class="form-control" type="text" id="itemCode">
+                </div>
+                <div class="mb-3">
+                    <label for="itemName" class="form-label">Item Name</label>
+                    <input class="form-control" type="text" id="itemName" multiple>
+                </div>
+                <div class="mb-3">
+                    <label for="itemPrice" class="form-label">Item Price</label>
+                    <input class="form-control" type="text" id="itemPrice">
+                </div>
+                <div class="mb-3">
+                    <label for="itemQuantity" class="form-label">Item Quantity</label>
+                    <input class="form-control" id="itemQuantity" type="text">
+                </div>
+
+                <button type="button" class="btn btn-success">Save</button>
+                <button type="button" class="btn btn-primary">Update</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </section>
+
+
+            <!--search-->
+            <aside id="itemSearch">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Input Item ID/Name" aria-label="Search">
+                    <button class="btn btn-secondary" type="submit" style="color: white;">Search</button>
+                </form>
+            </aside>
+
+            <button type="button" class="btn btn-info" id="newItembtn">New Item</button>
+            <button type="button" class="btn btn-warning" id="viewItembtn">View All Items</button>
+
+        </section>
+
+
+        <!--table-->
+        <section id="itemTable" class="justify-content-center">
+            <table class="table table-striped">
+                <thead style="background-color: #8E44AD; color: white;">
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td scope="row">P001</td>
+                    <td>Cake</td>
+                    <td>400.00</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td scope="row">P002</td>
+                    <td>Biscuit</td>
+                    <td>200.00</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td scope="row">P003</td>
+                    <td>Bun</td>
+                    <td>100.00</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td scope="row">P004</td>
+                    <td>Milo</td>
+                    <td>250.00</td>
+                    <td>30</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+
+</main>
 
 <script src="assets/js/bootstrap.min.js"></script>
 </body>
