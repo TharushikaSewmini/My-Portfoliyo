@@ -85,10 +85,6 @@
             margin: 0  1150px 0 50px;
         }
 
-        /*.btn-primary {*/
-        /*    margin-left: 450px;*/
-        /*}*/
-
         #orderItemsForm {
             position: absolute;
             top: 20px;
@@ -120,26 +116,26 @@
 <!--navbar-->
 <nav class="navbar navbar-expand-lg bg-light" style="box-shadow: 1px 2px 3px grey;" >
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">POS System</a>
+        <a class="navbar-brand" href="#" style="color: #2980b9">POS System</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <li class="nav-item" style="">
+                    <a class="nav-link active" aria-current="page" id="linkHome" href="#">Home</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Customer</a>
+                    <a class="nav-link" id="linkCustomer" href="#">Customer</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Items</a>
+                    <a class="nav-link" id="linkItems" href="#">Items</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Orders</a>
+                    <a class="nav-link" id="linkOrders" href="#">Orders</a>
                 </li>
 
             </ul>
@@ -181,14 +177,14 @@
 <main class="container-fluid">
 
     <!---------Home Page------------------>
-    <section id="#homePage">
+    <section id="homePage">
         <div class="row">
             <img src="../../CSS/Frameworks/assests/images/supermarket.jpg" class="img-fluid" alt="...">
         </div>
     </section>
 
     <!---------Customer Page-------------->
-    <section id="#customerPage">
+    <section id="customerPage">
         <!--breadcrumb-->
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb" style="color: blue; border: 1px solid grey;">
@@ -281,7 +277,7 @@
     </section>
 
     <!---------Items Page---------------->
-    <section id="#itemPage">
+    <section id="itemPage">
         <!--breadcrumb-->
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -377,7 +373,7 @@
     </section>
 
     <!---------Orders Page----------------->
-    <section id="#orderPage">
+    <section id="orderPage">
 
         <!--breadcrumb-->
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -533,6 +529,44 @@
 
 </main>
 
+<script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
+
+<script>
+
+    $("#homePage").css("display","block");
+    $("#customerPage").css("display","none");
+    $("#itemPage").css("display","none");
+    $("#orderPage").css("display","none");
+    
+    $("#linkHome").click(function () {
+        $("#homePage").css("display","block");
+        $("#customerPage").css("display","none");
+        $("#itemPage").css("display","none");
+        $("#orderPage").css("display","none");
+    });
+
+    $("#linkCustomer").click(function () {
+        $("#homePage").css("display","none");
+        $("#customerPage").css("display","block");
+        $("#itemPage").css("display","none");
+        $("#orderPage").css("display","none");
+    });
+
+    $("#linkItems").click(function () {
+        $("#homePage").css("display","none");
+        $("#customerPage").css("display","none");
+        $("#itemPage").css("display","block");
+        $("#orderPage").css("display","none");
+    });
+
+    $("#linkOrders").click(function () {
+        $("#homePage").css("display","none");
+        $("#customerPage").css("display","none");
+        $("#itemPage").css("display","none");
+        $("#orderPage").css("display","block");
+    });
+</script>
+
 </body>
 </html>
