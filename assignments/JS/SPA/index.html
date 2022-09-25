@@ -8,10 +8,85 @@
 
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
+    <style>
+        .navbar-text {
+            padding: 0;
+        }
+    </style>
 
 
 </head>
 <body>
+
+<!--navbar-->
+<nav class="navbar navbar-expand-lg bg-light" style="box-shadow: 1px 2px 3px grey;" >
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">POS System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Customer</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Items</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Orders</a>
+                </li>
+
+            </ul>
+
+            <!--navbar sign up,log out-->
+            <span class="navbar-text">
+                <div class="collapse navbar-collapse" id="navbarSideContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item" style="color: black">
+                            <i class="fa-solid fa-user"></i>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+
+            <span class="navbar-text">
+                <div class="collapse navbar-collapse" id="navbarSideContent2" style="margin-left: 20px;">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item" style="color: black">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Log Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+        </div>
+    </div>
+</nav>
+
+<main class="container-fluid">
+
+    <!--Home Page-->
+    <div class="row">
+        <img src="../../CSS/Frameworks/assests/images/supermarket.jpg" class="img-fluid" alt="...">
+    </div>
+</main>
+
 
 <script src="assets/js/bootstrap.min.js"></script>
 </body>
