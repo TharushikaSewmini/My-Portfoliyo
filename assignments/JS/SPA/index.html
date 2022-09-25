@@ -1,16 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>POS - SPA</title>
+    <meta charset="UTF-8">
+    <title>POS - SPA</title>
 
-  <meta content="width=device-width initial-scale=1" name="viewport">
+    <meta content="width=device-width initial-scale=1" name="viewport">
 
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/css/css/all.min.css">
 
     <style>
         .navbar-text {
             padding: 0;
+        }
+
+        .breadcrumb {
+            position: relative;
+            margin: 0;
+        }
+
+        #customerForm {
+            font-size: 15px;
+            position: relative;
+            margin: 0  800px 0 100px;
+        }
+
+        #content {
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .mb-3 {
+            height: 50px;
+        }
+
+        .form-label {
+            margin: 0;
+        }
+
+        .btn-success {
+            margin-left: 200px;
+        }
+
+        #customerSearch {
+            position: absolute;
+            right: 100px;
+            left: 900px;
+            top: 20px;
+        }
+
+        #newCustomerbtn, #viewCustomerbtn {
+            position: absolute;
+            right: 200px;
+            left: 1050px;
+        }
+
+        #newCustomerbtn {
+            top: 100px;
+        }
+
+        #viewCustomerbtn {
+            top: 150px;
+        }
+
+        #customerTable {
+            margin: 50px 40px 0 40px;
+        }
+
+        th, td, tr, tbody {
+            border: 1px solid #dbe3e7 !important;
         }
     </style>
 
@@ -86,6 +148,96 @@
         <img src="../../CSS/Frameworks/assests/images/supermarket.jpg" class="img-fluid" alt="...">
     </div>
 </main>
+
+<!--breadcrumb-->
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb" style="color: blue; border: 1px solid grey;">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Customer</li>
+    </ol>
+</nav>
+
+<!--title-->
+<h1 style="text-align: center; color: #34495e;">Customer</h1>
+
+
+<!--customer form-->
+<section id="content">
+    <section id="customerForm">
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Customer ID</label>
+            <input class="form-control" type="text" id="formFile">
+        </div>
+        <div class="mb-3">
+            <label for="formFileMultiple" class="form-label">Customer Name</label>
+            <input class="form-control" type="text" id="formFileMultiple" multiple>
+        </div>
+        <div class="mb-3">
+            <label for="formFileDisabled" class="form-label">Customer Address</label>
+            <input class="form-control" type="text" id="formFileDisabled">
+        </div>
+        <div class="mb-3">
+            <label for="formFileSm" class="form-label">Customer Salary</label>
+            <input class="form-control" id="formFileSm" type="text">
+        </div>
+
+        <button type="button" class="btn btn-success">Save</button>
+        <button type="button" class="btn btn-primary">Update</button>
+        <button type="button" class="btn btn-danger">Delete</button>
+    </section>
+
+    <!--search-->
+    <aside id="customerSearch">
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Input Customer ID/Name" aria-label="Search">
+            <button class="btn btn-secondary" type="submit" style="color: white;">Search</button>
+        </form>
+    </aside>
+
+    <button type="button" class="btn btn-info" id="newCustomerbtn">New Customer</button>
+    <button type="button" class="btn btn-warning" id="viewCustomerbtn">View All Customers</button>
+
+</section>
+
+<!--table-->
+<section id="customerTable" class="justify-content-center">
+    <table class="table table-striped">
+        <thead style="background-color: #8E44AD; color: white;">
+        <tr>
+            <th scope="col">Customer ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Salary</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td scope="row">C001</td>
+            <td>Nimal</td>
+            <td>Kalautara</td>
+            <td>25000.00</td>
+        </tr>
+        <tr>
+            <td scope="row">C002</td>
+            <td>Kamal</td>
+            <td>Colombo</td>
+            <td>30000.00</td>
+        </tr>
+        <tr>
+            <td scope="row">C003</td>
+            <td>Jayani</td>
+            <td>Mathugama</td>
+            <td>45000.00</td>
+        </tr>
+        <tr>
+            <td scope="row">C004</td>
+            <td>Amal</td>
+            <td>Agalawtta</td>
+            <td>35000.00</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
 
 
 <script src="assets/js/bootstrap.min.js"></script>
