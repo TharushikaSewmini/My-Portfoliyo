@@ -23,13 +23,14 @@
             margin: 0;
         }
 
+        /*Customer Page and Items Page*/
         #customerForm, #itemForm {
             font-size: 15px;
             position: relative;
             margin: 0  800px 0 100px;
         }
 
-        #customerContent, #itemContent {
+        #customerContent, #itemContent, #orderContent {
             position: relative;
             margin-top: 20px;
         }
@@ -42,7 +43,7 @@
             margin: 0;
         }
 
-        .btn-success {
+        #addItembtn {
             margin-left: 200px;
         }
 
@@ -73,6 +74,42 @@
 
         th, td, tr, tbody {
             border: 1px solid #dbe3e7 !important;
+        }
+
+
+        /*Order Page*/
+        #orderCustomersForm {
+            font-size: 15px;
+            position: relative;
+            top: 20px;
+            margin: 0  1150px 0 50px;
+        }
+
+        /*.btn-primary {*/
+        /*    margin-left: 450px;*/
+        /*}*/
+
+        #orderItemsForm {
+            position: absolute;
+            top: 20px;
+            margin: 0  450px 0 500px;
+        }
+
+        #addItembtn {
+            position: relative;
+            right: 0px;
+            margin-left: 450px;
+        }
+
+        #purchaseForm {
+            position: absolute;
+            right: 0px;
+            top: 20px;
+            margin: 0  50px 0 1200px;
+        }
+
+        #orderTable {
+            margin: 70px 40px 0 40px;
         }
     </style>
 
@@ -143,12 +180,14 @@
 
 <main class="container-fluid">
 
-    <!--Home Page-->
-    <div class="row">
-        <img src="../../CSS/Frameworks/assests/images/supermarket.jpg" class="img-fluid" alt="...">
-    </div>
+    <!---------Home Page------------------>
+    <section id="#homePage">
+        <div class="row">
+            <img src="../../CSS/Frameworks/assests/images/supermarket.jpg" class="img-fluid" alt="...">
+        </div>
+    </section>
 
-    <!--Customer Page-->
+    <!---------Customer Page-------------->
     <section id="#customerPage">
         <!--breadcrumb-->
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -241,10 +280,7 @@
         </section>
     </section>
 
-
-
-
-    <!--Items Page-->
+    <!---------Items Page---------------->
     <section id="#itemPage">
         <!--breadcrumb-->
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -334,6 +370,161 @@
                     <td>Milo</td>
                     <td>250.00</td>
                     <td>30</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+
+    <!---------Orders Page----------------->
+    <section id="#orderPage">
+
+        <!--breadcrumb-->
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Orders</li>
+            </ol>
+        </nav>
+
+        <!--title-->
+        <h1 style="text-align: center; color: #34495e;">Orders</h1>
+
+
+        <section id="orderContent">
+
+            <!--customer form-->
+            <section id="orderCustomersForm">
+                <form class="row g-2">
+                    <div class="col-md-6">
+                        <label for="orderID" class="form-label">Order ID</label>
+                        <input type="password" class="form-control" id="orderID">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="orderDate" class="form-label">Order Date</label>
+                        <input type="date" class="form-control" id="orderDate">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="inputCustomerID" class="form-label">Customer ID</label>
+                        <select id="inputCustomerID" class="form-select">
+                            <option selected></option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="inputPrice" class="form-label">Customer Name</label>
+                        <input type="text" class="form-control" id="customerName">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="customerAddress" class="form-label">Customer Address</label>
+                        <input type="text" class="form-control" id="customerAddress">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="customerSalary" class="form-label">Customer Salary</label>
+                        <input type="text" class="form-control" id="customerSalary">
+                    </div>
+
+                </form>
+
+            </section>
+
+            <!--items form-->
+            <section id="orderItemsForm">
+                <form class="row g-4">
+                    <div class="col-md-5">
+                        <label for="inputState" class="form-label">Item Code</label>
+                        <select id="inputState" class="form-select">
+                            <option selected></option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-md-7">
+                        <label for="inputName" class="form-label">Item Name</label>
+                        <input type="password" class="form-control" id="inputName">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputPrice" class="form-label">Item Price</label>
+                        <input type="text" class="form-control" id="inputPrice">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputQuantity" class="form-label">Item Quantity</label>
+                        <input type="text" class="form-control" id="inputQuantity">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="inputCity" class="form-label">Order Quantity</label>
+                        <input type="text" class="form-control" id="inputCity">
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary" id="addItembtn">Add Item</button>
+                    </div>
+                </form>
+            </section>
+
+
+            <!--orders form-->
+            <section id="purchaseForm">
+                <div class="mb-2" style="color: blue; font-size: 25px; height: 40px;">
+                    <label class="form-label">Total : 0.00 RS/=</label>
+                </div>
+                <div class="mb-2" style="color: red; font-size: 25px; height: 40px;">
+                    <label class="form-label">Sub Total : 0.00 RS/=</label>
+                </div>
+                <div class="mb-3">
+                    <label for="discount" class="form-label">Discount</label>
+                    <input class="form-control" type="text" id="discount">
+                </div>
+                <div class="mb-3">
+                    <label for="cash" class="form-label">Cash</label>
+                    <input class="form-control" id="cash" type="text">
+                </div>
+                <div class="mb-3">
+                    <label for="balance" class="form-label">Balance</label>
+                    <input class="form-control" id="balance" type="text">
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-success" id="purchasebtn">Purchase</button>
+                </div>
+            </section>
+
+
+        </section>
+
+
+        <!--table-->
+        <section id="orderTable" class="justify-content-center">
+            <table class="table table-striped">
+                <thead style="background-color: #8E44AD; color: white;">
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td scope="row">P001</td>
+                    <td>Cake</td>
+                    <td>400.00</td>
+                    <td>5</td>
+                    <td>2000.00</td>
+                </tr>
+                <tr>
+                    <td scope="row">P002</td>
+                    <td>Biscuit</td>
+                    <td>200.00</td>
+                    <td>10</td>
+                    <td>2000.00</td>
+                </tr>
+                <tr>
+                    <td scope="row">P003</td>
+                    <td>Bun</td>
+                    <td>100.00</td>
+                    <td>6</td>
+                    <td>600.00</td>
                 </tr>
                 </tbody>
             </table>
