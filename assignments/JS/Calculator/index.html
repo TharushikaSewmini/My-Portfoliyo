@@ -4,13 +4,88 @@
     <meta charset="UTF-8">
     <title>JS Calculator</title>
 
-  <meta content="width=device-width initial-scale=1" name="viewport">
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link href="../../../assets/css/normalize.css" rel="stylesheet">
 
   <style>
 
+      body {
+          background-color: cornflowerblue;
+      }
+
+      main {
+          border: 1px solid red;
+          width: 700px;
+          height: 500px;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+      }
+
+      section:first-child {
+          border: 1px solid yellow;
+          width: 590px;
+          height: 60px;
+          position: absolute;
+          right: 0;
+          margin: 20px 20px 0 20px;
+      }
+
+      button {
+          background-color: purple;
+          width: 60px;
+          height: 60px;
+          position: relative;
+          top: 0;
+          left: 0;
+          margin: 20px 20px 0 20px;
+      }
+
+      section:nth-child(3) {
+          border: 1px solid blue;
+          width: 660px;
+          height: 380px;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: 0 20px 20px 20px;
+          display: grid;
+          grid-template-rows: repeat(4, 1fr);
+          grid-template-columns: repeat(4, 1fr);
+          gap: 8px;
+      }
+
+      div {
+          border: 1px solid green;
+      }
   </style>
 </head>
 <body>
-
+<main>
+    <section></section>
+    <button></button>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</main>
 </body>
 </html>
