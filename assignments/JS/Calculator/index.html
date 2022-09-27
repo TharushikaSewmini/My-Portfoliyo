@@ -13,8 +13,8 @@
 <body>
 <main>
     <section>
-        <input type="text" readonly>
-        <button>C</button>
+        <input type="text" readonly id="txtDisplay">
+        <button id="btnClear">C</button>
     </section>
     <section>
         <button id="n7">7</button>
@@ -38,6 +38,48 @@
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 
+<script>
+    $("#n0").click(function () {
+        $("#txtDisplay").val("0");
+    });
+
+    $("#n1").click(function () {
+        $("#txtDisplay").val("1");
+    });
+
+    $("#n2").click(function () {
+        $("#txtDisplay").val("2");
+    });
+
+    $("#n3").click(function () {
+        $("#txtDisplay").val("3");
+    });
+
+    $("#n4").click(function () {
+        $("#txtDisplay").val("4");
+    });
+
+    $("#n5").keyup(function () {
+        $("#txtDisplay").val("5");
+    });
+
+    $("#n6").click(function () {
+        $("#txtDisplay").val("6");
+    });
+
+    $("#n7").click(function () {
+        $("#txtDisplay").val("7");
+    });
+
+    $("#n8").click(function () {
+        $("#txtDisplay").val("8");
+    });
+
+    $("#n9").click(function () {
+        $("#txtDisplay").val("9");
+    });
+
+</script>
 
 </body>
 </html>
