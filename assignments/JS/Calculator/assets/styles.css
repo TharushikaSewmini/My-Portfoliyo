@@ -71,14 +71,14 @@ section:nth-child(2)>button {
     cursor: pointer;
 }
 
-.number {
+#n0, #n1, #n2, #n3, #n4, #n5, #n6, #n7, #n8, #n9, #dot {
     background-color: #e0e0e0;
 }
 
-.symbol {
+#addition, #minus, #divide, #multiply {
     background-color: lightsalmon;
 }
 
-.symbol1 {
+#equal {
     background-color: lightseagreen;
 }
