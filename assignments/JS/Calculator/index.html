@@ -50,65 +50,99 @@
         var previousValue = $("#txtDisplay").val();
         var addedValue = 1;
         $("#txtDisplay").val(previousValue+addedValue);
-        // $("#txtDisplay").val("1");
     });
 
     $("#n2").click(function () {
         var previousValue = $("#txtDisplay").val();
         var addedValue = 2;
         $("#txtDisplay").val(previousValue+addedValue);
-        // $("#txtDisplay").val("2");
     });
 
     $("#n3").click(function () {
         var previousValue = $("#txtDisplay").val();
         var addedValue = 3;
         $("#txtDisplay").val(previousValue+addedValue);
-        // $("#txtDisplay").val("3");
     });
 
     $("#n4").click(function () {
         var previousValue = $("#txtDisplay").val();
         var addedValue = 4;
         $("#txtDisplay").val(previousValue+addedValue);
-        // $("#txtDisplay").val("4");
     });
 
     $("#n5").click(function () {
         var previousValue = $("#txtDisplay").val();
         var addedValue = 5;
         $("#txtDisplay").val(previousValue+addedValue);
-        // $("#txtDisplay").val("5");
     });
 
     $("#n6").click(function () {
         var previousValue = $("#txtDisplay").val();
         var addedValue = 6;
         $("#txtDisplay").val(previousValue+addedValue);
-        // $("#txtDisplay").val("6");
     });
 
     $("#n7").click(function () {
         var previousValue = $("#txtDisplay").val();
         var addedValue = 7;
         $("#txtDisplay").val(previousValue+addedValue);
-        // $("#txtDisplay").val("7");
     });
 
     $("#n8").click(function () {
         var previousValue = $("#txtDisplay").val();
         var addedValue = 8;
         $("#txtDisplay").val(previousValue+addedValue);
-        // $("#txtDisplay").val("8");
     });
 
     $("#n9").click(function () {
         var previousValue = $("#txtDisplay").val();
         var addedValue = 9;
         $("#txtDisplay").val(previousValue+addedValue);
-        // $("#txtDisplay").val("9");
     });
 
+    $("#dot").click(function () {
+        var previousValue = $("#txtDisplay").val();
+        var addedValue = ".";
+        $("#txtDisplay").val(previousValue+addedValue);
+    });
+
+
+    // Addition
+    $("#addition").click(function () {
+        var currentValue = $("#txtDisplay").val();
+        $("#txtDisplay").val(currentValue + $("#addition").text());
+    });
+
+    // Minus
+    $("#minus").click(function () {
+        var currentValue = $("#txtDisplay").val();
+        $("#txtDisplay").val(currentValue + $("#minus").text());
+    });
+
+    // Divide
+    $("#divide").click(function () {
+        var currentValue = $("#txtDisplay").val();
+        $("#txtDisplay").val(currentValue + $("#divide").text());
+    });
+
+    // Multiply
+    $("#multiply").click(function () {
+        var currentValue = $("#txtDisplay").val();
+        $("#txtDisplay").val(currentValue + $("#multiply").text());
+    });
+
+
+    // Get Equal
+    $("#equal").click(function () {
+        var nextValue = $("#txtDisplay").val();
+        var lastValue = eval(nextValue);
+        $("#txtDisplay").val(lastValue);
+    });
+
+    // Clear textField
+    $("#btnClear").click(function () {
+        $("#txtDisplay").val("");
+    });
 </script>
 
 </body>
