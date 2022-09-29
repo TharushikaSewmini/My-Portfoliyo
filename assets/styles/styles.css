@@ -53,7 +53,7 @@ header ul>li>a {
 /* Main */
 main {
     position: relative;
-    margin-top: 60px;
+    margin-top: 63px;
 }
 
 
@@ -945,7 +945,8 @@ footer>small {
 
 
 
-@media all and (max-width:320px) {
+/*@media all and (max-width:320px) {*/
+@media all and (max-width:425px) {
     /*------------Header--------------------*/
     body>header {
         height: 85px;
@@ -978,7 +979,7 @@ footer>small {
 
     /*------------Main--------------------*/
     main {
-        margin-top: 85px;
+        margin-top: 87px;
     }
 
     /*------------Home Page--------------------*/
@@ -1264,5 +1265,68 @@ footer>small {
         right: 0;
         left: 0;
         margin: auto;
+    }
+
+
+
+    @media all and (max-width:376px) and (min-width:321px) {
+        /*------------Header--------------------*/
+        body>header {
+            height: 90px;
+        }
+
+        header>h2 {
+            top: 18px;
+        }
+
+        header>nav {
+            top: 40px;
+        }
+
+        header>nav>ul>li {
+            padding: 0 4px 0 4px;
+            font-size: 11px;
+        }
+
+        /*------------Main--------------------*/
+        main {
+            margin-top: 98px;
+        }
+
+        /*------------Home Page--------------------*/
+        main>dfn>section:first-child {
+            height: 37.5vh;
+        }
+
+        main>dfn>section:first-child>section:first-child {
+            height: 75%;
+        }
+
+        main>dfn>section:first-child>section:first-child>section:first-child>h1 {
+            font-size: 85%;
+        }
+
+        main>dfn>section:first-child h1:nth-child(3) {
+            font-size: 65% !important;
+        }
+
+        main>dfn>section:first-child>section:first-child>div {
+            width: 45%;
+            height: 75%;
+            top: 30%;
+        }
+
+        main>dfn>section:first-child>section:first-child>section:nth-child(3) {
+            padding-top: 41%;
+        }
+
+        main>dfn>section:first-child>section:first-child>section:nth-child(3)>div>img {
+            width: 18px;
+            height: 18px;
+        }
+
+        main>dfn>section:first-child>section:first-child>section:nth-child(3)>div {
+            margin: 0 6px 0 6px;
+        }
     }
 }
