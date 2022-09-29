@@ -1355,5 +1355,15 @@ footer>small {
         main>section:nth-child(3)>section:nth-child(2)>div {
             margin: 25px;
         }
+
+
+        /*------------Education--------------------*/
+        main>section:nth-child(4)>section:nth-child(2)>div:first-child {
+            margin-left: 23px;
+        }
+
+        main>section:nth-child(4)>section:nth-child(2)>section>section>img {
+            height: 43%;
+        }
     }
 }
