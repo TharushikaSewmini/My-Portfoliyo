@@ -1024,7 +1024,7 @@ footer>small {
 
     /*------------About Me--------------------*/
     main>section:nth-child(2) {
-        height: 125vh;
+        height: 140vh;
         /*height: max-content;*/
         width: 100%;
     }
@@ -1045,8 +1045,8 @@ footer>small {
     }
 
     main>section:nth-child(2)>section:nth-child(2)>aside {
-        width: 75.5%;
-        height: 34%;
+        width: 76%;
+        height: 30%;;
         top: 15px;
         left: 0;
         margin: auto;
@@ -1070,7 +1070,7 @@ footer>small {
     }
 
     main>section:nth-child(2)>section:nth-child(2)>section>article>p {
-        font-size: 13px;
+        font-size: 15px;
         text-align: center;
         padding: 10px;
         line-height: 1.8;
@@ -1084,12 +1084,12 @@ footer>small {
     }
 
     main>section:nth-child(2)>section:nth-child(2)>section>section>pre {
-        font-size: 13px;
+        font-size: 14px;
         padding: 6px 10px;
     }
 
     main>section:nth-child(2)>section:nth-child(2)>section>button {
-        top: 665px;
+        top: 745px;
         margin: auto;
         left: 0;
         right: 0;
@@ -1327,6 +1327,33 @@ footer>small {
 
         main>dfn>section:first-child>section:first-child>section:nth-child(3)>div {
             margin: 0 6px 0 6px;
+        }
+
+
+        /*------------About Me--------------------*/
+        main>section:nth-child(2)>section:nth-child(2)>section {
+            width: 100%;
+            height: max-content;
+            padding-top: 286px
+        }
+
+        main>section:nth-child(2)>section:nth-child(2)>aside {
+            width: 76%;
+            height: 35%;
+        }
+
+        main>section:nth-child(2)>section:nth-child(2)>section>button {
+            top: 735px;
+        }
+
+
+        /*------------Skills--------------------*/
+        main>section:nth-child(3) {
+            height: 120vh;
+        }
+
+        main>section:nth-child(3)>section:nth-child(2)>div {
+            margin: 25px;
         }
     }
 }
