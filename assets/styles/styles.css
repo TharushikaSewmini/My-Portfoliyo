@@ -1343,6 +1343,10 @@ footer>small {
         height: 35%;
     }
 
+    main>section:nth-child(2)>section:nth-child(2)>section>section>pre {
+        font-size: 15px;
+    }
+
     main>section:nth-child(2)>section:nth-child(2)>section>button {
         top: 735px;
     }
@@ -1450,5 +1454,60 @@ footer>small {
     main>dfn>section:first-child>section:first-child>section:nth-child(3)>div>img {
         width: 19px;
         height: 19px;
+    }
+
+
+    /*------------About Me--------------------*/
+    main>section:nth-child(2) {
+        height: 145vh;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>aside {
+        height: 38%;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section {
+        padding-top: 320px;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>button {
+        top: 765px;
+    }
+
+
+    /*------------Skills--------------------*/
+    main>section:nth-child(3) {
+        height: 125vh;
+    }
+
+    main>section:nth-child(3)>section:nth-child(2)>div {
+        margin: 31px;
+    }
+
+
+    /*------------Education--------------------*/
+    main>section:nth-child(4)>section:nth-child(2)>div:first-child {
+        margin-left: 25px;
+    }
+
+    main>section:nth-child(4)>section:nth-child(2)>section>section>img {
+        height: 50%;
+    }
+
+
+    /*------------Services--------------------*/
+    main>section:nth-child(6) {
+        height: 145vh;
+    }
+
+    main>section:nth-child(6)>section:nth-child(2) {
+        margin-top: 75px;
+    }
+
+
+    /*------------Projects--------------------*/
+    main>section:nth-child(6)>section:nth-child(2)>section {
+        height: 26%;
+        width: 82%;
     }
 }
