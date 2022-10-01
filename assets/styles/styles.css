@@ -1266,162 +1266,189 @@ footer>small {
         left: 0;
         margin: auto;
     }
+}
 
 
-    /*====================425px================================*/
-    @media all and (max-width:426px) and (min-width:376px) {
-        /*------------Header--------------------*/
-        body>header {
-            height: 95px;
-        }
+/*====================375px================================*/
+@media all and (max-width:426px) and (min-width:321px) {
+    /*------------Header--------------------*/
+    body>header {
+        height: 90px;
+    }
 
-        header>h2 {
-            top: 18px;
-        }
+    header>h2 {
+        top: 18px;
+    }
 
-        header>nav {
-            top: 45px;
-        }
+    header>nav {
+        top: 40px;
+    }
 
-        header>nav>ul>li {
-            padding: 0 5px 0 5px;
-            font-size: 13px;
-        }
+    header>nav>ul>li {
+        padding: 0 4px 0 4px;
+        font-size: 11px;
+    }
 
-        /*------------Main--------------------*/
-        main {
-            margin-top: 98px;
-        }
+    /*------------Main--------------------*/
+    main {
+        margin-top: 98px;
+    }
 
-        /*------------Home Page--------------------*/
-        main>dfn>section:first-child {
-            height: 41vh;
-        }
+    /*------------Home Page--------------------*/
+    main>dfn>section:first-child {
+        height: 37.5vh;
+    }
+
+    main>dfn>section:first-child>section:first-child {
+        height: 75%;
+    }
+
+    main>dfn>section:first-child>section:first-child>section:first-child>h1 {
+        font-size: 85%;
+    }
+
+    main>dfn>section:first-child h1:nth-child(3) {
+        font-size: 65% !important;
+    }
+
+    main>dfn>section:first-child>section:first-child>div {
+        width: 45%;
+        height: 75%;
+        top: 30%;
+    }
+
+    main>dfn>section:first-child>section:first-child>section:nth-child(3) {
+        padding-top: 41%;
+    }
+
+    main>dfn>section:first-child>section:first-child>section:nth-child(3)>div>img {
+        width: 18px;
+        height: 18px;
+    }
+
+    /*main>dfn>section:first-child>section:first-child>section:nth-child(3)>div {*/
+    /*    margin: 0 6px 0 6px;*/
+    /*}*/
+
+
+    /*------------About Me--------------------*/
+    main>section:nth-child(2)>section:nth-child(2)>section {
+        width: 100%;
+        height: max-content;
+        padding-top: 286px
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>aside {
+        width: 76%;
+        height: 35%;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>button {
+        top: 735px;
     }
 
 
-    /*====================375px================================*/
-    @media all and (max-width:376px) and (min-width:321px) {
-        /*------------Header--------------------*/
-        body>header {
-            height: 90px;
-        }
+    /*------------Skills--------------------*/
+    main>section:nth-child(3) {
+        height: 120vh;
+    }
 
-        header>h2 {
-            top: 18px;
-        }
-
-        header>nav {
-            top: 40px;
-        }
-
-        header>nav>ul>li {
-            padding: 0 4px 0 4px;
-            font-size: 11px;
-        }
-
-        /*------------Main--------------------*/
-        main {
-            margin-top: 98px;
-        }
-
-        /*------------Home Page--------------------*/
-        main>dfn>section:first-child {
-            height: 37.5vh;
-        }
-
-        main>dfn>section:first-child>section:first-child {
-            height: 75%;
-        }
-
-        main>dfn>section:first-child>section:first-child>section:first-child>h1 {
-            font-size: 85%;
-        }
-
-        main>dfn>section:first-child h1:nth-child(3) {
-            font-size: 65% !important;
-        }
-
-        main>dfn>section:first-child>section:first-child>div {
-            width: 45%;
-            height: 75%;
-            top: 30%;
-        }
-
-        main>dfn>section:first-child>section:first-child>section:nth-child(3) {
-            padding-top: 41%;
-        }
-
-        main>dfn>section:first-child>section:first-child>section:nth-child(3)>div>img {
-            width: 18px;
-            height: 18px;
-        }
-
-        main>dfn>section:first-child>section:first-child>section:nth-child(3)>div {
-            margin: 0 6px 0 6px;
-        }
+    main>section:nth-child(3)>section:nth-child(2)>div {
+        margin: 25px;
+    }
 
 
-        /*------------About Me--------------------*/
-        main>section:nth-child(2)>section:nth-child(2)>section {
-            width: 100%;
-            height: max-content;
-            padding-top: 286px
-        }
+    /*------------Education--------------------*/
+    main>section:nth-child(4)>section:nth-child(2)>div:first-child {
+        margin-left: 23px;
+    }
 
-        main>section:nth-child(2)>section:nth-child(2)>aside {
-            width: 76%;
-            height: 35%;
-        }
-
-        main>section:nth-child(2)>section:nth-child(2)>section>button {
-            top: 735px;
-        }
+    main>section:nth-child(4)>section:nth-child(2)>section>section>img {
+        height: 43%;
+    }
 
 
-        /*------------Skills--------------------*/
-        main>section:nth-child(3) {
-            height: 120vh;
-        }
+    /*------------Services--------------------*/
+    main>section:nth-child(5)>section:nth-child(2)>section>img {
+        width: 20%;
+        height: 28%;
+    }
 
-        main>section:nth-child(3)>section:nth-child(2)>div {
-            margin: 25px;
-        }
-
-
-        /*------------Education--------------------*/
-        main>section:nth-child(4)>section:nth-child(2)>div:first-child {
-            margin-left: 23px;
-        }
-
-        main>section:nth-child(4)>section:nth-child(2)>section>section>img {
-            height: 43%;
-        }
+    main>section:nth-child(5)>section:nth-child(2)>section>h1 {
+        font-size: 120%;
+    }
 
 
-        /*------------Services--------------------*/
-        main>section:nth-child(5)>section:nth-child(2)>section>img {
-            width: 20%;
-            height: 28%;
-        }
+    /*------------Projects--------------------*/
+    main>section:nth-child(6) {
+        height: 140vh;
+    }
 
-        main>section:nth-child(5)>section:nth-child(2)>section>h1 {
-            font-size: 120%;
-        }
+    main>section:nth-child(6)>section:nth-child(2) {
+        margin-top: 70px;
+    }
+
+    main>section:nth-child(6)>section:nth-child(2)>section {
+        height: 25%;
+        width: 80%;
+    }
+}
 
 
-        /*------------Projects--------------------*/
-        main>section:nth-child(6) {
-            height: 140vh;
-        }
+/*====================425px================================*/
+@media all and (max-width:426px) and (min-width:376px) {
+    /*------------Header--------------------*/
+    body>header {
+        height: 95px;
+    }
 
-        main>section:nth-child(6)>section:nth-child(2) {
-            margin-top: 70px;
-        }
+    header>h2 {
+        top: 18px;
+    }
 
-        main>section:nth-child(6)>section:nth-child(2)>section {
-            height: 25%;
-            width: 80%;
-        }
+    header>nav {
+        top: 45px;
+    }
+
+    header>nav>ul>li {
+        padding: 0 5px 0 5px;
+        font-size: 13px;
+    }
+
+    /*------------Main--------------------*/
+    main {
+        margin-top: 98px;
+    }
+
+    /*------------Home Page--------------------*/
+    main>dfn>section:first-child {
+        height: 41vh;
+    }
+
+    main>dfn>section:first-child>section:first-child>section:first-child>h1 {
+        font-size: 92%;
+    }
+
+    main>dfn>section:first-child h1:nth-child(3) {
+        font-size: 70% !important;
+    }
+
+    main>dfn>section:first-child>section:first-child>div {
+        width: 50%;
+        height: 80%;
+        top: 25%;
+    }
+
+    main>dfn>section:first-child>section:first-child>section:nth-child(3) {
+        padding-top: 40%;
+    }
+
+    main>dfn>section:first-child>section:first-child>section:nth-child(3)>div {
+        margin: 0 6px 0 6px;
+    }
+
+    main>dfn>section:first-child>section:first-child>section:nth-child(3)>div>img {
+        width: 19px;
+        height: 19px;
     }
 }
