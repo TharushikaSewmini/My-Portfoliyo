@@ -1521,3 +1521,41 @@ footer>small {
         top: 60px;
     }
 }
+
+
+@media all and (max-width:769px) and (min-width:426px) {
+    /*------------Header--------------------*/
+    body>header {
+        height: 85px;
+    }
+
+    header>h2 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 15px;
+    }
+
+    header>nav {
+        top: 35px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: max-content;
+    }
+
+    header>nav>ul {
+        padding: 0;
+    }
+
+    header>nav>ul>li {
+        padding: 0 15px 0 15px;
+        font-size: 15px;
+    }
+
+    /*------------Main--------------------*/
+    main {
+        margin-top: 87px;
+    }
+}
