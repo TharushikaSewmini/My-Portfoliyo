@@ -1558,4 +1558,42 @@ footer>small {
     main {
         margin-top: 87px;
     }
+
+
+    /*------------Home Page--------------------*/
+    main>dfn>section:first-child {
+        height: 60vh;
+    }
+
+    main>dfn>section:first-child>section:first-child {
+        height: 80%;
+    }
+
+    main>dfn>section:first-child>section:first-child>section:first-child {
+        font-size: 35px;
+    }
+
+    main>dfn>section:first-child>section:first-child>section:first-child>h1 {
+        width: max-content;
+    }
+
+    main>dfn>section:first-child h1:nth-child(3) {
+        font-size: 70% !important;
+    }
+
+    main>dfn>section:first-child>section:first-child>section:nth-child(3) {
+        padding-top: 35%;
+    }
+
+    main>dfn>section:first-child>section:first-child>section:nth-child(3)>div>img {
+        width: 3.5vw;
+        height: 3.5vw;
+    }
+
+    main>dfn>section:first-child>section:first-child>div {
+        width: 40%;
+        height: 90%;
+        top: 15%;
+    }
+
 }
