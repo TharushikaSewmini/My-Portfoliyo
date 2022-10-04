@@ -1648,4 +1648,22 @@ footer>small {
         right: 0;
     }
 
+    /*------------Skills--------------------*/
+    main>section:nth-child(3) {
+        height: 80vh;
+        /*height: max-content;*/
+        width: 100%;
+    }
+
+    main>section:nth-child(3)>section:nth-child(2) {
+        justify-content: space-around;
+        top: 0;
+    }
+
+    main>section:nth-child(3)>section:nth-child(2)>div {
+        width: 80px;
+        height: 80px;
+        margin: 30px;
+    }
+
 }
