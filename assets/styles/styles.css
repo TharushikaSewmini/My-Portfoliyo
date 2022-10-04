@@ -1523,6 +1523,7 @@ footer>small {
 }
 
 
+/*====================768px================================*/
 @media all and (max-width:769px) and (min-width:426px) {
     /*------------Header--------------------*/
     body>header {
@@ -1594,6 +1595,57 @@ footer>small {
         width: 40%;
         height: 90%;
         top: 15%;
+    }
+
+    /*------------About Me--------------------*/
+    main>section:nth-child(2) {
+        height: 96vh;
+    }
+
+    main>section>section:first-child {
+        padding-top: 10px;
+    }
+
+    main>section>section:first-child>h2 {
+        font-size: 30px;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>aside {
+        width: 37.5%;
+        height: 85%;
+        margin-right: 20px;
+        top: 35px;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section {
+        width: 65%;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>article {
+        padding: 0;
+        margin-left: 20px;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>article>p {
+        font-size: 15px;
+        padding: 10px;
+        line-height: 1.8;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>section {
+        padding: 10px 0;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>section>pre {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>button {
+        top: 445px;
+        margin: auto;
+        left: 0;
+        right: 0;
     }
 
 }
