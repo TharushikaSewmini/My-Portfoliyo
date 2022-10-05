@@ -1807,4 +1807,51 @@ footer>small {
         width: 30px;
         height: 30px;
     }
+
+
+
+    main>section:nth-child(2)>section:nth-child(2)>section>article {
+        padding: 20px 0 20px 30px;
+    }
+    /*------------About Me--------------------*/
+    main>section>section:first-child {
+        padding-top: 10px;
+    }
+
+    main>section>section:first-child>h2 {
+        font-size: 30px;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>aside {
+        width: 31.5%;
+        height: 95%;
+        top: 10px;
+        margin-right: 20px;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>article>p {
+        font-size: 16px;
+        padding: 10px;
+        margin: 0;
+        line-height: 1.8;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>section {
+        margin: auto;
+        left: 0;
+        right: 0;
+        padding: 10px 0;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>section>pre {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>button {
+        top: 420px;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
 }
