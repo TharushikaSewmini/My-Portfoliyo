@@ -727,7 +727,7 @@ main>section:nth-child(6)>section:nth-child(2)>section>img {
 }
 
 /* "View More" Button */
-main>section:nth-child(6)>section:nth-child(2)>button {
+main>section:nth-child(6)>button {
     width: 150px;
     height: 35px;
     border-radius: 20px;
@@ -735,7 +735,7 @@ main>section:nth-child(6)>section:nth-child(2)>button {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 30px;
+    bottom: 110px;
     margin: auto;
     background: purple;
     color: white;
@@ -1179,7 +1179,7 @@ footer>small {
 
     /*------------Projects--------------------*/
     main>section:nth-child(6) {
-        height: 135vh;
+        height: 145vh;
         /*height: max-content;*/
         width: 100%;
     }
@@ -1187,7 +1187,7 @@ footer>small {
     main>section:nth-child(6)>section:nth-child(2) {
         margin-top: 65px;
         width: 85%;
-        height: 90%;
+        height: 85%;
         flex-direction: column;
     }
 
@@ -1205,9 +1205,10 @@ footer>small {
         margin-top: 0;
     }
 
-    main>section:nth-child(6)>section:nth-child(2)>button {
-        position: relative;
-        bottom: 5px;
+    main>section:nth-child(6)>button {
+        /*position: relative;*/
+        /*bottom: 5px;*/
+        top: 850px;
         width: 125px;
         height: 28px;
         font-size: 80%;
@@ -1384,17 +1385,17 @@ footer>small {
 
 
     /*------------Projects--------------------*/
-    main>section:nth-child(6) {
-        height: 140vh;
-    }
+    /*main>section:nth-child(6) {*/
+    /*    height: 140vh;*/
+    /*}*/
 
     main>section:nth-child(6)>section:nth-child(2) {
         margin-top: 70px;
     }
 
     main>section:nth-child(6)>section:nth-child(2)>section {
-        height: 25%;
-        width: 80%;
+        /*height: 25%;*/
+        width: 85%;
     }
 }
 
@@ -1497,7 +1498,7 @@ footer>small {
 
     /*------------Services--------------------*/
     main>section:nth-child(6) {
-        height: 145vh;
+        height: 150vh;
     }
 
     main>section:nth-child(6)>section:nth-child(2) {
@@ -1507,8 +1508,12 @@ footer>small {
 
     /*------------Projects--------------------*/
     main>section:nth-child(6)>section:nth-child(2)>section {
-        height: 26%;
-        width: 82%;
+        /*height: 26%;*/
+        width: 80%;
+    }
+
+    main>section:nth-child(6)>button {
+        top: 885px;
     }
 
 
@@ -1706,6 +1711,36 @@ footer>small {
 
     main>section:nth-child(5)>section:nth-child(2)>section>img {
         width: 25%;
+    }
+
+    /*------------Projects--------------------*/
+    main>section:nth-child(6) {
+        height: 90vh;
+        /*height: max-content;*/
+        width: 100%;
+    }
+
+    main>section:nth-child(6)>section:nth-child(2) {
+        width: 95%;
+        height: 70%;
+    }
+
+    main>section:nth-child(6)>section:nth-child(2)>section {
+        margin: 10px;
+        width: 100%;
+    }
+    }
+
+    main>section:nth-child(6)>section:nth-child(2)>section>h1 {
+        font-size: 100%;
+    }
+
+    main>section:nth-child(6)>section:nth-child(2)>section>img {
+        margin-top: 0;
+    }
+
+    main>section:nth-child(6)>button {
+        bottom: 40px;
     }
 
 }
