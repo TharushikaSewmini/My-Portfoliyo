@@ -1729,7 +1729,6 @@ footer>small {
         margin: 10px;
         width: 100%;
     }
-    }
 
     main>section:nth-child(6)>section:nth-child(2)>section>h1 {
         font-size: 100%;
@@ -1741,6 +1740,28 @@ footer>small {
 
     main>section:nth-child(6)>button {
         bottom: 40px;
+    }
+
+
+    /*------------Contact--------------------*/
+    main>section:nth-child(7) {
+        height: 560px;
+    }
+
+    main>section:nth-child(7)>section:nth-child(2)>aside {
+        width: 58%;
+        height: 80%;
+        top: 40px;
+        margin-left: 20px;
+    }
+
+    main>section:nth-child(7)>section:nth-child(2)>section:nth-child(2) {
+        top: 35px;
+    }
+
+    main>section:nth-child(7)>section:nth-child(2)>section:nth-child(3) {
+        top: 430px;
+        right: 35px;
     }
 
 }
