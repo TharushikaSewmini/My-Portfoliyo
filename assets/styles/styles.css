@@ -2033,4 +2033,31 @@ footer>small {
         left: 0;
         right: 0;
     }
+
+
+
+    /*------------Services--------------------*/
+    main>section:nth-child(5) {
+        height: 600px;
+    }
+
+    main>section:nth-child(6)>section:nth-child(2) {
+        top: 20px;
+    }
+
+
+
+    /*------------Contact--------------------*/
+    main>section:nth-child(7) {
+        height: 650px;
+    }
+
+    main>section:nth-child(7)>section:nth-child(2)>aside {
+        top: 55px;
+    }
+
+    main>section:nth-child(7)>section:nth-child(2)>section:nth-child(3) {
+        top: 430px;
+        right: 210px;
+    }
 }
