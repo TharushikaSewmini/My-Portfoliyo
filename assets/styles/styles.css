@@ -1962,3 +1962,75 @@ footer>small {
         margin: 0 10px 0 10px;
     }
 }
+
+
+
+/*====================1440px================================*/
+@media all and (max-width:1440px) and (min-width:1025px) {
+
+    /*------------Home Page--------------------*/
+    main>section:nth-child(2) {
+        height: 100vh;
+    }
+
+    main>dfn>section:first-child>section:first-child {
+        height: 80%;
+    }
+
+    main>dfn>section:first-child>section:first-child>section:nth-child(3) {
+        padding-top: 28%;
+    }
+
+    main>dfn>section:first-child>section:first-child>div {
+        top: -5px;
+        height: 105%;
+    }
+
+
+
+    /*------------About Me--------------------*/
+    main>section>section:first-child {
+        padding-top: 10px;
+    }
+
+    main>section>section:first-child>h2 {
+        font-size: 30px;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>aside {
+        width: 25%;
+        height: 100%;
+        top: 10px;
+        margin-right: 30px;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>article {
+        padding: 20px 0 20px 30px;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>article>p {
+        font-size: 16px;
+        padding: 10px;
+        margin: 0;
+        line-height: 1.8;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>section {
+        margin: auto;
+        left: 0;
+        right: 0;
+        padding: 10px 0;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>section>pre {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    main>section:nth-child(2)>section:nth-child(2)>section>button {
+        top: 400px;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+}
