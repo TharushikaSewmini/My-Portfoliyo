@@ -2,7 +2,7 @@
 
 /* Header */
 body>header {
-    height: 60px;
+    height: 8%;
     width: 100%;
     background: #2C2C2C;
     position: fixed;
@@ -903,7 +903,7 @@ main>section:nth-child(7)>section:nth-child(2)>section:nth-child(3) {
     width: max-content;
     position: absolute;
     top: 400px;
-    right: 180px;
+    right: 230px;
     display: flex;
     flex-direction: row;
 }
@@ -949,7 +949,8 @@ footer>small {
 @media all and (max-width:426px) {
     /*------------Header--------------------*/
     body>header {
-        height: 85px;
+        /*height: 85px;*/
+        height: 14.1%;
     }
 
     header>h2 {
@@ -1271,7 +1272,7 @@ footer>small {
 
 
 /*====================375px================================*/
-@media all and (max-width:426px) and (min-width:321px) {
+@media all and (max-width:375px) and (min-width:321px) {
     /*------------Header--------------------*/
     body>header {
         height: 90px;
