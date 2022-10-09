@@ -1,0 +1,29 @@
+main {
+    /*border: 1px solid red;*/
+    background: white;
+    position: relative;
+    height: max-content;
+    width: 99.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*gap: 10px;*/
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+    background-color: #34495e;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #3498db;
+}
+
+main>section {
+    /*border: 2px solid blue;*/
+    background: grey;
+    width: 90%;
+    height: 400px;
+    margin: 20px;
+}
