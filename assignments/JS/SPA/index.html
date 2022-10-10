@@ -14,14 +14,24 @@
     <link rel="stylesheet" href="../../../assets/css/css/all.min.css">
 
     <style>
-        .navbar-text {
+
+        .nav-link {
+            display: inline-block;
+        }
+
+        .d-flex {
             padding: 0;
         }
 
-        .breadcrumb {
-            position: relative;
-            margin: 0;
-        }
+        /*#navbarSideContent {*/
+        /*    position: relative;*/
+        /*    right: 450px;*/
+        /*}*/
+
+        /*.breadcrumb {*/
+        /*    position: relative;*/
+        /*    margin: 0;*/
+        /*}*/
 
         /*Customer Page and Items Page*/
         #customerForm, #itemForm {
@@ -43,10 +53,6 @@
             margin: 0;
         }
 
-        #addItembtn {
-            margin-left: 200px;
-        }
-
         #customerSearch, #itemSearch {
             position: absolute;
             right: 100px;
@@ -54,26 +60,16 @@
             top: 20px;
         }
 
-        #newCustomerbtn, #viewCustomerbtn, #newItembtn, #viewItembtn {
-            position: absolute;
-            right: 200px;
-            left: 1050px;
-        }
-
-        #newCustomerbtn, #newItembtn {
-            top: 100px;
-        }
-
-        #viewCustomerbtn, #viewItembtn {
-            top: 150px;
-        }
-
-        #customerTable, #itemTable {
+        #tblItem, #tblCustomer {
             margin: 50px 40px 0 40px;
         }
 
         th, td, tr, tbody {
             border: 1px solid #dbe3e7 !important;
+        }
+
+        #btnSaveCustomer, #btnSaveItem {
+            margin-left: 200px;
         }
 
 
@@ -91,20 +87,14 @@
             margin: 0  450px 0 500px;
         }
 
-        #addItembtn {
-            position: relative;
-            right: 0px;
-            margin-left: 450px;
-        }
-
         #purchaseForm {
             position: absolute;
-            right: 0px;
+            right: 0;
             top: 20px;
             margin: 0  50px 0 1200px;
         }
 
-        #orderTable {
+        #tblOrder {
             margin: 70px 40px 0 40px;
         }
     </style>
@@ -114,7 +104,7 @@
 <body>
 
 <!--navbar-->
-<nav class="navbar navbar-expand-lg bg-light" style="box-shadow: 1px 2px 3px grey;" >
+<nav class="navbar navbar-expand-lg bg-light" style="box-shadow: 1px 2px 4px grey;" >
     <div class="container-fluid">
         <a class="navbar-brand" href="#" style="color: #2980b9">POS System</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -141,35 +131,19 @@
             </ul>
 
             <!--navbar sign up,log out-->
-            <span class="navbar-text">
-                <div class="collapse navbar-collapse" id="navbarSideContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item" style="color: black">
-                            <i class="fa-solid fa-user"></i>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Sign Up</a>
-                        </li>
-                    </ul>
-                </div>
-            </span>
+            <ul class="navbar-nav me-6 mb-2 mb-lg-0" id="navbarSideContent" style="color: #1D314F;">
+                <li class="nav-item me-4">
+                    <i class="fa-solid fa-user"></i>
+                    <a class="nav-link" href="#" style="padding-left: 0; font-weight: bold; color: #1D314F;">Sign Up</a>
+                </li>
 
-            <span class="navbar-text">
-                <div class="collapse navbar-collapse" id="navbarSideContent2" style="margin-left: 20px;">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item" style="color: black">
-                            <i class="fa-solid fa-right-from-bracket"></i>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Log Out</a>
-                        </li>
-                    </ul>
-                </div>
-            </span>
+
+                <li class="nav-item">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <a class="nav-link" href="#" style="padding-left: 0; font-weight: bold; color: #1D314F;">Log Out</a>
+                </li>
+
+            </ul>
         </div>
     </div>
 </nav>
@@ -186,57 +160,61 @@
     <!---------Customer Page-------------->
     <section id="customerPage">
         <!--breadcrumb-->
-        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-            <ol class="breadcrumb" style="color: blue; border: 1px solid grey;">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Customer</li>
-            </ol>
-        </nav>
+<!--        <nav style="&#45;&#45;bs-breadcrumb-divider: '>';" aria-label="breadcrumb">-->
+<!--            <ol class="breadcrumb" style="color: blue; border: 1px solid grey;">-->
+<!--                <li class="breadcrumb-item"><a href="#">Home</a></li>-->
+<!--                <li class="breadcrumb-item active" aria-current="page">Customer</li>-->
+<!--            </ol>-->
+<!--        </nav>-->
 
         <!--title-->
-        <h1 style="text-align: center; color: #34495e;">Customer</h1>
+        <h1 style="text-align: center; color: #34495e; margin-top: 10px;">Customer</h1>
 
 
         <!--customer form-->
         <section id="customerContent">
             <section id="customerForm">
                 <div class="mb-3">
-                    <label for="formFile" class="form-label">Customer ID</label>
-                    <input class="form-control" type="text" id="formFile">
+                    <label for="txtCustomerID" class="form-label">Customer ID</label>
+                    <input class="form-control" type="text" id="txtCustomerID">
                 </div>
                 <div class="mb-3">
-                    <label for="formFileMultiple" class="form-label">Customer Name</label>
-                    <input class="form-control" type="text" id="formFileMultiple" multiple>
+                    <label for="txtCustomerName" class="form-label">Customer Name</label>
+                    <input class="form-control" type="text" id="txtCustomerName" multiple>
                 </div>
                 <div class="mb-3">
-                    <label for="formFileDisabled" class="form-label">Customer Address</label>
-                    <input class="form-control" type="text" id="formFileDisabled">
+                    <label for="txtCustomerAddress" class="form-label">Customer Address</label>
+                    <input class="form-control" type="text" id="txtCustomerAddress">
                 </div>
                 <div class="mb-3">
-                    <label for="formFileSm" class="form-label">Customer Salary</label>
-                    <input class="form-control" id="formFileSm" type="text">
+                    <label for="txtCustomerSalary" class="form-label">Customer Salary</label>
+                    <input class="form-control" id="txtCustomerSalary" type="text">
                 </div>
 
-                <button type="button" class="btn btn-success">Save</button>
-                <button type="button" class="btn btn-primary">Update</button>
-                <button type="button" class="btn btn-danger">Delete</button>
+                <div class="mt-4">
+                    <button type="button" class="btn btn-success" id="btnSaveCustomer">Save</button>
+                    <button type="button" class="btn btn-primary" id="btnUpdateCustomer">Update</button>
+                    <button type="button" class="btn btn-danger" id="btnDeleteCustomer">Delete</button>
+                </div>
             </section>
 
-            <!--search-->
+            <!--customer search-->
             <aside id="customerSearch">
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Input Customer ID/Name" aria-label="Search">
-                    <button class="btn btn-secondary" type="submit" style="color: white;">Search</button>
+                    <button class="btn btn-secondary" type="submit" style="color: white;" id="btnSearchCustomer">Search</button>
                 </form>
-            </aside>
 
-            <button type="button" class="btn btn-info" id="newCustomerbtn">New Customer</button>
-            <button type="button" class="btn btn-warning" id="viewCustomerbtn">View All Customers</button>
+                <div class="d-grid gap-2 col-8 mx-auto mt-5">
+                    <button type="button" class="btn btn-info" id="btnNewCustomer">New Customer</button>
+                    <button type="button" class="btn btn-warning" id="btnViewCustomer">View All Customers</button>
+                </div>
+            </aside>
 
         </section>
 
         <!--table-->
-        <section id="customerTable" class="justify-content-center">
+        <section class="justify-content-center" style="margin: 50px 40px 0 40px;">
             <table class="table table-striped">
                 <thead style="background-color: #8E44AD; color: white;">
                 <tr>
@@ -246,7 +224,7 @@
                     <th scope="col">Salary</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody id="tblCustomer">
                 <tr>
                     <td scope="row">C001</td>
                     <td>Nimal</td>
@@ -279,60 +257,64 @@
     <!---------Items Page---------------->
     <section id="itemPage">
         <!--breadcrumb-->
-        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Items</li>
-            </ol>
-        </nav>
+<!--        <nav style="&#45;&#45;bs-breadcrumb-divider: '>';" aria-label="breadcrumb">-->
+<!--            <ol class="breadcrumb">-->
+<!--                <li class="breadcrumb-item"><a href="#">Home</a></li>-->
+<!--                <li class="breadcrumb-item active" aria-current="page">Items</li>-->
+<!--            </ol>-->
+<!--        </nav>-->
 
 
         <!--title-->
-        <h1 style="text-align: center; color: #34495e;">Items</h1>
+        <h1 style="text-align: center; color: #34495e; margin-top: 10px;">Items</h1>
 
 
         <!--item form-->
         <section id="itemContent">
             <section id="itemForm">
                 <div class="mb-3">
-                    <label for="itemCode" class="form-label">Item Code</label>
-                    <input class="form-control" type="text" id="itemCode">
+                    <label for="txtItemCode" class="form-label">Item Code</label>
+                    <input class="form-control" type="text" id="txtItemCode">
                 </div>
                 <div class="mb-3">
-                    <label for="itemName" class="form-label">Item Name</label>
-                    <input class="form-control" type="text" id="itemName" multiple>
+                    <label for="txtItemName" class="form-label">Item Name</label>
+                    <input class="form-control" type="text" id="txtItemName" multiple>
                 </div>
                 <div class="mb-3">
-                    <label for="itemPrice" class="form-label">Item Price</label>
-                    <input class="form-control" type="text" id="itemPrice">
+                    <label for="txtItemPrice" class="form-label">Item Price</label>
+                    <input class="form-control" type="text" id="txtItemPrice">
                 </div>
                 <div class="mb-3">
-                    <label for="itemQuantity" class="form-label">Item Quantity</label>
-                    <input class="form-control" id="itemQuantity" type="text">
+                    <label for="txtItemQuantity" class="form-label">Item Quantity</label>
+                    <input class="form-control" id="txtItemQuantity" type="text">
                 </div>
 
-                <button type="button" class="btn btn-success">Save</button>
-                <button type="button" class="btn btn-primary">Update</button>
-                <button type="button" class="btn btn-danger">Delete</button>
+                <div class="mt-4">
+                    <button type="button" class="btn btn-success" id="btnSaveItem">Save</button>
+                    <button type="button" class="btn btn-primary" id="btnUpdateItem">Update</button>
+                    <button type="button" class="btn btn-danger" id="btnDeleteItem">Delete</button>
+                </div>
             </section>
 
 
-            <!--search-->
+            <!--item search-->
             <aside id="itemSearch">
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Input Item ID/Name" aria-label="Search">
-                    <button class="btn btn-secondary" type="submit" style="color: white;">Search</button>
+                    <button class="btn btn-secondary" type="submit" style="color: white;" id="btnSearchItem">Search</button>
                 </form>
-            </aside>
 
-            <button type="button" class="btn btn-info" id="newItembtn">New Item</button>
-            <button type="button" class="btn btn-warning" id="viewItembtn">View All Items</button>
+                <div class="d-grid gap-2 col-8 mx-auto mt-5">
+                    <button type="button" class="btn btn-info" id="btnNewItem">New Item</button>
+                    <button type="button" class="btn btn-warning" id="btnViewItem">View All Items</button>
+                </div>
+            </aside>
 
         </section>
 
 
         <!--table-->
-        <section id="itemTable" class="justify-content-center">
+        <section class="justify-content-center" style="margin: 50px 40px 0 40px;">
             <table class="table table-striped">
                 <thead style="background-color: #8E44AD; color: white;">
                 <tr>
@@ -342,7 +324,7 @@
                     <th scope="col">Quantity</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody id="tblItem">
                 <tr>
                     <td scope="row">P001</td>
                     <td>Cake</td>
@@ -376,15 +358,15 @@
     <section id="orderPage">
 
         <!--breadcrumb-->
-        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Orders</li>
-            </ol>
-        </nav>
+<!--        <nav style="&#45;&#45;bs-breadcrumb-divider: '>';" aria-label="breadcrumb">-->
+<!--            <ol class="breadcrumb">-->
+<!--                <li class="breadcrumb-item"><a href="#">Home</a></li>-->
+<!--                <li class="breadcrumb-item active" aria-current="page">Orders</li>-->
+<!--            </ol>-->
+<!--        </nav>-->
 
         <!--title-->
-        <h1 style="text-align: center; color: #34495e;">Orders</h1>
+        <h1 style="text-align: center; color: #34495e; margin-top: 10px;">Orders</h1>
 
 
         <section id="orderContent">
@@ -393,31 +375,31 @@
             <section id="orderCustomersForm">
                 <form class="row g-2">
                     <div class="col-md-6">
-                        <label for="orderID" class="form-label">Order ID</label>
-                        <input type="password" class="form-control" id="orderID">
+                        <label for="txtOrderID" class="form-label">Order ID</label>
+                        <input type="password" class="form-control" id="txtOrderID">
                     </div>
                     <div class="col-md-6">
-                        <label for="orderDate" class="form-label">Order Date</label>
-                        <input type="date" class="form-control" id="orderDate">
+                        <label for="txtOrderDate" class="form-label">Order Date</label>
+                        <input type="date" class="form-control" id="txtOrderDate">
                     </div>
                     <div class="col-md-12">
-                        <label for="inputCustomerID" class="form-label">Customer ID</label>
-                        <select id="inputCustomerID" class="form-select">
+                        <label for="cmbCustomerID" class="form-label">Customer ID</label>
+                        <select id="cmbCustomerID" class="form-select">
                             <option selected></option>
                             <option>...</option>
                         </select>
                     </div>
                     <div class="col-md-12">
-                        <label for="inputPrice" class="form-label">Customer Name</label>
-                        <input type="text" class="form-control" id="customerName">
+                        <label for="txtViewCusName" class="form-label">Customer Name</label>
+                        <input type="text" class="form-control" id="txtViewCusName">
                     </div>
                     <div class="col-md-12">
-                        <label for="customerAddress" class="form-label">Customer Address</label>
-                        <input type="text" class="form-control" id="customerAddress">
+                        <label for="txtViewCusAddress" class="form-label">Customer Address</label>
+                        <input type="text" class="form-control" id="txtViewCusAddress">
                     </div>
                     <div class="col-md-12">
-                        <label for="customerSalary" class="form-label">Customer Salary</label>
-                        <input type="text" class="form-control" id="customerSalary">
+                        <label for="txtViewCusSalary" class="form-label">Customer Salary</label>
+                        <input type="text" class="form-control" id="txtViewCusSalary">
                     </div>
 
                 </form>
@@ -435,24 +417,25 @@
                         </select>
                     </div>
                     <div class="col-md-7">
-                        <label for="inputName" class="form-label">Item Name</label>
-                        <input type="password" class="form-control" id="inputName">
+                        <label for="txtViewItemName" class="form-label">Item Name</label>
+                        <input type="password" class="form-control" id="txtViewItemName">
                     </div>
                     <div class="col-md-6">
-                        <label for="inputPrice" class="form-label">Item Price</label>
-                        <input type="text" class="form-control" id="inputPrice">
+                        <label for="txtViewItemPrice" class="form-label">Item Price</label>
+                        <input type="text" class="form-control" id="txtViewItemPrice">
                     </div>
                     <div class="col-md-6">
-                        <label for="inputQuantity" class="form-label">Item Quantity</label>
-                        <input type="text" class="form-control" id="inputQuantity">
+                        <label for="txtViewItemQtyOnHand" class="form-label">Item Quantity</label>
+                        <input type="text" class="form-control" id="txtViewItemQtyOnHand">
                     </div>
                     <div class="col-md-12">
-                        <label for="inputCity" class="form-label">Order Quantity</label>
-                        <input type="text" class="form-control" id="inputCity">
+                        <label for="txtViewItemQty" class="form-label">Order Quantity</label>
+                        <input type="text" class="form-control" id="txtViewItemQty">
                     </div>
 
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary" id="addItembtn">Add Item</button>
+                    <!--Add Item button-->
+                    <div class="d-md-flex justify-content-md-end">
+                        <button type="submit" class="btn btn-primary me-md-4" id="btnAddItem">Add Item</button>
                     </div>
                 </form>
             </section>
@@ -467,20 +450,21 @@
                     <label class="form-label">Sub Total : 0.00 RS/=</label>
                 </div>
                 <div class="mb-3">
-                    <label for="discount" class="form-label">Discount</label>
-                    <input class="form-control" type="text" id="discount">
+                    <label for="txtDiscount" class="form-label">Discount</label>
+                    <input class="form-control" type="text" id="txtDiscount">
                 </div>
                 <div class="mb-3">
-                    <label for="cash" class="form-label">Cash</label>
-                    <input class="form-control" id="cash" type="text">
+                    <label for="txtCash" class="form-label">Cash</label>
+                    <input class="form-control" id="txtCash" type="text">
                 </div>
                 <div class="mb-3">
-                    <label for="balance" class="form-label">Balance</label>
-                    <input class="form-control" id="balance" type="text">
+                    <label for="txtBalance" class="form-label">Balance</label>
+                    <input class="form-control" id="txtBalance" type="text">
                 </div>
 
-                <div class="col-12">
-                    <button type="submit" class="btn btn-success" id="purchasebtn">Purchase</button>
+                <!--Purchase button-->
+                <div class="mb-3 mt-4">
+                <button type="submit" class="btn btn-success" style="margin-left: 70px;" id="btnPurchase">Purchase</button>
                 </div>
             </section>
 
@@ -489,7 +473,7 @@
 
 
         <!--table-->
-        <section id="orderTable" class="justify-content-center">
+        <section class="justify-content-center" style="margin: 60px 40px 0 40px;">
             <table class="table table-striped">
                 <thead style="background-color: #8E44AD; color: white;">
                 <tr>
@@ -500,7 +484,7 @@
                     <th scope="col">Total</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody id="tblOrder">
                 <tr>
                     <td scope="row">P001</td>
                     <td>Cake</td>
