@@ -48,3 +48,36 @@ function bindRowClickEvents() {
         $("#txtCustomerSalary").val(salary);
     });
 }
+
+
+//Tab key disable
+$("#txtCustomerID, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary").on('keydown',function (event) {
+    if (event.key == "Tab") {
+        event.preventDefault();
+    }
+});
+
+//After press Enter key focus to the next textField
+$("#txtCustomerID").on('keydown',function (event) {
+    if(event.key=="Enter") {
+        $("#txtCustomerName").focus();
+    }
+});
+
+$("#txtCustomerName").on('keydown',function (event) {
+    if(event.key=="Enter") {
+        $("#txtCustomerAddress").focus();
+    }
+});
+
+$("#txtCustomerAddress").on('keydown',function (event) {
+    if(event.key=="Enter") {
+        $("#txtCustomerSalary").focus();
+    }
+});
+
+$("#txtCustomerSalary").on('keydown',function (event) {
+    if(event.key=="Enter") {
+        alert("Add Customer");
+    }
+});
