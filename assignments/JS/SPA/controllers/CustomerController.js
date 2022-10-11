@@ -1,5 +1,21 @@
 var customers = [];
 
+$("#txtCustomerID").focus();
+
+const cusIDRegEx = /^(C)[0-9]{1,3}$/;
+const cusNameRegEx = /^[A-z ]{4,20}$/;
+const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
+const cusSalaryRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+
+let customerValidations = [];
+
+customerValidations.push({reg: cusIDRegEx, field: $("#txtCustomerID"), error: "Customer ID pattern is wrong: C001"});
+customerValidations.push({reg: cusNameRegEx, field: $("#txtCustomerName"), error: "Customer Name pattern is wrong: A-z min 4 letters"});
+customerValidations.push({reg: cusAddressRegEx, field: $("#txtCustomerAddress"), error: "Customer Address pattern is wrong: A-z 0-9/, min 7 characters"});
+customerValidations.push({reg: cusSalaryRegEx, field: $("#txtCustomerSalary"), error: "Customer Salary pattern is wrong: 100 / 100.00"});
+
+
+
 $("#btnSaveCustomer").click(function () {
     var customerID = $("#txtCustomerID").val();
     var customerName = $("#txtCustomerName").val();
