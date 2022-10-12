@@ -186,6 +186,37 @@ function bindRowClickEvents() {
     });
 }
 
+//click event for search button
+$("#btnSearchCustomer").click(function () {
+    let typedID = $("#txtSearchCustomer").val();
+    let customer = searchCustomer(typedID);
+    if(customer != null) {
+        setTextFieldValues(customer.id, customer.name, customer.address, customer.salary);
+    }else {
+        alert("There is no customer available for that " + typedID);
+        setTextFieldValues("","","","");
+        $("#txtSearchCustomer").val("");
+    }
+});
+
+//search customer
+function searchCustomer(customerID) {
+    for(let customer of customers) {
+        if(customer.id == customerID) {
+            return customer;
+        }
+    }
+    return null;
+}
+
+//set values for textFields
+function setTextFieldValues(id, name, address, salary) {
+    $("#txtCustomerID").val(id);
+    $("#txtCustomerName").val(name);
+    $("#txtCustomerAddress").val(address);
+    $("#txtCustomerSalary").val(salary);
+}
+
 //click event for add new customer
 $("#btnNewCustomer").click(function () {
     clearTextFields();
@@ -197,28 +228,3 @@ function clearTextFields() {
     $("#txtCustomerID, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary").val("");
     checkValidity();
 }
-
-// //After press Enter key focus to the next textField
-// $("#txtCustomerID").on('keydown',function (event) {
-//     if(event.key=="Enter") {
-//         $("#txtCustomerName").focus();
-//     }
-// });
-//
-// $("#txtCustomerName").on('keydown',function (event) {
-//     if(event.key=="Enter") {
-//         $("#txtCustomerAddress").focus();
-//     }
-// });
-//
-// $("#txtCustomerAddress").on('keydown',function (event) {
-//     if(event.key=="Enter") {
-//         $("#txtCustomerSalary").focus();
-//     }
-// });
-//
-// $("#txtCustomerSalary").on('keydown',function (event) {
-//     if(event.key=="Enter") {
-//         alert("Add Customer");
-//     }
-// });
