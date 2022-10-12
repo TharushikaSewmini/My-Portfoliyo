@@ -199,6 +199,13 @@ $("#btnSearchCustomer").click(function () {
     }
 });
 
+//after pressing Enter key in txtSearchCustomer, focus the Search button
+$("#txtSearchCustomer").on('keydown',function (event) {
+    if (event.key == "Enter") {
+        setTextFieldFocus($("#btnSearchCustomer"));
+    }
+});
+
 //search customer
 function searchCustomer(customerID) {
     for(let customer of customers) {
@@ -207,6 +214,36 @@ function searchCustomer(customerID) {
         }
     }
     return null;
+}
+
+//click event for Delete button
+$("#btnDeleteCustomer").click(function () {
+    let deleteID = $("#txtCustomerID").val();
+
+    let option = confirm("Do you really want to delete customer id: " + deleteID);
+    if(option) {
+        if(deleteCustomer(deleteID)) {
+            alert("Customer Deleted Successfully");
+            setTextFieldValues("","","","");
+        }else {
+            alert("No such customer to delete.Please check the id");
+        }
+        $("#txtSearchCustomer").val("");
+    }
+});
+
+//delete customer
+function deleteCustomer(customerID) {
+    let customer = searchCustomer(customerID);
+    if(customer != null) {
+        let indexNumber = customers.indexOf(customer);
+        customers.splice(indexNumber,1);
+        viewAllCustomers();
+        bindRowClickEvents();
+        return true;
+    }else {
+        return false;
+    }
 }
 
 //set values for textFields
@@ -220,11 +257,12 @@ function setTextFieldValues(id, name, address, salary) {
 //click event for add new customer
 $("#btnNewCustomer").click(function () {
     clearTextFields();
+    $("#txtSearchCustomer").val("");
 })
 
 //clear all textFields
 function clearTextFields() {
     $("#txtCustomerID").focus();
-    $("#txtCustomerID, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary").val("");
+    $("#txtCustomerID, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary, #txtSearchCustomer").val("");
     checkValidity();
 }
