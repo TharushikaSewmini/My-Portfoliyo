@@ -1,18 +1,25 @@
-var customers = [];
-
 $("#txtCustomerID").focus();
 
-const cusIDRegEx = /^(C)[0-9]{1,3}$/;
+const cusIDRegEx = /^(C)[0-9]{2,3}$/;
 const cusNameRegEx = /^[A-z ]{4,20}$/;
 const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
 const cusSalaryRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
 let customerValidations = [];
 
+var customers = [];
+
 customerValidations.push({reg: cusIDRegEx, field: $("#txtCustomerID"), error: "Customer ID pattern is wrong: C001"});
 customerValidations.push({reg: cusNameRegEx, field: $("#txtCustomerName"), error: "Customer Name pattern is wrong: A-z min 4 letters"});
 customerValidations.push({reg: cusAddressRegEx, field: $("#txtCustomerAddress"), error: "Customer Address pattern is wrong: A-z 0-9/, min 7 characters"});
 customerValidations.push({reg: cusSalaryRegEx, field: $("#txtCustomerSalary"), error: "Customer Salary pattern is wrong: 100 / 100.00"});
+
+//Tab key disable
+$("#txtCustomerID, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary").on('keydown',function (event) {
+    if (event.key == "Tab") {
+        event.preventDefault();
+    }
+});
 
 $("#txtCustomerID, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary").on('keyup',function (event) {
     checkValidity();
@@ -51,8 +58,9 @@ $("#txtCustomerSalary").on('keydown',function (event) {
     if(event.key=="Enter" && check(cusSalaryRegEx, $("#txtCustomerSalary"))) {
         let response = confirm("Do you want to add this customer?");
         if (response) {
-            $("#btnCustomerSave").focus();
-            save();
+            $("#btnSaveCustomer").focus();
+            console.log(customerValidations);
+            console.log(customers);
         }
     }else {
         setTextFieldFocus($("#txtCustomerSalary"));
@@ -109,18 +117,10 @@ function defaultText(txtField,error) {
 //set button disable or enable
 function setButtonState(value) {
     if(value>0) {
-        $("#btnCustomerSave").attr('disabled',true);
+        $("#btnSaveCustomer").attr('disabled',true);
     }else {
-        $("#btnCustomerSave").attr('disabled',false);
+        $("#btnSaveCustomer").attr('disabled',false);
     }
-}
-
-//clear all textFields
-function clearTextFields() {
-    $("#txtCustomerID").focus();
-    console.log(customers);
-    $("#txtCustomerID, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary").val("");
-    // checkValidity();
 }
 
 //set the txtField focus
@@ -128,15 +128,12 @@ function setTextFieldFocus(txtField) {
     txtField.focus();
 }
 
-
-
-
-
+//click event for save button
 $("#btnSaveCustomer").click(function () {
-    var customerID = $("#txtCustomerID").val();
-    var customerName = $("#txtCustomerName").val();
-    var customerAddress = $("#txtCustomerAddress").val();
-    var customerSalary = $("#txtCustomerSalary").val();
+    let customerID = $("#txtCustomerID").val();
+    let customerName = $("#txtCustomerName").val();
+    let customerAddress = $("#txtCustomerAddress").val();
+    let customerSalary = $("#txtCustomerSalary").val();
 
     var customerObject = {
         id: customerID,
@@ -150,13 +147,17 @@ $("#btnSaveCustomer").click(function () {
     viewAllCustomers();
 
     bindRowClickEvents();
+
+    clearTextFields();
 });
 
-$("#btnViewAllCustomer").click(function () {
+//click event for view all customer button
+$("#btnViewAllCustomers").click(function () {
     viewAllCustomers();
     bindRowClickEvents();
 });
 
+//Load all customers to the table
 function viewAllCustomers() {
     $("#tblCustomer").empty();
 
@@ -166,8 +167,12 @@ function viewAllCustomers() {
     }
 }
 
+//click event for table row
 function bindRowClickEvents() {
     $("#tblCustomer>tr").click(function () {
+        // let rowData = $(this).text();
+        // console.log(rowData);
+
         let id = $(this).children(":eq(0)").text();
         let name = $(this).children(":eq(1)").text();
         let address = $(this).children(":eq(2)").text();
@@ -181,13 +186,17 @@ function bindRowClickEvents() {
     });
 }
 
+//click event for add new customer
+$("#btnNewCustomer").click(function () {
+    clearTextFields();
+})
 
-//Tab key disable
-$("#txtCustomerID, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary").on('keydown',function (event) {
-    if (event.key == "Tab") {
-        event.preventDefault();
-    }
-});
+//clear all textFields
+function clearTextFields() {
+    $("#txtCustomerID").focus();
+    $("#txtCustomerID, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary").val("");
+    checkValidity();
+}
 
 // //After press Enter key focus to the next textField
 // $("#txtCustomerID").on('keydown',function (event) {

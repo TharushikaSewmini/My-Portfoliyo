@@ -216,21 +216,25 @@
         <!--customer form-->
         <section id="customerContent">
             <section id="customerForm">
-                <div class="mb-3">
-                    <label for="txtCustomerID" class="form-label">Customer ID</label>
+                <div class="mb-1">
+                    <label for="txtCustomerID" class="form-label fw-bold">Customer ID</label>
                     <input class="form-control" type="text" id="txtCustomerID">
+                    <span class="control-error text-danger" style="font-size: 13px;" id="lblCustomerID"></span>
                 </div>
-                <div class="mb-3">
-                    <label for="txtCustomerName" class="form-label">Customer Name</label>
+                <div class="mb-1 mt-1">
+                    <label for="txtCustomerName" class="form-label fw-bold">Customer Name</label>
                     <input class="form-control" type="text" id="txtCustomerName" multiple>
+                    <span class="control-error text-danger" style="font-size: 13px;" id="lblCustomerName"></span>
                 </div>
-                <div class="mb-3">
-                    <label for="txtCustomerAddress" class="form-label">Customer Address</label>
+                <div class="mb-1 mt-1">
+                    <label for="txtCustomerAddress" class="form-label fw-bold">Customer Address</label>
                     <input class="form-control" type="text" id="txtCustomerAddress">
+                    <span class="control-error text-danger" style="font-size: 13px;" id="lblCustomerAddress"></span>
                 </div>
-                <div class="mb-3">
-                    <label for="txtCustomerSalary" class="form-label">Customer Salary</label>
+                <div class="mb-1 mt-1">
+                    <label for="txtCustomerSalary" class="form-label fw-bold">Customer Salary</label>
                     <input class="form-control" id="txtCustomerSalary" type="text">
+                    <span class="control-error text-danger" style="font-size: 13px;" id="lblCustomerSalary"></span>
                 </div>
 
                 <div class="mt-4">
@@ -249,7 +253,7 @@
 
                 <div class="d-grid gap-2 col-8 mx-auto mt-5">
                     <button type="button" class="btn btn-info" id="btnNewCustomer">New Customer</button>
-                    <button type="button" class="btn btn-warning" id="btnViewAllCustomer">View All Customers</button>
+                    <button type="button" class="btn btn-warning" id="btnViewAllCustomers">View All Customers</button>
                 </div>
             </aside>
 
