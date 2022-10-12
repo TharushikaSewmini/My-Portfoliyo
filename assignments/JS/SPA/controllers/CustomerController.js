@@ -246,6 +246,35 @@ function deleteCustomer(customerID) {
     }
 }
 
+//click event for update button
+$("#btnUpdateCustomer").click(function () {
+    let updateID = $("#txtCustomerID").val();
+    let response = updateCustomer(updateID);
+    if(response) {
+        alert("Customer Updated Successfully");
+        // setTextFieldValues("","","","");
+        clearTextFields();
+    }else {
+        alert("Update Failed");
+    }
+});
+
+//update customer
+function updateCustomer(customerID) {
+    let customer = searchCustomer(customerID);
+    if(customer != null) {
+        customer.id = $("#txtCustomerID").val();
+        customer.name = $("#txtCustomerName").val();
+        customer.address = $("#txtCustomerAddress").val();
+        customer.salary = $("#txtCustomerSalary").val();
+        viewAllCustomers();
+        bindRowClickEvents();
+        return true;
+    }else {
+        return false;
+    }
+}
+
 //set values for textFields
 function setTextFieldValues(id, name, address, salary) {
     $("#txtCustomerID").val(id);
