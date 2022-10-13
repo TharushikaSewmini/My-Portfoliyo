@@ -231,3 +231,32 @@ function clearTextFields() {
     $("#txtItemCode, #txtItemName, #txtItemPrice, #txtItemQuantity").val("");
     checkValidity();
 }
+
+//click event for Delete button
+$("#btnDeleteItem").click(function () {
+    let deleteCode = $("#txtItemCode").val();
+
+    let option = confirm("Do you really want to delete item code: " + deleteCode);
+    if(option) {
+        if(deleteItem(deleteCode)) {
+            alert("Item Deleted Successfully");
+            setTextFieldValues("","","","");
+        }else {
+            alert("No such item to delete.Please check the code");
+        }
+    }
+});
+
+//delete item
+function deleteItem(itemCode) {
+    let item = searchItem(itemCode);
+    if(item != null) {
+        let indexNumber = items.indexOf(item);
+        items.splice(indexNumber,1);
+        viewAllItems();
+        bindRowClickEvents();
+        return true;
+    }else {
+        return false;
+    }
+}
