@@ -144,6 +144,8 @@ $("#btnSaveCustomer").click(function () {
 
     bindRowClickEvents();
 
+    loadAllCustomersForOption();
+
     clearTextFields();
 });
 
