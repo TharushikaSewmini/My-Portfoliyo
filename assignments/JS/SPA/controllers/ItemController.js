@@ -126,3 +126,65 @@ function setButtonState(value) {
 function setTextFieldFocus(txtField) {
     txtField.focus();
 }
+
+//click event for save item button
+$("#btnSaveItem").click(function () {
+    let itemCode = $("#txtItemCode").val();
+    let itemName = $("#txtItemName").val();
+    let itemPrice = $("#txtItemPrice").val();
+    let itemQuantity = $("#txtItemQuantity").val();
+
+    var itemObject = {
+        code: itemCode,
+        name: itemName,
+        price: itemPrice,
+        quantity: itemQuantity
+    }
+
+    items.push(itemObject);
+
+    viewAllItems();
+
+    bindRowClickEvents();
+
+    clearTextFields();
+});
+
+$("#btnViewAllItems").click(function () {
+    viewAllItems();
+    bindRowClickEvents();
+});
+
+function viewAllItems() {
+    $("#tblItem").empty();
+
+    for(var item of items) {
+        var row = "<tr><td>"+item.code+"</td><td>"+item.name+"</td><td>"+item.price+"</td><td>"+item.quantity+"</td></tr>";
+        $("#tblItem").append(row);
+    }
+}
+
+function bindRowClickEvents() {
+    $("#tblItem>tr").click(function () {
+        // let rowData = $(this).text();
+        // console.log(rowData);
+
+        let code = $(this).children(":eq(0)").text();
+        let name = $(this).children(":eq(1)").text();
+        let price = $(this).children(":eq(2)").text();
+        let quantity = $(this).children(":eq(3)").text();
+        console.log(code, name, price, quantity);
+
+        $("#txtItemCode").val(code);
+        $("#txtItemName").val(name);
+        $("#txtItemPrice").val(price);
+        $("#txtItemQuantity").val(quantity);
+    });
+}
+
+//clear all textFields
+function clearTextFields() {
+    $("#txtItemCode").focus();
+    $("#txtItemCode, #txtItemName, #txtItemPrice, #txtItemQuantity").val("");
+    checkValidity();
+}
