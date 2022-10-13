@@ -318,21 +318,25 @@
         <!--item form-->
         <section id="itemContent">
             <section id="itemForm">
-                <div class="mb-3">
-                    <label for="txtItemCode" class="form-label">Item Code</label>
+                <div class="mb-1">
+                    <label for="txtItemCode" class="form-label fw-bold">Item Code</label>
                     <input class="form-control" type="text" id="txtItemCode">
+                    <span class="control-error text-danger" style="font-size: 13px;" id="lblItemCode"></span>
                 </div>
-                <div class="mb-3">
-                    <label for="txtItemName" class="form-label">Item Name</label>
+                <div class="mb-1 mt-1">
+                    <label for="txtItemName" class="form-label fw-bold">Item Name</label>
                     <input class="form-control" type="text" id="txtItemName" multiple>
+                    <span class="control-error text-danger" style="font-size: 13px;" id="lblItemName"></span>
                 </div>
-                <div class="mb-3">
-                    <label for="txtItemPrice" class="form-label">Item Price</label>
+                <div class="mb-1 mt-1">
+                    <label for="txtItemPrice" class="form-label fw-bold">Item Price</label>
                     <input class="form-control" type="text" id="txtItemPrice">
+                    <span class="control-error text-danger" style="font-size: 13px;" id="lblItemPrice"></span>
                 </div>
-                <div class="mb-3">
-                    <label for="txtItemQuantity" class="form-label">Item Quantity</label>
+                <div class="mb-1 mt-1">
+                    <label for="txtItemQuantity" class="form-label fw-bold">Item Quantity</label>
                     <input class="form-control" id="txtItemQuantity" type="text">
+                    <span class="control-error text-danger" style="font-size: 13px;" id="lblItemQuantity"></span>
                 </div>
 
                 <div class="mt-4">
@@ -346,13 +350,13 @@
             <!--item search-->
             <aside id="itemSearch">
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Input Item ID/Name" aria-label="Search">
-                    <button class="btn btn-secondary" type="submit" style="color: white;" id="btnSearchItem">Search</button>
+                    <input class="form-control me-2" type="search" id="txtSearchItem" placeholder="Input Item ID/Name" aria-label="Search">
+                    <button class="btn btn-secondary" type="button" id="btnSearchItem" style="color: white;">Search</button>
                 </form>
 
                 <div class="d-grid gap-2 col-8 mx-auto mt-5">
                     <button type="button" class="btn btn-info" id="btnNewItem">New Item</button>
-                    <button type="button" class="btn btn-warning" id="btnViewItem">View All Items</button>
+                    <button type="button" class="btn btn-warning" id="btnViewAllItems">View All Items</button>
                 </div>
             </aside>
 
