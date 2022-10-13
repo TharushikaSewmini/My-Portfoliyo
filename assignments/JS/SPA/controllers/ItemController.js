@@ -5,16 +5,12 @@ const itemNameRegEx = /^[A-z ]{4,20}$/;
 const itemPriceRegEx =  /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 const itemQuantityRegEx = /^[0-9]{1,5}$/;
 
-let itemValidations = [];
-
-var items = [];
-
 itemValidations.push({reg: itemCodeRegEx, field: $("#txtItemCode"), error: "Item code pattern is wrong: P001"});
 itemValidations.push({reg: itemNameRegEx, field: $("#txtItemName"), error: "Item Name pattern is wrong: A-z min 4 letters"});
 itemValidations.push({reg: itemPriceRegEx, field: $("#txtItemPrice"), error: "Item Price pattern is wrong: 100 / 100.00"});
 itemValidations.push({reg: itemQuantityRegEx, field: $("#txtItemQuantity"), error: "Item Quantity pattern is wrong: 10"});
 
-// //Tab key disable
+//Tab key disable
 $("#txtItemCode, #txtItemName, #txtItemPrice, #txtItemQuantity").on('keydown',function (event) {
     if (event.key == "Tab") {
         event.preventDefault();
@@ -22,40 +18,40 @@ $("#txtItemCode, #txtItemName, #txtItemPrice, #txtItemQuantity").on('keydown',fu
 });
 
 $("#txtItemCode, #txtItemName, #txtItemPrice, #txtItemQuantity").on('keyup',function (event) {
-    checkValidity();
+    checkItemFieldsValidity();
 });
 
 $("#txtItemCode, #txtItemName, #txtItemPrice, #txtItemQuantity").on('blur',function (event) {
-    checkValidity();
+    checkItemFieldsValidity();
 });
 
 //After press Enter key focus to the next textField
 $("#txtItemCode").on('keydown',function (event) {
-    if(event.key=="Enter" && check(itemCodeRegEx, $("#txtItemCode"))) {
+    if(event.key=="Enter" && checkItems(itemCodeRegEx, $("#txtItemCode"))) {
         $("#txtItemName").focus();
     }else {
-        setTextFieldFocus($("#txtItemCode"));
+        setTextFieldFocusItem($("#txtItemCode"));
     }
 });
 
 $("#txtItemName").on('keydown',function (event) {
-    if(event.key=="Enter" && check(itemNameRegEx, $("#txtItemName"))) {
-        setTextFieldFocus($("#txtItemPrice"));
+    if(event.key=="Enter" && checkItems(itemNameRegEx, $("#txtItemName"))) {
+        setTextFieldFocusItem($("#txtItemPrice"));
     }else {
-        setTextFieldFocus($("#txtItemName"));
+        setTextFieldFocusItem($("#txtItemName"));
     }
 });
 
 $("#txtItemPrice").on('keydown',function (event) {
-    if(event.key=="Enter" && check(itemPriceRegEx, $("#txtItemPrice"))) {
-        setTextFieldFocus($("#txtItemQuantity"));
+    if(event.key=="Enter" && checkItems(itemPriceRegEx, $("#txtItemPrice"))) {
+        setTextFieldFocusItem($("#txtItemQuantity"));
     }else {
-        setTextFieldFocus($("#txtItemPrice"));
+        setTextFieldFocusItem($("#txtItemPrice"));
     }
 });
 
 $("#txtItemQuantity").on('keydown',function (event) {
-    if(event.key=="Enter" && check(itemQuantityRegEx, $("#txtItemQuantity"))) {
+    if(event.key=="Enter" && checkItems(itemQuantityRegEx, $("#txtItemQuantity"))) {
         let response = confirm("Do you want to add this item?");
         if (response) {
             $("#btnSaveItem").focus();
@@ -63,34 +59,34 @@ $("#txtItemQuantity").on('keydown',function (event) {
             console.log(items);
         }
     }else {
-        setTextFieldFocus($("#txtItemQuantity"));
+        setTextFieldFocusItem($("#txtItemQuantity"));
     }
 });
 
 //after checking, set the colors to the txtField border
-function checkValidity() {
+function checkItemFieldsValidity() {
     let errorCount = 0;
     for (let validation of itemValidations) {
-        if(check(validation.reg, validation.field)) {
-            textSuccess(validation.field,"");
+        if(checkItems(validation.reg, validation.field)) {
+            textSuccessItem(validation.field,"");
         }else {
             errorCount = errorCount+1;
-            textError(validation.field,validation.error);
+            textErrorItem(validation.field,validation.error);
         }
     }
-    setButtonState(errorCount);
+    setButtonStateItem(errorCount);
 }
 
 //check the txtField value is equal to regEx
-function check(regEx, txtField) {
+function checkItems(regEx, txtField) {
     let input = txtField.val();
     return regEx.test(input) ? true : false;
 }
 
 //set txtField border color green
-function textSuccess(txtField,error) {
+function textSuccessItem(txtField,error) {
     if(txtField.val().length <= 0) {
-        defaultText(txtField,"");
+        defaultTextItem(txtField,"");
     }else {
         txtField.css('border','1px solid green');
         txtField.parent().children('span').text(error);
@@ -98,9 +94,9 @@ function textSuccess(txtField,error) {
 }
 
 //set txtField border color red
-function textError(txtField,error) {
+function textErrorItem(txtField,error) {
     if(txtField.val().length <= 0) {
-        defaultText(txtField,"");
+        defaultTextItem(txtField,"");
     }else {
         txtField.css('border','1px solid red');
         txtField.parent().children('span').text(error);
@@ -108,13 +104,13 @@ function textError(txtField,error) {
 }
 
 //set txtFields borders default color
-function defaultText(txtField,error) {
+function defaultTextItem(txtField,error) {
     txtField.css('border','1px solid #CED4DA');
     txtField.parent().children('span').text(error);
 }
 
 //set button disable or enable
-function setButtonState(value) {
+function setButtonStateItem(value) {
     if(value>0) {
         $("#btnSaveItem").attr('disabled',true);
     }else {
@@ -123,7 +119,7 @@ function setButtonState(value) {
 }
 
 //set the txtField focus
-function setTextFieldFocus(txtField) {
+function setTextFieldFocusItem(txtField) {
     txtField.focus();
 }
 
@@ -145,25 +141,25 @@ $("#btnSaveItem").click(function () {
 
     viewAllItems();
 
-    bindRowClickEvents();
+    bindRowClickEventsItem();
 
-    clearTextFields();
+    clearTextFieldsItem();
 });
 
 $("#btnViewAllItems").click(function () {
     viewAllItems();
-    bindRowClickEvents();
+    bindRowClickEventsItem();
 });
 
 //clear the textFields for add new item
 $("#btnNewItem").click(function () {
-    clearTextFields();
+    clearTextFieldsItem();
 });
 
 //after pressing Enter key in txtSearchItem, focus the Search button
 $("#txtSearchItem").on('keydown',function (event) {
     if (event.key == "Enter") {
-        setTextFieldFocus($("#btnSearchItem"));
+        setTextFieldFocusItem($("#btnSearchItem"));
     }
 });
 
@@ -172,10 +168,10 @@ $("#btnSearchItem").click(function () {
     let typedCode = $("#txtSearchItem").val();
     let item = searchItem(typedCode);
     if(item != null) {
-        setTextFieldValues(item.code, item.name, item.price, item.quantity);
+        setTextFieldValuesItem(item.code, item.name, item.price, item.quantity);
     }else {
         alert("There is no item available for that " + typedCode);
-        setTextFieldValues("","","","");
+        setTextFieldValuesItem("","","","");
         $("#txtSearchItem").val("");
     }
 });
@@ -188,10 +184,11 @@ $("#btnDeleteItem").click(function () {
     if(option) {
         if(deleteItem(deleteCode)) {
             alert("Item Deleted Successfully");
-            setTextFieldValues("","","","");
+            setTextFieldValuesItem("","","","");
         }else {
             alert("No such item to delete.Please check the code");
         }
+        $("#txtSearchItem").val("");
     }
 });
 
@@ -202,7 +199,7 @@ $("#btnUpdateItem").click(function () {
     if(response) {
         alert("Item Updated Successfully");
         // setTextFieldValues("","","","");
-        clearTextFields();
+        clearTextFieldsItem();
     }else {
         alert("Update Failed");
     }
@@ -219,7 +216,7 @@ function viewAllItems() {
     }
 }
 
-function bindRowClickEvents() {
+function bindRowClickEventsItem() {
     $("#tblItem>tr").click(function () {
         // let rowData = $(this).text();
         // console.log(rowData);
@@ -248,7 +245,7 @@ function searchItem(itemCode) {
 }
 
 //set values for textFields
-function setTextFieldValues(code, name, price, quantity) {
+function setTextFieldValuesItem(code, name, price, quantity) {
     $("#txtItemCode").val(code);
     $("#txtItemName").val(name);
     $("#txtItemPrice").val(price);
@@ -256,10 +253,10 @@ function setTextFieldValues(code, name, price, quantity) {
 }
 
 //clear all textFields
-function clearTextFields() {
+function clearTextFieldsItem() {
     $("#txtItemCode").focus();
     $("#txtItemCode, #txtItemName, #txtItemPrice, #txtItemQuantity").val("");
-    checkValidity();
+    checkItemFieldsValidity();
 }
 
 //delete item
@@ -269,7 +266,7 @@ function deleteItem(itemCode) {
         let indexNumber = items.indexOf(item);
         items.splice(indexNumber,1);
         viewAllItems();
-        bindRowClickEvents();
+        bindRowClickEventsItem();
         return true;
     }else {
         return false;
@@ -285,7 +282,7 @@ function updateItem(itemCode) {
         item.price = $("#txtItemPrice").val();
         item.quantity = $("#txtItemQuantity").val();
         viewAllItems();
-        bindRowClickEvents();
+        bindRowClickEventsItem();
         return true;
     }else {
         return false;

@@ -1,3 +1,5 @@
+let customerValidations = [];
 var customers = [];
 
-let customerValidations = [];
+let itemValidations = [];
+var items = [];
