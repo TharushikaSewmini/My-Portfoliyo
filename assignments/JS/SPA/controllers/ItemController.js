@@ -155,6 +155,11 @@ $("#btnViewAllItems").click(function () {
     bindRowClickEvents();
 });
 
+//clear the textFields for add new item
+$("#btnNewItem").click(function () {
+    clearTextFields();
+})
+
 function viewAllItems() {
     $("#tblItem").empty();
 
@@ -180,6 +185,44 @@ function bindRowClickEvents() {
         $("#txtItemPrice").val(price);
         $("#txtItemQuantity").val(quantity);
     });
+}
+
+//after pressing Enter key in txtSearchItem, focus the Search button
+$("#txtSearchItem").on('keydown',function (event) {
+    if (event.key == "Enter") {
+        setTextFieldFocus($("#btnSearchItem"));
+    }
+});
+
+//click event for search button
+$("#btnSearchItem").click(function () {
+    let typedCode = $("#txtSearchItem").val();
+    let item = searchItem(typedCode);
+    if(item != null) {
+        setTextFieldValues(item.code, item.name, item.price, item.quantity);
+    }else {
+        alert("There is no item available for that " + typedCode);
+        setTextFieldValues("","","","");
+        $("#txtSearchItem").val("");
+    }
+});
+
+//search item
+function searchItem(itemCode) {
+    for(let item of items) {
+        if(item.code == itemCode) {
+            return item;
+        }
+    }
+    return null;
+}
+
+//set values for textFields
+function setTextFieldValues(code, name, price, quantity) {
+    $("#txtItemCode").val(code);
+    $("#txtItemName").val(name);
+    $("#txtItemPrice").val(price);
+    $("#txtItemQuantity").val(quantity);
 }
 
 //clear all textFields
