@@ -66,3 +66,63 @@ $("#txtItemQuantity").on('keydown',function (event) {
         setTextFieldFocus($("#txtItemQuantity"));
     }
 });
+
+//after checking, set the colors to the txtField border
+function checkValidity() {
+    let errorCount = 0;
+    for (let validation of itemValidations) {
+        if(check(validation.reg, validation.field)) {
+            textSuccess(validation.field,"");
+        }else {
+            errorCount = errorCount+1;
+            textError(validation.field,validation.error);
+        }
+    }
+    setButtonState(errorCount);
+}
+
+//check the txtField value is equal to regEx
+function check(regEx, txtField) {
+    let input = txtField.val();
+    return regEx.test(input) ? true : false;
+}
+
+//set txtField border color green
+function textSuccess(txtField,error) {
+    if(txtField.val().length <= 0) {
+        defaultText(txtField,"");
+    }else {
+        txtField.css('border','1px solid green');
+        txtField.parent().children('span').text(error);
+    }
+}
+
+//set txtField border color red
+function textError(txtField,error) {
+    if(txtField.val().length <= 0) {
+        defaultText(txtField,"");
+    }else {
+        txtField.css('border','1px solid red');
+        txtField.parent().children('span').text(error);
+    }
+}
+
+//set txtFields borders default color
+function defaultText(txtField,error) {
+    txtField.css('border','1px solid #CED4DA');
+    txtField.parent().children('span').text(error);
+}
+
+//set button disable or enable
+function setButtonState(value) {
+    if(value>0) {
+        $("#btnSaveItem").attr('disabled',true);
+    }else {
+        $("#btnSaveItem").attr('disabled',false);
+    }
+}
+
+//set the txtField focus
+function setTextFieldFocus(txtField) {
+    txtField.focus();
+}
