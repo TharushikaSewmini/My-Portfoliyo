@@ -158,7 +158,57 @@ $("#btnViewAllItems").click(function () {
 //clear the textFields for add new item
 $("#btnNewItem").click(function () {
     clearTextFields();
-})
+});
+
+//after pressing Enter key in txtSearchItem, focus the Search button
+$("#txtSearchItem").on('keydown',function (event) {
+    if (event.key == "Enter") {
+        setTextFieldFocus($("#btnSearchItem"));
+    }
+});
+
+//click event for search button
+$("#btnSearchItem").click(function () {
+    let typedCode = $("#txtSearchItem").val();
+    let item = searchItem(typedCode);
+    if(item != null) {
+        setTextFieldValues(item.code, item.name, item.price, item.quantity);
+    }else {
+        alert("There is no item available for that " + typedCode);
+        setTextFieldValues("","","","");
+        $("#txtSearchItem").val("");
+    }
+});
+
+//click event for Delete button
+$("#btnDeleteItem").click(function () {
+    let deleteCode = $("#txtItemCode").val();
+
+    let option = confirm("Do you really want to delete item code: " + deleteCode);
+    if(option) {
+        if(deleteItem(deleteCode)) {
+            alert("Item Deleted Successfully");
+            setTextFieldValues("","","","");
+        }else {
+            alert("No such item to delete.Please check the code");
+        }
+    }
+});
+
+//click event for update button
+$("#btnUpdateItem").click(function () {
+    let updateCode = $("#txtItemCode").val();
+    let response = updateItem(updateCode);
+    if(response) {
+        alert("Item Updated Successfully");
+        // setTextFieldValues("","","","");
+        clearTextFields();
+    }else {
+        alert("Update Failed");
+    }
+});
+
+
 
 function viewAllItems() {
     $("#tblItem").empty();
@@ -187,26 +237,6 @@ function bindRowClickEvents() {
     });
 }
 
-//after pressing Enter key in txtSearchItem, focus the Search button
-$("#txtSearchItem").on('keydown',function (event) {
-    if (event.key == "Enter") {
-        setTextFieldFocus($("#btnSearchItem"));
-    }
-});
-
-//click event for search button
-$("#btnSearchItem").click(function () {
-    let typedCode = $("#txtSearchItem").val();
-    let item = searchItem(typedCode);
-    if(item != null) {
-        setTextFieldValues(item.code, item.name, item.price, item.quantity);
-    }else {
-        alert("There is no item available for that " + typedCode);
-        setTextFieldValues("","","","");
-        $("#txtSearchItem").val("");
-    }
-});
-
 //search item
 function searchItem(itemCode) {
     for(let item of items) {
@@ -232,27 +262,28 @@ function clearTextFields() {
     checkValidity();
 }
 
-//click event for Delete button
-$("#btnDeleteItem").click(function () {
-    let deleteCode = $("#txtItemCode").val();
-
-    let option = confirm("Do you really want to delete item code: " + deleteCode);
-    if(option) {
-        if(deleteItem(deleteCode)) {
-            alert("Item Deleted Successfully");
-            setTextFieldValues("","","","");
-        }else {
-            alert("No such item to delete.Please check the code");
-        }
-    }
-});
-
 //delete item
 function deleteItem(itemCode) {
     let item = searchItem(itemCode);
     if(item != null) {
         let indexNumber = items.indexOf(item);
         items.splice(indexNumber,1);
+        viewAllItems();
+        bindRowClickEvents();
+        return true;
+    }else {
+        return false;
+    }
+}
+
+//update item
+function updateItem(itemCode) {
+    let item = searchItem(itemCode);
+    if(item != null) {
+        item.code = $("#txtItemCode").val();
+        item.name = $("#txtItemName").val();
+        item.price = $("#txtItemPrice").val();
+        item.quantity = $("#txtItemQuantity").val();
         viewAllItems();
         bindRowClickEvents();
         return true;
