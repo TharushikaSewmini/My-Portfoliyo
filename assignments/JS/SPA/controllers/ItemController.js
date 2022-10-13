@@ -143,6 +143,8 @@ $("#btnSaveItem").click(function () {
 
     bindRowClickEventsItem();
 
+    loadAllItemsForOption();
+
     clearTextFieldsItem();
 });
 
