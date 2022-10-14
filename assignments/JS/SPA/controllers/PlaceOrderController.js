@@ -90,6 +90,7 @@ $("#txtOrderQty").on('keydown',function (event) {
     }else {
         setTextFieldFocusOrder($("#txtOrderQty"));
     }
+    defaultTextOrder($("#txtOrderQty"),"");
 });
 
 $("#txtDiscount").on('keydown',function (event) {
@@ -246,26 +247,76 @@ $("#btnAddItem").click(function () {
 
 //add items to table
 function addItems() {
-    $("#tblOrder").empty();
-
     let itemCode = $("#txtViewItemCode").val();
     let itemName = $("#txtViewItemName").val();
     let itemPrice = parseFloat($("#txtViewItemPrice").val());
-    let orderQuantity = parseFloat($("#txtOrderQty").val());
-    let total = (itemPrice)*(orderQuantity);
+    let orderQty = parseFloat($("#txtOrderQty").val());
+    let total = (itemPrice)*(orderQty);
 
-    let orderItemObject = {
-        code: itemCode,
-        name: itemName,
-        price: itemPrice,
-        quantity: orderQuantity,
-        total: total
+    let itemCodeExist = isItemCodeExist(itemCode);
+
+    if(itemCodeExist != null) {
+        for (let orderItem of orderItems) {
+            if (orderItem.orderedCode === itemCodeExist.orderedCode) {
+                orderItem.orderedQuantity += orderQty;
+                orderItem.orderTotal += total;
+            }
+        }
+    }else {
+        let orderItemObject = {
+            orderedCode: itemCode,
+            orderedName: itemName,
+            orderedPrice: itemPrice,
+            orderedQuantity: orderQty,
+            orderTotal: total
+        }
+
+        orderItems.push(orderItemObject);
     }
+    updateItemQtyOnHand(itemCode);
+    loadAllItemsToTable();
+    $("#txtOrderQty").val("");
+    // clearTextFieldsOrder();
 
-    orderItems.push(orderItemObject);
+}
+
+
+//Added all order items to the table
+function loadAllItemsToTable() {
+    $("#tblOrder").empty();
 
     for(let orderItem of orderItems) {
-        var row = "<tr><td>" + orderItem.code + "</td><td>" + orderItem.name + "</td><td>" + orderItem.price + "</td><td>" + orderItem.quantity + "</td><td>" + orderItem.total + "</td></tr>";
+        var row = "<tr><td>" + orderItem.orderedCode + "</td><td>" + orderItem.orderedName + "</td><td>" + orderItem.orderedPrice + "</td><td>" + orderItem.orderedQuantity + "</td><td>" + orderItem.orderTotal + "</td></tr>";
         $("#tblOrder").append(row);
     }
 }
+
+//update item qtyOnHand after adding table
+function updateItemQtyOnHand(orderedItemCode) {
+    for(let item of items) {
+        if(item.code === orderedItemCode) {
+            item.quantity = item.quantity - parseFloat($("#txtOrderQty").val());
+            $("#txtViewItemQtyOnHand").val(item.quantity);
+            // items.push(item);
+            // updateItem(item.code);
+        }
+    }
+}
+
+//check duplicate items
+function isItemCodeExist(itemCode) {
+    for(let orderItem of orderItems) {
+        if(orderItem.orderedCode === itemCode) {
+            return orderItem;
+        }
+    }
+    return null;
+}
+
+//clear all textFields
+function clearTextFieldsOrder() {
+    $("#cmbItemCode").focus();
+    $("#txtViewItemCode, #txtViewItemName, #txtViewItemPrice, #txtViewItemQtyOnHand, #txtOrderQty").val("");
+    // checkValidity();
+}
+

@@ -129,8 +129,8 @@ $("#btnSaveItem").click(function () {
     if (response) {
         let itemCode = $("#txtItemCode").val();
         let itemName = $("#txtItemName").val();
-        let itemPrice = $("#txtItemPrice").val();
-        let itemQuantity = $("#txtItemQuantity").val();
+        let itemPrice = parseFloat($("#txtItemPrice").val());
+        let itemQuantity = parseFloat($("#txtItemQuantity").val());
 
         var itemObject = {
             code: itemCode,
