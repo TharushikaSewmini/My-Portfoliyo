@@ -147,6 +147,8 @@ $("#btnSaveCustomer").click(function () {
     loadAllCustomersForOption();
 
     clearTextFields();
+
+    // generateCusID();
 });
 
 //click event for view all customer button
@@ -292,4 +294,10 @@ function setTextFieldValues(id, name, address, salary) {
     $("#txtCustomerName").val(name);
     $("#txtCustomerAddress").val(address);
     $("#txtCustomerSalary").val(salary);
+}
+
+//generate new customer id
+function generateCusID() {
+    let lastCustomer = customers[customers.length-1].id;
+    $("#txtCustomerID").val('C00' + (parseInt(lastCustomer.split('C')[1]) + 1));
 }

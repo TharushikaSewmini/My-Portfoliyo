@@ -52,12 +52,12 @@ $("#txtItemPrice").on('keydown',function (event) {
 
 $("#txtItemQuantity").on('keydown',function (event) {
     if(event.key=="Enter" && checkItems(itemQuantityRegEx, $("#txtItemQuantity"))) {
-        let response = confirm("Do you want to add this item?");
-        if (response) {
+        // let response = confirm("Do you want to add this item?");
+        // if (response) {
             $("#btnSaveItem").focus();
             console.log(itemValidations);
             console.log(items);
-        }
+        // }
     }else {
         setTextFieldFocusItem($("#txtItemQuantity"));
     }
@@ -125,27 +125,30 @@ function setTextFieldFocusItem(txtField) {
 
 //click event for save item button
 $("#btnSaveItem").click(function () {
-    let itemCode = $("#txtItemCode").val();
-    let itemName = $("#txtItemName").val();
-    let itemPrice = $("#txtItemPrice").val();
-    let itemQuantity = $("#txtItemQuantity").val();
+    let response = confirm("Do you want to add this item?");
+    if (response) {
+        let itemCode = $("#txtItemCode").val();
+        let itemName = $("#txtItemName").val();
+        let itemPrice = $("#txtItemPrice").val();
+        let itemQuantity = $("#txtItemQuantity").val();
 
-    var itemObject = {
-        code: itemCode,
-        name: itemName,
-        price: itemPrice,
-        quantity: itemQuantity
+        var itemObject = {
+            code: itemCode,
+            name: itemName,
+            price: itemPrice,
+            quantity: itemQuantity
+        }
+
+        items.push(itemObject);
+
+        viewAllItems();
+
+        bindRowClickEventsItem();
+
+        loadAllItemsForOption();
+
+        clearTextFieldsItem();
     }
-
-    items.push(itemObject);
-
-    viewAllItems();
-
-    bindRowClickEventsItem();
-
-    loadAllItemsForOption();
-
-    clearTextFieldsItem();
 });
 
 $("#btnViewAllItems").click(function () {
