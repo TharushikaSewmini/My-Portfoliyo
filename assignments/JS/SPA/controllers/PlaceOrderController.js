@@ -58,6 +58,9 @@ $("#txtOrderID").on('keydown',function (event) {
 //     }
 // });
 
+
+
+
 //check the order quantity is available or not
 function checkOrderQty(orderQty) {
     if (parseInt($("#txtViewItemQtyOnHand").val()) < parseInt(orderQty) ) {
@@ -90,7 +93,7 @@ $("#txtOrderQty").on('keydown',function (event) {
     }else {
         setTextFieldFocusOrder($("#txtOrderQty"));
     }
-    defaultTextOrder($("#txtOrderQty"),"");
+    // defaultTextOrder($("#txtOrderQty"),"");
 });
 
 $("#txtDiscount").on('keydown',function (event) {
@@ -275,6 +278,7 @@ function addItems() {
     }
     updateItemQtyOnHand(itemCode);
     loadAllItemsToTable();
+    calculateTotal();
     $("#txtOrderQty").val("");
     // clearTextFieldsOrder();
 
@@ -311,6 +315,15 @@ function isItemCodeExist(itemCode) {
         }
     }
     return null;
+}
+
+//calculate the total cost
+function calculateTotal() {
+    let totalCost = parseFloat(0.0);
+    for(let orderItem of orderItems) {
+        totalCost += orderItem.orderTotal;
+    }
+    $("#txtTotal, #txtSubTotal").text(totalCost);
 }
 
 //clear all textFields

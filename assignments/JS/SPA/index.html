@@ -507,12 +507,14 @@
             <!--orders form-->
             <section id="purchaseForm">
                 <div class="mb-2" style="color: blue; font-size: 25px; height: 40px;">
-                    <label class="form-label">Total : 0.00 RS/=</label>
+                    <label class="form-label">Total : </label>
+                    <label id="txtTotal">0.00</label>RS/=
                 </div>
-                <div class="mb-2" style="color: red; font-size: 25px; height: 40px;">
-                    <label class="form-label">Sub Total : 0.00 RS/=</label>
+                <div class="mb-2" style="color: red; font-size: 25px; height: 40px; border: none;">
+                    <label class="form-label">Sub Total : </label>
+                    <label id="txtSubTotal">0.00</label>RS/=
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 mt-1">
                     <label for="txtDiscount" class="form-label">Discount</label>
                     <input class="form-control" type="text" id="txtDiscount">
                     <span class="control-error text-danger" style="font-size: 13px;" id="lblDiscount"></span>
