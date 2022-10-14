@@ -17,11 +17,11 @@ $("input").on('keydown',function (event) {
     }
 });
 
-$("#txtOrderID, #txtDiscount, #txtCash").on('keyup',function (event) {
+$("#txtOrderID").on('keyup',function (event) {
     checkValidityOrder();
 });
 
-$("#txtOrderID, #txtDiscount, #txtCash").on('blur',function (event) {
+$("#txtOrderID").on('blur',function (event) {
     checkValidityOrder();
 });
 
@@ -96,24 +96,25 @@ $("#txtOrderQty").on('keydown',function (event) {
     // defaultTextOrder($("#txtOrderQty"),"");
 });
 
-$("#txtDiscount").on('keydown',function (event) {
-    if(event.key=="Enter" && checkOrderFields(discountRegEx, $("#txtDiscount"))) {
-        $("#txtCash").focus();
+$("#txtCash").on('keydown',function (event) {
+    if(event.key=="Enter" && checkOrderFields(discountRegEx, $("#txtCash"))) {
+        $("#txtDiscount").focus();
     }else {
-        setTextFieldFocusOrder($("#txtDiscount"));
+        setTextFieldFocusOrder($("#txtCash"));
     }
 });
 
-$("#txtCash").on('keydown',function (event) {
-    if(event.key=="Enter" && checkOrderQty(cashRegEx, $("#txtCash"))) {
-        let response = confirm("Do you want to purchase?");
-        if (response) {
-            $("#btnPurchase").focus();
+$("#txtDiscount").on('keydown',function (event) {
+    if(event.key=="Enter" && checkOrderFields(cashRegEx, $("#txtDiscount"))) {
+        // let response = confirm("Do you want to purchase?");
+        // if (response) {
+            // $("#btnPurchase").focus();
             console.log(placeOrderValidations);
             console.log(placeOrders);
-        }
+
+        // }
     }else {
-        setTextFieldFocusOrder($("#txtCash"));
+        setTextFieldFocusOrder($("#txtDiscount"));
     }
 });
 
@@ -218,13 +219,6 @@ $("#cmbItemCode").change(function () {
         $("#txtViewItemQtyOnHand").val(item.quantity);
     }
 });
-
-
-//generate new order id
-function generateNewOrderID() {
-    let lastOrderId = placeOrders[placeOrders.length+1].oID;
-    $("#txtCustomerID").val('O00' + (parseInt(lastOrderId.split('O')[1]) + 1));
-}
 
 //set current date to txtOrderDate
 function setCurrentDate() {
@@ -342,23 +336,30 @@ function checkCash(cash) {
 
 //calculate Total with Discount
 $("#txtDiscount").on('keydown', function (event) {
-    let discount = $("#txtDiscount").val();
+    var discount = $("#txtDiscount").val();
     if(event.key=="Enter") {
-        let newTotal = parseFloat($("#txtTotal").text()) - discount;
-        $("#txtTotal, #txtSubTotal").text(newTotal);
+        var total = parseFloat($("#txtSubTotal").text());
+        var newTotal = total - discount;
+        $("#txtSubTotal").text(newTotal+".00");
+        setBalance();
     }
 });
-
 
 //calculate balance
-$("#txtCash").on('keyup', function () {
+function setBalance() {
     let cash = $("#txtCash").val();
-    if(checkCash(cash)) {
-        let balance = cash - parseFloat($("#txtTotal").text());
-        $("#txtBalance").val(balance);
+    if (checkCash(cash)) {
+        var balance = cash - parseFloat($("#txtSubTotal").text());
+        $("#txtBalance").val(balance+".00");
     }
+}
+
+//keydown event for Cash button
+$("#txtCash").on('keydown', function () {
+    setBalance();
 });
 
+//click event for Purchase button
 $("#btnPurchase").click(function () {
     if(checkCash()) {
         let orderID = $("#txtOrderID").val();
@@ -375,23 +376,64 @@ $("#btnPurchase").click(function () {
             total: total
         }
 
-        for (let orderItem of orderItems) {
-            var orderDetailObject = {
-                orderID: orderObject.oID,
-                itemCode: orderItem.orderedCode,
-                qty: orderItem.orderedQuantity
-            }
-        }
+        // for (let orderItem of orderItems) {
+        //     var orderDetailObject = {
+        //         orderID: orderObject.oID,
+        //         itemCode: orderItem.orderedCode,
+        //         qty: orderItem.orderedQuantity
+        //     }
+        // }
 
         placeOrders.push(orderObject);
 
         alert("Order saved successfully");
+        clearTextFieldsOrder();
+        generateNewOrderID();
     }else {
         alert("Failed to Save");
     }
-
-    clearTextFieldsOrder();
 });
+
+// //click event for search button
+// $("#txtOrderID").click(function () {
+//     let typedOrderID = $("#txtOrderID").val();
+//     let order = searchOrder(typedOrderID);
+//     if(order != null) {
+//         setTextFieldValuesOrder(order.oID, order.date, order.cusID, order.total);
+//
+//         $("#tblOrder").empty();
+//
+//         for(let orderItem of orderItems) {
+//             if(orderItem.orderID == order.oID)
+//             var row = "<tr><td>" + orderItem.orderedCode + "</td><td>" + orderItem.orderedName + "</td><td>" + orderItem.orderedPrice + "</td><td>" + orderItem.orderedQuantity + "</td><td>" + orderItem.orderTotal + "</td></tr>";
+//             $("#tblOrder").append(row);
+//         }
+//
+//     }else {
+//         alert("There is no order available for that " + typedOrderID);
+//         setTextFieldValuesOrder("","","","");
+//         $("#txtOrderID").val("");
+//     }
+// });
+//
+// //search order
+// function searchOrder(orderID) {
+//     for(let order of placeOrders) {
+//         if(order.oID == orderID) {
+//             return order;
+//         }
+//     }
+//     return null;
+// }
+//
+// //set values for textFields
+// function setTextFieldValuesOrder(oID, date, cusID, total) {
+//     $("#txtOrderID").val(oID);
+//     $("#txtOrderDate").val(date);
+//     $("#cmbCustomerID").val(cusID);
+//     $("#txtTotal, #txtSubTotal").val(total);
+// }
+
 
 //clear all textFields
 function clearTextFieldsOrder() {
@@ -399,8 +441,14 @@ function clearTextFieldsOrder() {
     $("#cmbCustomerID, #txtOrderID, #txtViewCusID, #txtViewCusName, #txtViewCusAddress, #txtViewCusSalary").val("");
     $("#cmbItemCode, #txtViewItemCode, #txtViewItemName, #txtViewItemPrice, #txtViewItemQtyOnHand, #txtOrderQty").val("");
     $("#txtTotal, #txtSubTotal, #txtDiscount, #txtCash, #txtBalance").val("");
+    $("#tblOrder").empty();
     checkValidity();
-    generateNewOrderID();
+}
+
+//generate new order id
+function generateNewOrderID() {
+    let lastOrderId = placeOrders[placeOrders.length-1].oID;
+    $("#txtOrderID").val('O00' + (parseInt(lastOrderId.split('O')[1]) + 1));
 }
 
 
