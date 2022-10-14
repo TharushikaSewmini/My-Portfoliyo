@@ -326,6 +326,23 @@ function calculateTotal() {
     $("#txtTotal, #txtSubTotal").text(totalCost);
 }
 
+//calculate Total with Discount
+$("#txtDiscount").on('keydown', function (event) {
+    let discount = $("#txtDiscount").val();
+    if(event.key=="Enter") {
+        let newTotal = parseFloat($("#txtTotal").text()) - discount;
+        $("#txtTotal, #txtSubTotal").text(newTotal);
+    }
+});
+
+
+//calculate balance
+$("#txtCash").on('keyup', function () {
+    let cash = $("#txtCash").val();
+    let balance = cash - parseFloat($("#txtTotal").text());
+    $("#txtBalance").val(balance);
+});
+
 //clear all textFields
 function clearTextFieldsOrder() {
     $("#cmbItemCode").focus();
