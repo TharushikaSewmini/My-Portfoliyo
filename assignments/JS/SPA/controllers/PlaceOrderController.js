@@ -7,8 +7,8 @@ const cashRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
 placeOrderValidations.push({reg: orderIDRegEx, field: $("#txtOrderID"), error: "Order ID pattern is wrong: O001"});
 // placeOrderValidations.push({reg: orderQtyRegEx, field: $("#txtOrderQty"), error: "Order Quantity pattern is wrong: 10"});
-placeOrderValidations.push({reg: discountRegEx, field: $("#txtDiscount"), error: "Discount pattern is wrong: 100 / 100.00"});
-placeOrderValidations.push({reg: cashRegEx, field: $("#txtCash"), error: "Cash pattern is wrong: 100 / 100.00"});
+// placeOrderValidations.push({reg: discountRegEx, field: $("#txtDiscount"), error: "Discount pattern is wrong: 100 / 100.00"});
+// placeOrderValidations.push({reg: cashRegEx, field: $("#txtCash"), error: "Cash pattern is wrong: 100 / 100.00"});
 
 //Tab key disable
 $("input").on('keydown',function (event) {
@@ -121,7 +121,7 @@ $("#txtCash").on('keydown',function (event) {
 function checkValidityOrder() {
     let errorCount = 0;
     for (let validation of placeOrderValidations) {
-        if(checkOrderFields(validation.reg, validation.field)) {
+        if(checkOrderFields(validation.reg, validation.field) && $("#txtOrderID, #txtViewCusID, #txtViewCusName, #txtViewCusAddress, #txtViewCusSalary, #txtViewItemCode, #txtViewItemName, #txtViewItemPrice, #txtViewItemQtyOnHand, #txtOrderID") != null) {
             textSuccessOrder(validation.field,"");
         }else {
             errorCount = errorCount+1;
@@ -222,7 +222,7 @@ $("#cmbItemCode").change(function () {
 
 //generate new order id
 function generateNewOrderID() {
-    let lastOrderId = placeOrders[placeOrders.length-1].id;
+    let lastOrderId = placeOrders[placeOrders.length+1].oID;
     $("#txtCustomerID").val('O00' + (parseInt(lastOrderId.split('O')[1]) + 1));
 }
 
@@ -326,6 +326,20 @@ function calculateTotal() {
     $("#txtTotal, #txtSubTotal").text(totalCost);
 }
 
+//check the cash
+function checkCash(cash) {
+    if(cash > 100000) {
+        let error = "Insufficient Credit";
+        $("#txtCash").css('border','1px solid red');
+        $("#txtCash").parent().children('span').text(error);
+        return false;
+    }else {
+        $("#txtCash").css('border','1px solid green');
+        $("#txtCash").parent().children('span').text("");
+        return true;
+    }
+}
+
 //calculate Total with Discount
 $("#txtDiscount").on('keydown', function (event) {
     let discount = $("#txtDiscount").val();
@@ -339,17 +353,54 @@ $("#txtDiscount").on('keydown', function (event) {
 //calculate balance
 $("#txtCash").on('keyup', function () {
     let cash = $("#txtCash").val();
-    let balance = cash - parseFloat($("#txtTotal").text());
-    $("#txtBalance").val(balance);
+    if(checkCash(cash)) {
+        let balance = cash - parseFloat($("#txtTotal").text());
+        $("#txtBalance").val(balance);
+    }
 });
 
+$("#btnPurchase").click(function () {
+    if(checkCash()) {
+        let orderID = $("#txtOrderID").val();
+        let orderDate = $("#txtOrderDate").val();
+        let customerID = $("#cmbCustomerID").val();
+        let discount = $("#txtDiscount").val();
+        let total = $("#txtTotal").text();
 
+        var orderObject = {
+            oID: orderID,
+            date: orderDate,
+            cusID: customerID,
+            discount: discount,
+            total: total
+        }
+
+        for (let orderItem of orderItems) {
+            var orderDetailObject = {
+                orderID: orderObject.oID,
+                itemCode: orderItem.orderedCode,
+                qty: orderItem.orderedQuantity
+            }
+        }
+
+        placeOrders.push(orderObject);
+
+        alert("Order saved successfully");
+    }else {
+        alert("Failed to Save");
+    }
+
+    clearTextFieldsOrder();
+});
 
 //clear all textFields
 function clearTextFieldsOrder() {
-    $("#cmbItemCode").focus();
-    $("#txtViewItemCode, #txtViewItemName, #txtViewItemPrice, #txtViewItemQtyOnHand, #txtOrderQty").val("");
-    // checkValidity();
+    $("#txtOrderID").focus();
+    $("#cmbCustomerID, #txtOrderID, #txtViewCusID, #txtViewCusName, #txtViewCusAddress, #txtViewCusSalary").val("");
+    $("#cmbItemCode, #txtViewItemCode, #txtViewItemName, #txtViewItemPrice, #txtViewItemQtyOnHand, #txtOrderQty").val("");
+    $("#txtTotal, #txtSubTotal, #txtDiscount, #txtCash, #txtBalance").val("");
+    checkValidity();
+    generateNewOrderID();
 }
 
 
