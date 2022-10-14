@@ -6,7 +6,7 @@ const discountRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 const cashRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
 placeOrderValidations.push({reg: orderIDRegEx, field: $("#txtOrderID"), error: "Order ID pattern is wrong: O001"});
-placeOrderValidations.push({reg: orderQtyRegEx, field: $("#txtOrderQty"), error: "Order Quantity pattern is wrong: 10"});
+// placeOrderValidations.push({reg: orderQtyRegEx, field: $("#txtOrderQty"), error: "Order Quantity pattern is wrong: 10"});
 placeOrderValidations.push({reg: discountRegEx, field: $("#txtDiscount"), error: "Discount pattern is wrong: 100 / 100.00"});
 placeOrderValidations.push({reg: cashRegEx, field: $("#txtCash"), error: "Cash pattern is wrong: 100 / 100.00"});
 
@@ -17,11 +17,11 @@ $("input").on('keydown',function (event) {
     }
 });
 
-$("#txtOrderID, #txtOrderQty, #txtDiscount, #txtCash").on('keyup',function (event) {
+$("#txtOrderID, #txtDiscount, #txtCash").on('keyup',function (event) {
     checkValidityOrder();
 });
 
-$("#txtOrderID, #txtOrderQty, #txtDiscount, #txtCash").on('blur',function (event) {
+$("#txtOrderID, #txtDiscount, #txtCash").on('blur',function (event) {
     checkValidityOrder();
 });
 
@@ -58,14 +58,34 @@ $("#txtOrderID").on('keydown',function (event) {
 //     }
 // });
 
+function checkOrderQty(orderQty) {
+    if (parseInt($("#txtViewItemQtyOnHand").val()) < parseInt(orderQty) ) {
+        // textSuccessOrder($("#txtOrderQty"), "");
+
+        let error = "Please enter a amount lower than : " + $("#txtViewItemQtyOnHand").val();
+        $("#txtOrderQty").css('border','1px solid red');
+        $("#txtOrderQty").parent().children('span').text(error);
+        return false;
+    } else {
+        // textErrorOrder($("#txtOrderQty"), "Please enter a amount lower than : " + $("#txtViewItemQtyOnHand").val());
+
+        $("#txtOrderQty").css('border','1px solid green');
+        $("#txtOrderQty").parent().children('span').text("");
+        return true;
+    }
+}
+
 $("#txtOrderQty").on('keydown',function (event) {
-    if(event.key=="Enter" && checkOrderFields(orderQtyRegEx, $("#txtOrderQty"))) {
-        let response = confirm("Do you want to add this item?");
-        if (response) {
-            $("#btnAddItem").focus();
-            console.log(placeOrderValidations);
-            console.log(placeOrders);
-        }
+    let returnValue = checkOrderQty($("#txtOrderQty").val());
+    if(returnValue) {
+        // if (event.key == "Enter") {
+        //     let response = confirm("Do you want to add this item?");
+        //     if (response) {
+        //         $("#btnAddItem").focus();
+        //     }
+        // } else {
+        //     setTextFieldFocusOrder($("#txtOrderQty"));
+        // }
     }else {
         setTextFieldFocusOrder($("#txtOrderQty"));
     }
@@ -80,7 +100,7 @@ $("#txtDiscount").on('keydown',function (event) {
 });
 
 $("#txtCash").on('keydown',function (event) {
-    if(event.key=="Enter" && checkO(cashRegEx, $("#txtCash"))) {
+    if(event.key=="Enter" && checkOrderQty(cashRegEx, $("#txtCash"))) {
         let response = confirm("Do you want to purchase?");
         if (response) {
             $("#btnPurchase").focus();
