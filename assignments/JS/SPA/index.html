@@ -432,12 +432,18 @@
                         <label for="txtOrderDate" class="form-label">Order Date</label>
                         <input type="date" class="form-control" id="txtOrderDate">
                     </div>
-                    <div class="col-md-12">
-                        <label for="cmbCustomerID" class="form-label">Customer ID</label>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                        <label class="form-label">Customer</label>
                         <select id="cmbCustomerID" class="form-select">
-                            <option selected></option>
+                            <option selected>Select Customer ID</option>
                             <option>...</option>
                         </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="txtViewCusID" class="form-label">Customer ID</label>
+                        <input type="text" class="form-control" id="txtViewCusID">
                     </div>
                     <div class="col-md-12">
                         <label for="txtViewCusName" class="form-label">Customer Name</label>
@@ -458,15 +464,19 @@
 
             <!--items form-->
             <section id="orderItemsForm">
-                <form class="row g-4">
-                    <div class="col-md-5">
-                        <label for="cmbItemCode" class="form-label">Item Code</label>
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Item</label>
                         <select id="cmbItemCode" class="form-select">
-                            <option selected></option>
+                            <option selected>Select Item Code</option>
                             <option>...</option>
                         </select>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-6">
+                        <label for="txtViewItemCode" class="form-label">Item Code</label>
+                        <input type="text" class="form-control" id="txtViewItemCode">
+                    </div>
+                    <div class="col-md-12">
                         <label for="txtViewItemName" class="form-label">Item Name</label>
                         <input type="text" class="form-control" id="txtViewItemName">
                     </div>

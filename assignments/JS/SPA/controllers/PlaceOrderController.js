@@ -16,13 +16,41 @@ function loadAllItemsForOption() {
     }
 }
 
+//click event for customer ID select option
+$("#cmbCustomerID").change(function () {
+    let customerID = $("#cmbCustomerID").val();
 
-function generateOrderID() {
+    // let customerID = $(this).text();`
+
+    let customer = searchCustomer(customerID);
+    if(customer != null) {
+        $("#txtViewCusID").val(customer.id);
+        $("#txtViewCusName").val(customer.name);
+        $("#txtViewCusAddress").val(customer.address);
+        $("#txtViewCusSalary").val(customer.salary);
+    }
+});
+
+$("#cmbItemCode").change(function () {
+    let itemCode = $("#cmbItemCode").val();
+    let item = searchItem(itemCode);
+    if(item != null) {
+        $("#txtViewItemCode").val(item.code);
+        $("#txtViewItemName").val(item.name);
+        $("#txtViewItemPrice").val(item.price);
+        $("#txtViewItemQtyOnHand").val(item.quantity);
+    }
+});
+
+
+//generate new order id
+function generateNewOrderID() {
     let lastOrderId = placeOrders[placeOrders.length-1].id;
-    $("#txtCustomerID").val('C00' + (parseInt(lastOrderId.split('C')[1]) + 1));
+    $("#txtCustomerID").val('O00' + (parseInt(lastOrderId.split('O')[1]) + 1));
 }
 
-function setLocalDate() {
+//set current date to txtOrderDate
+function setCurrentDate() {
     var now = new Date();
 
     var day = ("0" + now.getDate()).slice(-2);
@@ -35,5 +63,6 @@ function setLocalDate() {
 
 $(window).on('load', function () {
     console.log("Window on load");
-    setLocalDate();
+    setCurrentDate();
 });
+
