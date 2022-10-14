@@ -343,10 +343,13 @@ $("#txtCash").on('keyup', function () {
     $("#txtBalance").val(balance);
 });
 
+
+
 //clear all textFields
 function clearTextFieldsOrder() {
     $("#cmbItemCode").focus();
     $("#txtViewItemCode, #txtViewItemName, #txtViewItemPrice, #txtViewItemQtyOnHand, #txtOrderQty").val("");
     // checkValidity();
 }
+
 
