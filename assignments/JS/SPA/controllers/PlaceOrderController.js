@@ -58,6 +58,7 @@ $("#txtOrderID").on('keydown',function (event) {
 //     }
 // });
 
+//check the order quantity is available or not
 function checkOrderQty(orderQty) {
     if (parseInt($("#txtViewItemQtyOnHand").val()) < parseInt(orderQty) ) {
         // textSuccessOrder($("#txtOrderQty"), "");
@@ -238,3 +239,33 @@ $(window).on('load', function () {
     setCurrentDate();
 });
 
+//click event for add item button
+$("#btnAddItem").click(function () {
+    addItems();
+});
+
+//add items to table
+function addItems() {
+    $("#tblOrder").empty();
+
+    let itemCode = $("#txtViewItemCode").val();
+    let itemName = $("#txtViewItemName").val();
+    let itemPrice = parseFloat($("#txtViewItemPrice").val());
+    let orderQuantity = parseFloat($("#txtOrderQty").val());
+    let total = (itemPrice)*(orderQuantity);
+
+    let orderItemObject = {
+        code: itemCode,
+        name: itemName,
+        price: itemPrice,
+        quantity: orderQuantity,
+        total: total
+    }
+
+    orderItems.push(orderItemObject);
+
+    for(let orderItem of orderItems) {
+        var row = "<tr><td>" + orderItem.code + "</td><td>" + orderItem.name + "</td><td>" + orderItem.price + "</td><td>" + orderItem.quantity + "</td><td>" + orderItem.total + "</td></tr>";
+        $("#tblOrder").append(row);
+    }
+}

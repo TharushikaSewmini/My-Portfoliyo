@@ -6,3 +6,4 @@ var items = [];
 
 let placeOrderValidations = [];
 var placeOrders = [];
+var orderItems = [];
