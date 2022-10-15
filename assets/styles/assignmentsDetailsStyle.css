@@ -24,10 +24,155 @@ main>section {
     /*border: 2px solid blue;*/
     background: grey;
     width: 90%;
-    height: 400px;
+    height: 350px;
     margin: 20px;
+    position: relative;
 }
 
-main>section>div {
+div {
+    width: 40%;
+    height: 90%;
+    margin: 15px;
+}
+
+a {
+    position: absolute;
+    top: 280px;
+    margin: auto;
+    text-align: center;
+}
+
+#a1, #a3, #a5, #tA1, #aA1, #aA3, #fWA, #spaA {
+    right: 500px;
+}
+
+#a2, #a4, #a6, #tA2, #aA2, #aA4, #cA {
+    left: 300px;
+}
+
+#basicCase1>div {
+    background: url("../images/BasicCase1.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+#basicCase2>div {
+    position: relative;
+    left: 780px;
+    background: url("../images/BasicCase2.png");
+    background-size: cover;
+}
+
+#basicCase3>div {
+    background: url("../images/BasicCase3.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+#basicCase4>div {
+    position: relative;
+    left: 780px;
+    background: url("../images/BasicCase4.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#basicCase5>div {
+    background: url("../images/BasicCase5.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+#basicCase6>div {
+    position: relative;
+    left: 780px;
+    background: url("../images/BasicCase6.png");
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/*Transition*/
+
+h1 {
+    color: #a52834;
+    font-size: 40px;
+}
+
+#transCase1>div {
+    background: url("../images/transCase1.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+#transCase2>div {
+    position: relative;
+    left: 780px;
+    background: url("../images/transCase2.png");
+    background-size: cover;
+}
+
+
+/*Animations*/
+
+#animCase1>div {
+    background: url("../images/animCase1.png");
+    background-size: cover;
+    background-position: top;
+
+}
+
+#animCase2>div {
+    position: relative;
+    left: 780px;
+    background: url("../images/animCase2.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#animCase3>div {
+    background: url("../images/animCase3.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+#animCase4>div {
+    position: relative;
+    left: 780px;
+    background: url("../images/animCase4.png");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*Frameworks*/
+
+#fWCase4>div {
+    background: url("../images/fwPOS.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+/*JS*/
+#calc>div {
+    position: relative;
+    left: 780px;
+    background: url("../images/JSCalc.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#spa>div {
+    background: url("../images/JSSPA.png");
+    background-size: cover;
+    background-position: center;
 
 }
