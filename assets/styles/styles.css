@@ -112,6 +112,32 @@ main>dfn>section:first-child>section:first-child>section:first-child>h1 {
     height: max-content;
     font-size: 100%;
     margin: 0;
+    /*transition-property: color;*/
+    /*transition-duration: 2s;*/
+
+    animation-name: my-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+/*main>dfn>section:first-child>section:first-child>section:first-child>h1:hover {*/
+/*    color: red;*/
+/*    transition-property: color;*/
+/*    transition-duration: 2s;*/
+/*}*/
+
+@keyframes my-animation {
+    0%{
+        opacity: 0;
+        /*left: 0%;*/
+    }
+
+    100%{
+        opacity: 100%;
+        /*left: 30%;*/
+    }
 }
 
 main>dfn>section:first-child h1:first-child {
