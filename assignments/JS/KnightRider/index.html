@@ -81,6 +81,13 @@
             border: none;
             color: white;
             border-radius: 6px;
+            cursor: pointer;
+        }
+
+        audio {
+            position: relative;
+            top: 200px;
+            left: 20px;
         }
     </style>
 </head>
@@ -94,6 +101,10 @@
     </section>
     <div></div>
 </main>
+
+<audio id="themeSong" controls autoplay>
+    <source src="assets/audio/Knight-Rider-Theme-Song.mp3" type="audio/mpeg">
+</audio>
 
 <section id="buttonContainer">
     <button id="btnStart" style="background: green">Start</button>
@@ -139,15 +150,17 @@
         knightRider.animate();
     }
 
-    var id = setInterval(renderDivs,100);
+    var id = "";
 
     $("#btnStart").click(function () {
         clearInterval(id);
         id = setInterval(renderDivs,100);
+        $("#themeSong").trigger('play');
     });
 
     $("#btnStop").click(function () {
         clearInterval(id);
+        $("#themeSong").trigger('pause');
     });
 
 </script>
