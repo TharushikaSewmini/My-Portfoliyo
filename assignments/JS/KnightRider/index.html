@@ -10,28 +10,62 @@
     <style>
         body {
             position: relative;
+            background: black;
+        }
+
+        h1 {
+            color: red;
+            text-align: center;
+            position: relative;
+            top: 100px;
+            font-family: 'Ubuntu', sans-serif;
         }
 
         main {
+            width: 1200px;
+            height: 200px;
             position: relative;
-        }
-
-        main>#container {
-            position: absolute;
-            top: 250px;
+            top: 120px;
             left: 0;
             right: 0;
             margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main>div {
+            width: 930px;
+            height: 1px;
+            background: white;
+        }
+
+        main>div:nth-child(1) {
+            margin-bottom: 15px;
+        }
+
+        main>div:nth-child(3) {
+            margin-top: 15px;
+        }
+
+        #container {
             width: max-content;
             height: 60px;
             display: flex;
         }
 
+        #container>div {
+            border: 1px solid black;
+            width: 150px;
+            height: 60px;
+        }
+
         #buttonContainer {
-            width: 300px;
+            width: 250px;
             height: 40px;
             font-family: 'Open Sans', sans-serif;
-            top: 10px;
+            top: 80px;
             position: absolute;
             right: 0;
             left: 0;
@@ -46,16 +80,19 @@
             height: 40px;
             border: none;
             color: white;
+            border-radius: 6px;
         }
     </style>
 </head>
 <body>
 
 <h1>JavaScript Knight Rider</h1>
+
 <main>
+    <div></div>
     <section id="container">
     </section>
-
+    <div></div>
 </main>
 
 <section id="buttonContainer">
@@ -63,5 +100,56 @@
     <button id="btnStop" style="background: red">Stop</button>
 </section>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+<script>
+    var knightRider={
+        count: 0,
+        tempArray: [],
+        leftColorArray: ['white', 'white', 'white', 'white', 'white', 'white', '#7C322A', '#88453E', '#91534C', '#A5726C', '#BC9793', '#E7D9D8'],
+        rightColorArray: ['white', 'white', 'white', 'white', 'white', 'white', '#E7D9D8', '#BC9793', '#A5726C', '#91534C', '#88453E', '#7C322A'],
+        animLeft: function () {
+            var lastColor = this.tempArray.pop();
+            this.tempArray.unshift(lastColor);
+        },
+        animRight: function () {
+            var firstColor = this.tempArray.shift();
+            this.tempArray.push(firstColor);
+        },
+        animate : function () {
+            this.count ++;
+            if(this.count <= this.leftColorArray.length) {
+                this.tempArray = this.leftColorArray;
+                this.animLeft();
+            }else {
+                if(this.count >= this.rightColorArray.length *2) {
+                    this.count = 0;
+                }
+                this.tempArray = this.rightColorArray;
+                this.animRight();
+            }
+        }
+    }
+
+    renderDivs();
+    function renderDivs() {
+        $("#container").empty();
+        for (let i=0; i< (knightRider.tempArray.length) /2; i++) {
+            $("#container").append(`<div style="background-color: ${knightRider.tempArray[i]}"></div>`)
+        }
+        knightRider.animate();
+    }
+
+    var id = setInterval(renderDivs,100);
+
+    $("#btnStart").click(function () {
+        clearInterval(id);
+        id = setInterval(renderDivs,100);
+    });
+
+    $("#btnStop").click(function () {
+        clearInterval(id);
+    });
+
+</script>
 </body>
 </html>
