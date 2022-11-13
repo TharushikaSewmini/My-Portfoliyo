@@ -2,30 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>QUE Process</title>
+    <title>JS Que</title>
 
     <meta content="width=device-width initial-scale=1" name="viewport">
     <link href="../../../assets/css/normalize.css" rel="stylesheet">
 
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-
     <style>
-        body {
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        main {
+            width: 1500px;
+            height: 500px;
             background: #E9E7E6;
-            position: relative;
+            margin-top: 50px;
             display: flex;
             flex-direction: row;
             align-items: center;
+            justify-content: space-evenly;
         }
 
-        body>img {
+        main>img {
             width: 400px;
             height: 360px;
         }
 
-        section {
-            width: 1150px;
-            height: 600px;
+        #container {
+            width: 1000px;
+            height: 500px;
             background: #E9E7E6;
             display: flex;
             flex-direction: row;
@@ -47,29 +54,48 @@
 
         div>h1 {
             font-size: 20px;
+            font-family: 'Open Sans', sans-serif;
             color: deeppink;
             margin-top: 20px;
             margin-left: -20px;
         }
+
+        #buttonContainer {
+            font-family: 'Open Sans', sans-serif;
+            margin-top: 10px;
+        }
+
+        button {
+            width: 100px;
+            height: 40px;
+            border: none;
+            color: white;
+        }
     </style>
 </head>
 <body>
-<section id="container">
+<main>
+    <section id="container">
+    </section>
+
+    <img src="assets/images/home.jpg">
+</main>
+
+<section id="buttonContainer">
+    <button id="btnStart" style="background: green">Start</button>
+    <button id="btnStop" style="background: red">Stop</button>
 </section>
 
-<img src="assets/images/home.jpg">
-
 <script src="assets/js/jquery-3.6.1.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
 
 <script>
     var cueData={
-        person: [{color:"red", background:$("#imageContent").val(), name: "A"},
-            {color:"blue", background:$("#imageContent").val(), name: "B"},
-            {color:"green", background:$("#imageContent").val(), name: "C"},
-            {color:"yellow", background:$("#imageContent").val(), name: "D"},
-            {color:"purple", background:$("#imageContent").val(), name: "E"},
-            {color:"orange", background:$("#imageContent").val(), name: "F"}],
+        person: [{name: "A"},
+            {name: "B"},
+            {name: "C"},
+            {name: "D"},
+            {name: "E"},
+            {name: "F"}],
         nextPerson: function() {
             var lastPerson = this.person.pop();
             this.person.unshift(lastPerson);
@@ -85,7 +111,16 @@
         cueData.nextPerson();
     }
 
-    setInterval(renderDivs,900);
+    var id = setInterval(renderDivs,900);
+
+    $("#btnStart").click(function () {
+        clearInterval(id);
+        id = setInterval(renderDivs,900);
+    });
+
+    $("#btnStop").click(function () {
+        clearInterval(id);
+    });
 </script>
 </body>
 </html>
