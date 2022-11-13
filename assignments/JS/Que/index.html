@@ -5,11 +5,48 @@
     <title>QUE Process</title>
 
     <meta content="width=device-width initial-scale=1" name="viewport">
+    <link href="../../../assets/css/normalize.css" rel="stylesheet">
+
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        section {
+            width: 900px;
+            height: 500px;
+            position: relative;
+            border: 1px solid blue;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+
+        div:first-child {
+            background: url("assets/images/businessman.gif");
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
-
+<section id="container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</section>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
+
+<script>
+
+</script>
 </body>
 </html>
