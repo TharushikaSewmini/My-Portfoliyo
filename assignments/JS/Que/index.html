@@ -10,43 +10,82 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        section {
-            width: 900px;
-            height: 500px;
+        body {
+            background: #E9E7E6;
             position: relative;
-            border: 1px solid blue;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        body>img {
+            width: 400px;
+            height: 360px;
+        }
+
+        section {
+            width: 1150px;
+            height: 600px;
+            background: #E9E7E6;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
         }
+
         div {
             width: 200px;
-            height: 200px;
-            border: 1px solid red;
+            height: 150px;
+            display: flex;
+            margin-top: 140px;
         }
 
-        div:first-child {
-            background: url("assets/images/businessman.gif");
-            background-position: center;
-            background-size: cover;
+        div>img {
+            width: 160px;
+            height: 130px;
+        }
+
+        div>h1 {
+            font-size: 20px;
+            color: deeppink;
+            margin-top: 20px;
+            margin-left: -20px;
         }
     </style>
 </head>
 <body>
 <section id="container">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
 </section>
+
+<img src="assets/images/home.jpg">
+
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 
 <script>
+    var cueData={
+        person: [{color:"red", background:$("#imageContent").val(), name: "A"},
+            {color:"blue", background:$("#imageContent").val(), name: "B"},
+            {color:"green", background:$("#imageContent").val(), name: "C"},
+            {color:"yellow", background:$("#imageContent").val(), name: "D"},
+            {color:"purple", background:$("#imageContent").val(), name: "E"},
+            {color:"orange", background:$("#imageContent").val(), name: "F"}],
+        nextPerson: function() {
+            var lastPerson = this.person.pop();
+            this.person.unshift(lastPerson);
+        }
+    }
 
+    renderDivs();
+    function renderDivs() {
+        $("#container").empty();
+        for (let i=0; i<cueData.person.length; i++) {
+            $("#container").append(`<div style="background-color:#E9E7E6;"> <img id="imageContent" src="assets/images/businessman.gif"> <h1>${cueData.person[i].name}</h1> </div>`)
+        }
+        cueData.nextPerson();
+    }
+
+    setInterval(renderDivs,900);
 </script>
 </body>
 </html>
