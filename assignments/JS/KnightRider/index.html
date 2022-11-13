@@ -4,11 +4,64 @@
     <meta charset="UTF-8">
     <title>JS Knight Rider</title>
 
-  <meta content="width=device-width initial-scale=1" name="viewport">
-  <link href="../../../assets/css/normalize.css" rel="stylesheet">
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link href="../../../assets/css/normalize.css" rel="stylesheet">
+
+    <style>
+        body {
+            position: relative;
+        }
+
+        main {
+            position: relative;
+        }
+
+        main>#container {
+            position: absolute;
+            top: 250px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: max-content;
+            height: 60px;
+            display: flex;
+        }
+
+        #buttonContainer {
+            width: 300px;
+            height: 40px;
+            font-family: 'Open Sans', sans-serif;
+            top: 10px;
+            position: absolute;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        #buttonContainer>button {
+            position: relative;
+            top: 300px;
+            margin-left: 10px;
+            width: 100px;
+            height: 40px;
+            border: none;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 
+<h1>JavaScript Knight Rider</h1>
+<main>
+    <section id="container">
+    </section>
+
+</main>
+
+<section id="buttonContainer">
+    <button id="btnStart" style="background: green">Start</button>
+    <button id="btnStop" style="background: red">Stop</button>
+</section>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 </body>
 </html>
