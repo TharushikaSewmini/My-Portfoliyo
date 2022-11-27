@@ -31,27 +31,74 @@ main {
 }
 
 #bgImage>section>div:first-child>img {
+    border: 1px solid red;
     height: 100%;
     width: 100%;
 }
 
-#coins {
+.coins {
     position: absolute;
     width: 100px;
     height: 30px;
-    top: 300px;
-    left: 1000px;
     display: flex;
 }
 
-#coins>div {
+#bg1 .coins {
+    top: 300px;
+    left: 1000px;
+}
+
+#bg2 .coins {
+    top: 200px;
+    left: 1600px;
+}
+
+#bg3 .coins {
+    top: 350px;
+    left: 2300px;
+}
+
+#bg4 .coins {
+    top: 280px;
+    left: 2800px;
+}
+
+#bg5 .coins {
+    top: 400px;
+    left: 3400px;
+}
+
+#bg6 .coins {
+    top: 300px;
+    left: 7900px;
+}
+
+.coins>div {
     height: 30px;
     width: 30px;
 }
 
-#coins>div>img {
+.coins>div>img {
     height: 30px;
     width: 30px;
+}
+
+.enemies {
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    top: 300px;
+    left: 1400px;
+}
+
+.enemies>div {
+    height: 80px;
+    width: 80px;
+}
+
+.enemies>div>img {
+    height: 80px;
+    width: 80px;
 }
 
 #avatarImage {
