@@ -43,33 +43,78 @@ main {
     display: flex;
 }
 
-#bg1 .coins {
+#bg1 #c1 {
     top: 300px;
     left: 1000px;
 }
 
-#bg2 .coins {
-    top: 200px;
-    left: 1600px;
-}
-
-#bg3 .coins {
-    top: 350px;
-    left: 2300px;
-}
-
-#bg4 .coins {
-    top: 280px;
-    left: 2800px;
-}
-
-#bg5 .coins {
+#bg1 #c2 {
     top: 400px;
+    left: 1400px;
+}
+
+#bg2 #c3 {
+    top: 250px;
+    left: 1900px;
+}
+
+#bg2 #c4 {
+    top: 450px;
+    left: 2400px;
+}
+
+#bg2 #c5 {
+    top: 200px;
+    left: 2900px;
+}
+
+#bg3 #c6 {
+    top: 350px;
     left: 3400px;
 }
 
-#bg6 .coins {
+#bg3 #c7 {
+    top: 450px;
+    left: 3900px;
+}
+
+#bg3 #c8 {
+    top: 220px;
+    left: 4400px;
+}
+
+#bg4 #c9 {
+    top: 380px;
+    left: 4900px;
+}
+
+#bg4 #c10 {
+    top: 180px;
+    left: 5400px;
+}
+
+#bg4 #c11 {
+    top: 400px;
+    left: 5900px;
+}
+
+#bg5 #c12 {
+    top: 290px;
+    left: 6400px;
+}
+
+#bg5 #c13 {
+    top: 430px;
+    left: 6900px;
+}
+
+#bg6 #c14 {
     top: 300px;
+    left: 7400px;
+}
+
+#bg6 #c15 {
+    top: 190px;
     left: 7900px;
 }
 
