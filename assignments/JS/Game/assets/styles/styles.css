@@ -18,7 +18,7 @@ main {
     animation-timing-function: linear;
 }
 
-#bgImage>section {
+#bg1, #bg2, #bg3, #bg4, #bg5, #bg6 {
     width: 100%;
     height: 100%;
     display: flex;
@@ -31,9 +31,9 @@ main {
 }
 
 #bgImage>section>div:first-child>img {
-    border: 1px solid red;
     height: 100%;
     width: 100%;
+    filter: brightness(70%);
 }
 
 .coins {
@@ -45,12 +45,12 @@ main {
 
 #bg1 #c1 {
     top: 300px;
-    left: 1000px;
+    left: 950px;
 }
 
 #bg1 #c2 {
     top: 400px;
-    left: 1400px;
+    left: 1350px;
 }
 
 #bg2 #c3 {
@@ -94,7 +94,7 @@ main {
 }
 
 #bg4 #c11 {
-    top: 400px;
+    top: 450px;
     left: 5900px;
 }
 
@@ -104,17 +104,17 @@ main {
 }
 
 #bg5 #c13 {
-    top: 430px;
+    top: 400px;
     left: 6900px;
 }
 
 #bg6 #c14 {
-    top: 300px;
+    top: 200px;
     left: 7400px;
 }
 
 #bg6 #c15 {
-    top: 190px;
+    top: 340px;
     left: 7900px;
 }
 
@@ -148,12 +148,12 @@ main {
 
 #avatarImage {
     width: 150px;
-    height: 150px;
+    height: 80px;
     position: fixed;
     left: 50px;
     bottom: 150px;
-    background: url("../../assets/images/Avatar.png");
-    background-size: cover;
+    background: url("../../assets/images/avatar.gif");
+    background-size: contain;
     background-position: center;
     z-index: 2;
 }
