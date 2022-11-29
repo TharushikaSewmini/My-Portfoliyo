@@ -6,6 +6,7 @@ main {
     background: url("../../assets/images/bg1.png");
     background-size: contain;
     background-position: center;
+    filter: brightness(90%);
 }
 
 #bgImage {
@@ -21,22 +22,58 @@ main {
     animation-timing-function: linear;
 }
 
-#bg1, #bg2, #bg3, #bg4, #bg5, #bg6 {
+.bg {
+    position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
-#bgImage>section>div:first-child {
+.bg>div {
+    position: absolute;
     height: 100%;
     width: 100%;
 }
 
-#bgImage>section>div:first-child>img {
-    height: 100%;
-    width: 100%;
-    filter: brightness(90%);
+.bg>div:first-child {
+    background: url("../../assets/images/background2.png");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(80%);
+    animation-name: my-animation3;
+    animation-direction: reverse;
+    animation-duration: 20s;
+}
+
+.bg>div:nth-child(2) {
+    background: url("../../assets/images/background4.png");
+    background-size: cover;
+    background-position: center;
+    animation-name: my-animation3;
+    animation-direction: reverse;
+    animation-duration: 20s;
+}
+
+.bg>div:nth-child(3) {
+    margin-left: 500px;
+    background: url("../../assets/images/background4.png");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(80%);
+    z-index: 2;
+}
+
+.bg>div:nth-child(4) {
+    background: url("../../assets/images/background5.png");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(80%);
+    z-index: 2;
+}
+
+.bg>div:nth-child(5) {
+    background: url("../../assets/images/background6.png");
+    background-size: cover;
+    background-position: center;
 }
 
 #bgContent1 {
@@ -55,30 +92,6 @@ main {
     animation-timing-function: linear;
 }
 
-/*#bgContent1>section {*/
-/*    height: 100%;*/
-/*    width: 100%;*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    align-items: self-start;*/
-/*    justify-content: space-around;*/
-/*}*/
-
-/*#bgCon1, #bgCon2, #bgCon3, #bgCon4, #bgCon5, #bgCon6 div {*/
-/*    height: 100%;*/
-/*    width: 100%;*/
-/*}*/
-
-/*#bgCon1, #bgCon2, #bgCon3, #bgCon4, #bgCon5, #bgCon6 div>img {*/
-/*    height: 100%;*/
-/*    width: 100%;*/
-/*}*/
-
-/*#bgImage>section>div:nth-child(2)>img {*/
-/*    height: 50%;*/
-/*    width: 100%;*/
-/*}*/
-
 .coins {
     width: max-content;
     height: 30px;
@@ -86,87 +99,25 @@ main {
     flex-direction: row;
 }
 
-
-/*#c1, #c2, #c3, #c4, #c5, #c6, #c7, #c8, #c9, #c10, #c11, #c12, #c13, #c14, #c15 {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    border: 1px solid purple;*/
-/*}*/
-
 #c1, #c6, #c11 {
     margin-top: 300px;
-    /*left: 950px;*/
 }
 
 #c2, #c7, #c12 {
     margin-top: 450px;
-    /*left: 1350px;*/
 }
 
 #c3, #c8, #c13 {
     margin-top: 200px;
-    /*left: 1900px;*/
 }
 
 #c4,#c9, #c14 {
     margin-top: 400px;
-    /*left: 2400px;*/
 }
 
 #c5, #c10, #c15 {
     margin-top: 500px;
-    /*left: 2900px;*/
 }
-
-/*#c11 {*/
-/*    margin-top: 380px;*/
-/*    !*left: 3400px;*!*/
-/*}*/
-
-/*#bgCon3 #c7 {*/
-/*    margin-top: 450px;*/
-/*    !*left: 3900px;*!*/
-/*}*/
-
-/*#bgCon3 #c8 {*/
-/*    margin-top: 220px;*/
-/*    !*left: 4400px;*!*/
-/*}*/
-
-/*#bgCon4 #c9 {*/
-/*    margin-top: 380px;*/
-/*    !*left: 4900px;*!*/
-/*}*/
-
-/*#bgCon4 #c10 {*/
-/*    margin-top: 180px;*/
-/*    !*left: 5400px;*!*/
-/*}*/
-
-/*#bgCon4 #c11 {*/
-/*    margin-top: 450px;*/
-/*    !*left: 5900px;*!*/
-/*}*/
-
-/*#c12 {*/
-/*    margin-top: 290px;*/
-/*    !*left: 6400px;*!*/
-/*}*/
-
-/*#bgCon5 #c13 {*/
-/*    margin-top: 400px;*/
-/*    !*left: 6900px;*!*/
-/*}*/
-
-/*#bgCon6 #c14 {*/
-/*    margin-top: 200px;*/
-/*    !*left: 7400px;*!*/
-/*}*/
-
-/*#bgCon6 #c15 {*/
-/*    margin-top: 340px;*/
-/*    !*left: 7900px;*!*/
-/*}*/
 
 .coins>div {
     height: 30px;
@@ -223,6 +174,7 @@ main {
 #bgContent2>section>div>img {
     height: 100%;
     width: 100%;
+    filter: brightness(95%);
 }
 
 #avatarImage {
@@ -234,8 +186,8 @@ main {
     background: url("../../assets/images/avatar.gif");
     background-size: contain;
     background-position: center;
-    filter: brightness(130%);
-    z-index: 2;
+    filter: drop-shadow(2px 3px 2px black);
+    z-index: 4;
 }
 
 @keyframes my-animation {
@@ -277,6 +229,24 @@ main {
 @keyframes my-animation2 {
     0%{
         transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(-75%);
+    }
+}
+
+@keyframes my-animation3 {
+    0%{
+        transform: translateX(0);
+    }
+
+    25%{
+        transform: translateX(-25%);
+    }
+
+    50%{
+        transform: translateX(-50%);
     }
 
     100%{
