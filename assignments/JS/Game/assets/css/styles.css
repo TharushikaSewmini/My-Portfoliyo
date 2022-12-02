@@ -6,21 +6,60 @@ main {
     background: url("../../assets/images/bg1.png");
     background-size: contain;
     background-position: center;
-    filter: brightness(90%);
+    /*filter: brightness(90%);*/
 }
 
 #bgImage {
     width: 600%;
     height: 100%;
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: row;
     animation-name: my-animation;
-    animation-duration: 20s;
+    animation-duration: 24s;
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-timing-function: linear;
+    animation-play-state: paused;
+    z-index: 2;
 }
+
+
+
+
+#bgImageContent1 {
+    width: 600%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    animation-name: my-animation3;
+    animation-duration: 24s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+}
+
+
+
+
+#bgImageContent2 {
+    width: 600%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    animation-name: my-animation4;
+    animation-duration: 24s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+    z-index: 1;
+}
+
+
 
 .bg {
     position: relative;
@@ -34,26 +73,62 @@ main {
     width: 100%;
 }
 
-.bg>div:first-child {
+
+
+.bg1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.bg1>div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+.bg2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.bg2>div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+.bg1>div {
     background: url("../../assets/images/background2.png");
     background-size: cover;
     background-position: center;
     filter: brightness(70%);
-    animation-name: my-animation3;
-    animation-direction: reverse;
-    animation-duration: 20s;
+    /*animation-name: my-animation3;*/
+    /*animation-direction: normal;*/
+    /*animation-duration: 28s;*/
+    /*animation-delay: 1s;*/
+    /*animation-play-state: paused;*/
 }
 
-.bg>div:nth-child(2) {
+.bg2>div {
     background: url("../../assets/images/background4.png");
     background-size: cover;
     background-position: center;
-    animation-name: my-animation3;
-    animation-direction: reverse;
-    animation-duration: 20s;
+    /*animation-name: my-animation3;*/
+    /*animation-direction: normal;*/
+    /*animation-duration: 28s;*/
+    /*animation-delay: 1s;*/
+    /*animation-play-state: paused;*/
 }
 
-.bg>div:nth-child(3) {
+.bg>div:nth-child(1) {
     margin-left: 500px;
     background: url("../../assets/images/background4.png");
     background-size: cover;
@@ -62,7 +137,7 @@ main {
     z-index: 2;
 }
 
-.bg>div:nth-child(4) {
+.bg>div:nth-child(2) {
     background: url("../../assets/images/background5.png");
     background-size: cover;
     background-position: center;
@@ -70,7 +145,7 @@ main {
     z-index: 2;
 }
 
-.bg>div:nth-child(5) {
+.bg>div:nth-child(3) {
     background: url("../../assets/images/background6.png");
     background-size: cover;
     background-position: center;
@@ -90,17 +165,26 @@ main {
 #bgContent1, #enemyArea {
     position: absolute;
     height: 100%;
-    width: 650%;
+    width: 300%;
     top: 0;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*align-items: self-start;*/
+    /*justify-content: space-around;*/
+    animation-name: my-animation1;
+    animation-duration: 8s;
+    animation-iteration-count: 3;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+    z-index: 3;
+}
+
+#enemyArea {
     display: flex;
     flex-direction: row;
     align-items: self-start;
     justify-content: space-around;
-    animation-name: my-animation1;
-    animation-duration: 20s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-timing-function: linear;
 }
 
 #enemyArea {
@@ -108,6 +192,7 @@ main {
 }
 
 .coins {
+    position: absolute;
     width: max-content;
     height: 30px;
     display: flex;
@@ -117,22 +202,67 @@ main {
 
 #c1, #c6, #c11 {
     margin-top: 300px;
+    left: 1000px;
 }
 
 #c2, #c7, #c12 {
     margin-top: 450px;
+    left: 1800px;
 }
 
 #c3, #c8, #c13 {
     margin-top: 200px;
+    left: 2400px;
 }
 
 #c4,#c9, #c14 {
     margin-top: 400px;
+    left: 3000px;
 }
 
 #c5, #c10, #c15 {
     margin-top: 500px;
+    left: 3600px;
+}
+
+#c6 {
+    left: 3400px;
+}
+
+#c7 {
+    left: 3900px;
+}
+
+#c8 {
+    left: 4400px;
+}
+
+#c9 {
+    left: 4900px;
+}
+
+#c10 {
+    left: 5400px;
+}
+
+#c11 {
+    left: 5900px;
+}
+
+#c12 {
+    left: 6400px;
+}
+
+#c13 {
+    left: 6900px;
+}
+
+#c14 {
+    left: 7400px;
+}
+
+#c15 {
+    left: 7900px;
 }
 
 
@@ -190,10 +320,11 @@ main {
     display: flex;
     flex-direction: row;
     animation-name: my-animation2;
-    animation-duration: 10s;
+    animation-duration: 12s;
     animation-iteration-count: 2;
     animation-direction: normal;
     animation-timing-function: linear;
+    animation-play-state: paused;
 }
 
 #bgContent2>section {
@@ -217,14 +348,32 @@ main {
     height: 95px;
     position: fixed;
     left: 50px;
-    top: 0;
-    bottom: 0;
+    top: 500px;
     margin: auto;
     background: url("../../assets/images/avatar1.gif");
     background-size: contain;
     background-position: center;
     filter: brightness(150%);
     z-index: 4;
+}
+
+#btnStartGame {
+    width: 200px;
+    height: 100px;
+    background: purple;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50px;
+    right: 0;
+    margin: auto;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    z-index: 5;
+    cursor: pointer;
 }
 
 @keyframes my-animation {
@@ -242,24 +391,24 @@ main {
         transform: translateX(0);
     }
 
-    20%{
-        transform: translateX(-15);
-    }
+    /*20%{*/
+    /*    transform: translateX(-15);*/
+    /*}*/
 
-    40%{
-        transform: translateX(-30);
-    }
+    /*40%{*/
+    /*    transform: translateX(-30);*/
+    /*}*/
 
-    60%{
-        transform: translateX(-45);
-    }
+    /*60%{*/
+    /*    transform: translateX(-45);*/
+    /*}*/
 
-    80%{
-        transform: translateX(-60);
-    }
+    /*80%{*/
+    /*    transform: translateX(-60);*/
+    /*}*/
 
     100%{
-        transform: translateX(-90%);
+        transform: translateX(-65%);
     }
 }
 
@@ -278,15 +427,26 @@ main {
         transform: translateX(0);
     }
 
-    25%{
-        transform: translateX(-25%);
-    }
+    /*25%{*/
+    /*    transform: translateX(-25%);*/
+    /*}*/
 
-    50%{
+    /*50%{*/
+    /*    transform: translateX(-50%);*/
+    /*}*/
+
+    100%{
         transform: translateX(-50%);
+    }
+}
+
+
+@keyframes my-animation4 {
+    0%{
+        transform: translateX(0);
     }
 
     100%{
-        transform: translateX(-75%);
+        transform: translateX(-55%);
     }
 }
